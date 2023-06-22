@@ -51,7 +51,7 @@ class RestaurantController extends Controller
     /**
      * @authenticated
      * @header Authorization Bearer
-     * Create New Restaurants.
+     * Create New Restaurant.
      * @apiResourceModel App\Models\Restaurant
      */
     #[ResponseFromApiResource(RestaurantResource::class, Restaurant::class, 201)]
@@ -80,7 +80,7 @@ class RestaurantController extends Controller
     /**
      * @authenticated
      * @header Authorization Bearer
-     * Update Restaurants.
+     * Update Restaurant.
      * @apiResourceModel App\Models\Restaurant
      */
     #[ResponseFromApiResource(RestaurantResource::class, Restaurant::class, 202)]
@@ -89,6 +89,24 @@ class RestaurantController extends Controller
         try {
             $restaurant = RestaurantService::update($restaurant, $request->validated());
             $restaurant = RestaurantResource::make($restaurant);
+            DB::commit();
+            return $this->successUpdated($restaurant);
+        } catch (\Exception $exception){
+            return $this->errorOccurred($exception->getMessage());
+        }
+    }
+
+    /**
+     * @authenticated
+     * @header Authorization Bearer
+     * Delete Restaurant.
+     * @apiResourceModel App\Models\Restaurant
+     */
+    #[ResponseFromApiResource(RestaurantResource::class, Restaurant::class, 202)]
+    public function destroy(Restaurant $restaurant): JsonResponse{
+        DB::beginTransaction();
+        try {
+            $restaurant->delete();
             DB::commit();
             return $this->successUpdated($restaurant);
         } catch (\Exception $exception){
