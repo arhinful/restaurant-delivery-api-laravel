@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Menu\StoreRequest;
 use App\Http\Resources\MenuResource;
+use App\Http\Resources\RestaurantResource;
 use App\Models\Menu;
+use App\Models\Restaurant;
 use App\Services\MenuService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
+use Knuckles\Scribe\Attributes\ResponseFromApiResource;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
@@ -24,9 +27,9 @@ class MenuController extends Controller
     /**
      * Fetch Menus.
      * Filter: /menus?filter[name]=kofibusy lounge [can be filtered by name and or price and or restaurant.id].
-     * Sort: /menus?sort=name(Ascending) or restaurants?sort=-name (Descending), price, -price,
+     * Sort: /menus?sort=name(Ascending) or -name, price, -price,
      * @apiResourceCollection App\Http\Resources\RestaurantResource
-     * @apiResourceModel App\Models\Restaurant paginate=15
+     * @apiResourceModel App\Models\Menu paginate=15
      */
     public function index(): JsonResponse{
         $menus = QueryBuilder::for(Menu::class)
@@ -46,6 +49,13 @@ class MenuController extends Controller
         return $this->successReadCollection($menus);
     }
 
+    /**
+     * @authenticated
+     * @header Authorization Bearer
+     * Create New Menu.
+     * @apiResourceModel App\Models\Menu
+     */
+    #[ResponseFromApiResource(MenuResource::class, Menu::class, 201)]
     public function store(StoreRequest $request): JsonResponse{
         DB::beginTransaction();
         try {
