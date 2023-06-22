@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\MenuItem\StoreRequest;
+use App\Http\Requests\MenuItem\UpdateRequest;
 use App\Http\Resources\MenuItemResource;
 use App\Http\Resources\RestaurantResource;
 use App\Models\MenuItem;
@@ -72,8 +73,27 @@ class MenuItemController extends Controller
      * @apiResource App\Http\Resources\MenuItemResource
      * @apiResourceModel App\Models\MenuItem
      */
-    public function view(MenuItem $item){
+    public function show(MenuItem $item): JsonResponse{
         $item = MenuItemResource::make($item);
         return $this->successRead($item);
+    }
+
+    /**
+     * @authenticated
+     * @header Authorization Bearer
+     * Update Menu Item.
+     * @apiResourceModel App\Models\MenuItem
+     */
+    #[ResponseFromApiResource(MenuItemResource::class, MenuItem::class, 202)]
+    public function update(MenuItem $item, UpdateRequest $request): JsonResponse{
+        DB::beginTransaction();
+        try {
+            $item = MenuItemService::update($item, $request->validated());
+            $item = MenuItemResource::make($item);
+            return $this->successUpdated($item);
+        } catch (\Exception $exception){
+            DB::rollBack();
+            return $this->errorOccurred($exception->getMessage());
+        }
     }
 }

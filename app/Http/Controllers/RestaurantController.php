@@ -72,7 +72,7 @@ class RestaurantController extends Controller
      * @apiResource App\Http\Resources\RestaurantResource
      * @apiResourceModel App\Models\Restaurant
      */
-    public function show(Restaurant $restaurant){
+    public function show(Restaurant $restaurant): JsonResponse{
         $restaurant = RestaurantResource::make($restaurant);
         return $this->successRead($restaurant);
     }

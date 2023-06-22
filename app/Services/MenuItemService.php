@@ -10,4 +10,9 @@ class MenuItemService
         $menu = MenuItem::create($data);
         return $menu;
     }
+
+    public static function update(MenuItem $item, array $data): MenuItem{
+        $item->update($data);
+        return $item;
+    }
 }
