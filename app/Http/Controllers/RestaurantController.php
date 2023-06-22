@@ -18,7 +18,7 @@ use Spatie\QueryBuilder\QueryBuilder;
 class RestaurantController extends Controller
 {
     public function __construct(){
-        $this->middleware(['auth'])->only(['store']);
+        $this->middleware(['auth'])->only(['store', 'update', 'delete']);
         $this->authorizeResource(Restaurant::class, 'restaurant');
     }
 
