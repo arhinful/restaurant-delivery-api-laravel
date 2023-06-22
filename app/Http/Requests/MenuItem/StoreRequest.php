@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\MenuItem;
 
+use App\Rules\Money;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreRequest extends FormRequest
@@ -24,7 +25,7 @@ class StoreRequest extends FormRequest
         return [
             'restaurant_id' => ['required', 'string', 'exists:restaurants,id'],
             'name' => ['required', 'string', 'max:100'],
-            'price' => ['required', 'string', 'max:199'],
+            'price' => ['required', new Money()],
             'description' => ['required', 'string', 'max:299'],
         ];
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\MenuItem;
 
+use App\Rules\Money;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateRequest extends FormRequest
@@ -23,7 +24,7 @@ class UpdateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:100'],
-            'price' => ['required', 'string', 'max:199'],
+            'price' => ['required', 'string', new Money()],
             'description' => ['required', 'string', 'max:299'],
         ];
     }
