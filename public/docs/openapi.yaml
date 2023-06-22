@@ -62,19 +62,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kuellodhxqyprssrhdcsuorqk
+                  example: hfxrxdsheq
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: ygislason@example.com
+                  example: obashirian@example.net
                 password:
                   type: string
                   description: ''
-                  example: non
+                  example: molestias
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: dolor
+                  example: cupiditate
               required:
                 - name
                 - email
@@ -131,11 +131,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: emard.hollie@example.com
+                  example: upouros@example.com
                 password:
                   type: string
                   description: ''
-                  example: 'p+d0J[=_-c>zOFc'
+                  example: ~qSQSn%WhWOk7;$
               required:
                 - email
                 - password
@@ -159,7 +159,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: avis51@example.org
+                  example: jessica.stiedemann@example.com
               required:
                 - email
       security: []
@@ -182,11 +182,11 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: vel
+                  example: aut
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: kutch.samanta@example.org
+                  example: mckenzie.chaya@example.org
                 password:
                   type: string
                   description: ''
@@ -223,7 +223,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the verify email.'
-        example: tenetur
+        example: sit
         required: true
         schema:
           type: string
@@ -231,7 +231,7 @@ paths:
         in: path
         name: hash
         description: ''
-        example: assumenda
+        example: sed
         required: true
         schema:
           type: string
@@ -268,27 +268,157 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'The route api/v1 could not be found.'
+                  message: 'API resource not found'
                   exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
-                  file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\AbstractRouteCollection.php'
-                  line: 44
+                  file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\Application.php'
+                  line: 1221
                   trace:
                     -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\RouteCollection.php'
-                      line: 162
-                      function: handleMatchedRoute
-                      class: Illuminate\Routing\AbstractRouteCollection
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php'
+                      line: 45
+                      function: abort
+                      class: Illuminate\Foundation\Application
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\routes\api.php'
+                      line: 25
+                      function: abort
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\CallableDispatcher.php'
+                      line: 40
+                      function: '{closure}'
+                      class: Illuminate\Routing\RouteFileRegistrar
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
+                      line: 237
+                      function: dispatch
+                      class: Illuminate\Routing\CallableDispatcher
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
+                      line: 208
+                      function: runCallable
+                      class: Illuminate\Routing\Route
                       type: '->'
                     -
                       file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 754
-                      function: match
-                      class: Illuminate\Routing\RouteCollection
+                      line: 799
+                      function: run
+                      class: Illuminate\Routing\Route
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 141
+                      function: 'Illuminate\Routing\{closure}'
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php'
+                      line: 50
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\SubstituteBindings
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 159
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 90
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 159
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 125
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 87
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
+                      line: 25
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 141
+                      function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
+                      line: 24
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 798
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 777
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
                       type: '->'
                     -
                       file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
                       line: 741
-                      function: findRoute
+                      function: runRoute
                       class: Illuminate\Routing\Router
                       type: '->'
                     -
@@ -564,35 +694,165 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'The route api/v1 could not be found.'
+                    example: 'API resource not found'
                   exception:
                     type: string
                     example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file:
                     type: string
-                    example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\AbstractRouteCollection.php'
+                    example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\Application.php'
                   line:
                     type: integer
-                    example: 44
+                    example: 1221
                   trace:
                     type: array
                     example:
                       -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\RouteCollection.php'
-                        line: 162
-                        function: handleMatchedRoute
-                        class: Illuminate\Routing\AbstractRouteCollection
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php'
+                        line: 45
+                        function: abort
+                        class: Illuminate\Foundation\Application
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\routes\api.php'
+                        line: 25
+                        function: abort
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\CallableDispatcher.php'
+                        line: 40
+                        function: '{closure}'
+                        class: Illuminate\Routing\RouteFileRegistrar
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
+                        line: 237
+                        function: dispatch
+                        class: Illuminate\Routing\CallableDispatcher
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
+                        line: 208
+                        function: runCallable
+                        class: Illuminate\Routing\Route
                         type: '->'
                       -
                         file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 754
-                        function: match
-                        class: Illuminate\Routing\RouteCollection
+                        line: 799
+                        function: run
+                        class: Illuminate\Routing\Route
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 141
+                        function: 'Illuminate\Routing\{closure}'
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php'
+                        line: 50
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\SubstituteBindings
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 159
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 90
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 159
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 125
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 87
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
+                        line: 25
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 141
+                        function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
+                        line: 24
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 798
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 777
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
                         type: '->'
                       -
                         file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
                         line: 741
-                        function: findRoute
+                        function: runRoute
                         class: Illuminate\Routing\Router
                         type: '->'
                       -
@@ -870,16 +1130,16 @@ paths:
                       properties:
                         file:
                           type: string
-                          example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\RouteCollection.php'
+                          example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php'
                         line:
                           type: integer
-                          example: 162
+                          example: 45
                         function:
                           type: string
-                          example: handleMatchedRoute
+                          example: abort
                         class:
                           type: string
-                          example: Illuminate\Routing\AbstractRouteCollection
+                          example: Illuminate\Foundation\Application
                         type:
                           type: string
                           example: '->'
@@ -891,7 +1151,7 @@ paths:
         in: path
         name: fallbackPlaceholder
         description: ''
-        example: ''
+        example: 'Z[kv'
         required: true
         schema:
           type: string
@@ -1163,11 +1423,11 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: jmhh
+                  example: xip
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: qlkbkbzpwjnypixs
+                  example: jcdy
               required:
                 - name
                 - location
@@ -1233,6 +1493,158 @@ paths:
       tags:
         - Restaurants
       security: []
+    put:
+      summary: ''
+      operationId: putApiV1RestaurantsId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: Bearer
+          schema:
+            type: string
+      responses:
+        202:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    uuid: ce8327cf-da0f-4b52-8265-2219aa6f7e91
+                    name: srrqihaj
+                    location: qfcjhccfzubqgfjpkclhqdszi
+                    code: '962934466592018'
+                    is_active: 1
+                    added_by_id: 1
+                    deleted_at: null
+                    created_at: '2023-06-22T11:57:28.000000Z'
+                    updated_at: '2023-06-22T11:57:28.000000Z'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      uuid:
+                        type: string
+                        example: ce8327cf-da0f-4b52-8265-2219aa6f7e91
+                      name:
+                        type: string
+                        example: srrqihaj
+                      location:
+                        type: string
+                        example: qfcjhccfzubqgfjpkclhqdszi
+                      code:
+                        type: string
+                        example: '962934466592018'
+                      is_active:
+                        type: integer
+                        example: 1
+                      added_by_id:
+                        type: integer
+                        example: 1
+                      deleted_at:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: '2023-06-22T11:57:28.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-06-22T11:57:28.000000Z'
+      tags:
+        - Restaurants
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: nhrwmwaftolgrczbiqvhbxu
+                location:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: kbmbhnuavmo
+              required:
+                - name
+                - location
+    delete:
+      summary: ''
+      operationId: deleteApiV1RestaurantsId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: Bearer
+          schema:
+            type: string
+      responses:
+        202:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    uuid: ce8327cf-da0f-4b52-8265-2219aa6f7e91
+                    name: srrqihaj
+                    location: qfcjhccfzubqgfjpkclhqdszi
+                    code: '962934466592018'
+                    is_active: 1
+                    added_by_id: 1
+                    deleted_at: null
+                    created_at: '2023-06-22T11:57:28.000000Z'
+                    updated_at: '2023-06-22T11:57:28.000000Z'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      uuid:
+                        type: string
+                        example: ce8327cf-da0f-4b52-8265-2219aa6f7e91
+                      name:
+                        type: string
+                        example: srrqihaj
+                      location:
+                        type: string
+                        example: qfcjhccfzubqgfjpkclhqdszi
+                      code:
+                        type: string
+                        example: '962934466592018'
+                      is_active:
+                        type: integer
+                        example: 1
+                      added_by_id:
+                        type: integer
+                        example: 1
+                      deleted_at:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: '2023-06-22T11:57:28.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-06-22T11:57:28.000000Z'
+      tags:
+        - Restaurants
     parameters:
       -
         in: path

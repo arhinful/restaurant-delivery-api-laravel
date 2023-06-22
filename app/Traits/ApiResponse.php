@@ -60,7 +60,7 @@ trait ApiResponse
     public function successDeleted(): JsonResponse{
         return $this->success(
             "Item updated successfully",
-            Response::HTTP_NO_CONTENT
+            status: Response::HTTP_NO_CONTENT
         );
     }
 

@@ -108,7 +108,7 @@ class RestaurantController extends Controller
         try {
             $restaurant->delete();
             DB::commit();
-            return $this->successUpdated($restaurant);
+            return $this->successDeleted();
         } catch (\Exception $exception){
             return $this->errorOccurred($exception->getMessage());
         }
