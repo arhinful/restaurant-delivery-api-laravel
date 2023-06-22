@@ -46,7 +46,7 @@ class MenuController extends Controller
         return $this->successReadCollection($menus);
     }
 
-    public function store(StoreRequest $request){
+    public function store(StoreRequest $request): JsonResponse{
         DB::beginTransaction();
         try {
             $menu = MenuService::store($request->validated());
