@@ -54,6 +54,7 @@ class RestaurantController extends Controller
      * @header Authorization Bearer
      * @apiResourceModel App\Models\Restaurant
      */
+    #[ResponseFromApiResource(RestaurantResource::class, Restaurant::class, 201)]
     public function store(StoreRequest $request): JsonResponse{
         DB::beginTransaction();
         try {

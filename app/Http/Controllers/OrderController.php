@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Order\StoreRequest;
 use App\Http\Resources\OrderResource;
+use App\Http\Resources\RestaurantResource;
 use App\Models\Order;
+use App\Models\Restaurant;
 use App\Services\OrderService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
+use Knuckles\Scribe\Attributes\ResponseFromApiResource;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
@@ -49,6 +52,13 @@ class OrderController extends Controller
         return $this->successCreated($orders);
     }
 
+    /**
+     * Create New Order.
+     * @authenticated
+     * @header Authorization Bearer
+     * @apiResourceModel App\Models\Order
+     */
+    #[ResponseFromApiResource(OrderResource::class, Order::class, 201)]
     public function store(StoreRequest $request): JsonResponse{
         DB::beginTransaction();
         try {
