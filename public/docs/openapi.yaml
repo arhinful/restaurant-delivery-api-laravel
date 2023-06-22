@@ -27,6 +27,7 @@ paths:
                     name: 'Arhinful Emmanuel'
                     email: kofibusy@gmail.com
                     created_at: null
+                    roles: []
                 properties:
                   data:
                     type: object
@@ -46,6 +47,9 @@ paths:
                       created_at:
                         type: string
                         example: null
+                      roles:
+                        type: array
+                        example: []
       tags:
         - Authentication
       requestBody:
@@ -58,19 +62,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: bdfwjzsffvkxjovjwejws
+                  example: vusnjdngnsprsrnhsgrasfxee
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: connie37@example.org
+                  example: araceli.wintheiser@example.com
                 password:
                   type: string
                   description: ''
-                  example: sequi
+                  example: rerum
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: ut
+                  example: fugit
               required:
                 - name
                 - email
@@ -127,24 +131,15 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: remmerich@example.net
+                  example: cbarrows@example.com
                 password:
                   type: string
                   description: ''
-                  example: 9nzlZYk3%
+                  example: 'H($Tk:=KO:9]k_&6'
               required:
                 - email
                 - password
       security: []
-  /api/v1/logout:
-    post:
-      summary: ''
-      operationId: postApiV1Logout
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Authentication
   /api/v1/forgot-password:
     post:
       summary: 'Handle an incoming password reset link request.'
@@ -153,7 +148,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - Authentication
       requestBody:
         required: true
         content:
@@ -164,7 +159,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: kuvalis.antwan@example.org
+                  example: hmosciski@example.com
               required:
                 - email
       security: []
@@ -176,7 +171,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - Authentication
       requestBody:
         required: true
         content:
@@ -187,15 +182,15 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: quasi
+                  example: eum
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: hodkiewicz.lynn@example.org
+                  example: pgutkowski@example.net
                 password:
                   type: string
                   description: ''
-                  example: saepe
+                  example: rem
               required:
                 - token
                 - email
@@ -221,14 +216,14 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - Authentication
       security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the verify email.'
-        example: nisi
+        example: reprehenderit
         required: true
         schema:
           type: string
@@ -236,7 +231,7 @@ paths:
         in: path
         name: hash
         description: ''
-        example: qui
+        example: dolorem
         required: true
         schema:
           type: string
@@ -248,8 +243,17 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - Authentication
       security: []
+  /api/v1/logout:
+    post:
+      summary: ''
+      operationId: postApiV1Logout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
   '/api/v1/{fallbackPlaceholder}':
     get:
       summary: ''
@@ -1147,14 +1151,39 @@ paths:
         in: path
         name: fallbackPlaceholder
         description: ''
-        example: F)-A
+        example: V_
         required: true
         schema:
           type: string
+  /api/v1/restaurants:
+    get:
+      summary: 'Fetch Restaurants.'
+      operationId: fetchRestaurants
+      description: "Filter: /restaurants?filter[name]=kofibusy lounge\nSort: /restaurants?sort=name(Ascending) or restaurants?sort=-name (Descending)"
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                properties:
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Restaurants
+      security: []
 tags:
   -
     name: Authentication
     description: ''
   -
     name: Endpoints
+    description: ''
+  -
+    name: Restaurants
     description: ''

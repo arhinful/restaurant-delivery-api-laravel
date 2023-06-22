@@ -28,40 +28,40 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: bdfwjzsffvkxjovjwejws
+        example: vusnjdngnsprsrnhsgrasfxee
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: connie37@example.org
+        example: araceli.wintheiser@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: sequi
+        example: rerum
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'The value and <code>password</code> must match.'
         required: true
-        example: ut
+        example: fugit
         type: string
         custom: []
     cleanBodyParameters:
-      name: bdfwjzsffvkxjovjwejws
-      email: connie37@example.org
-      password: sequi
-      password_confirmation: ut
+      name: vusnjdngnsprsrnhsgrasfxee
+      email: araceli.wintheiser@example.com
+      password: rerum
+      password_confirmation: fugit
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":{"id":null,"uuid":null,"name":"Arhinful Emmanuel","email":"kofibusy@gmail.com","created_at":null}}'
+        content: '{"data":{"id":null,"uuid":null,"name":"Arhinful Emmanuel","email":"kofibusy@gmail.com","created_at":null,"roles":[]}}'
         headers: []
         description: ''
         custom: []
@@ -96,19 +96,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: remmerich@example.net
+        example: cbarrows@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: 9nzlZYk3%
+        example: 'H($Tk:=KO:9]k_&6'
         type: string
         custom: []
     cleanBodyParameters:
-      email: remmerich@example.net
-      password: 9nzlZYk3%
+      email: cbarrows@example.com
+      password: 'H($Tk:=KO:9]k_&6'
     fileParameters: []
     responses:
       -
@@ -140,6 +140,184 @@ endpoints:
         headers: []
         description: ''
         custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/forgot-password
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming password reset link request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: hmosciski@example.com
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: hmosciski@example.com
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/reset-password
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming new password request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: eum
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: pgutkowski@example.net
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: rem
+        type: string
+        custom: []
+    cleanBodyParameters:
+      token: eum
+      email: pgutkowski@example.net
+      password: rem
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/verify-email/{id}/{hash}'
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Mark the authenticated user's email address as verified."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the verify email.'
+        required: true
+        example: reprehenderit
+        type: string
+        custom: []
+      hash:
+        name: hash
+        description: ''
+        required: true
+        example: dolorem
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: reprehenderit
+      hash: dolorem
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/email/verification-notification
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Send a new email verification notification.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
     responseFields: []
     auth: []
     controller: null
