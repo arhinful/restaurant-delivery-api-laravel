@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\OrderResource;
 use App\Models\Order;
+use Illuminate\Http\JsonResponse;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
@@ -26,7 +27,7 @@ class OrderController extends Controller
      * @apiResourceCollection App\Http\Resources\RestaurantResource
      * @apiResourceModel App\Models\Restaurant paginate=15
      */
-    public function index(){
+    public function index(): JsonResponse{
         $orders = QueryBuilder::for(Order::class)
             ->allowedFilters([
                 'location',
