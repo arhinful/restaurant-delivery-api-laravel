@@ -32,7 +32,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[]}'
+        content: '{"data":[{"id":1,"uuid":"ce8327cf-da0f-4b52-8265-2219aa6f7e91","name":"srrqihaj","location":"qfcjhccfzubqgfjpkclhqdszi","code":"962934466592018","is_active":1,"added_by_id":1,"deleted_at":null,"created_at":"2023-06-22T11:57:28.000000Z","updated_at":"2023-06-22T11:57:28.000000Z"},{"id":1,"uuid":"ce8327cf-da0f-4b52-8265-2219aa6f7e91","name":"srrqihaj","location":"qfcjhccfzubqgfjpkclhqdszi","code":"962934466592018","is_active":1,"added_by_id":1,"deleted_at":null,"created_at":"2023-06-22T11:57:28.000000Z","updated_at":"2023-06-22T11:57:28.000000Z"}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
         headers: []
         description: ''
         custom: []
@@ -58,6 +58,7 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      Authorization: Bearer
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -67,24 +68,68 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: kpapzyxczjli
+        example: jmhh
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: qdykjtjceqliasiqnuty
+        example: qlkbkbzpwjnypixs
         type: string
         custom: []
     cleanBodyParameters:
-      name: kpapzyxczjli
-      location: qdykjtjceqliasiqnuty
+      name: jmhh
+      location: qlkbkbzpwjnypixs
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: '{"data":{"id":1,"uuid":"ce8327cf-da0f-4b52-8265-2219aa6f7e91","name":"srrqihaj","location":"qfcjhccfzubqgfjpkclhqdszi","code":"962934466592018","is_active":1,"added_by_id":1,"deleted_at":null,"created_at":"2023-06-22T11:57:28.000000Z","updated_at":"2023-06-22T11:57:28.000000Z"}}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/restaurants/{id}'
+    metadata:
+      groupName: Restaurants
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Fetch Single Restaurants.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the restaurant.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[]}'
+        content: '{"data":{"id":1,"uuid":"ce8327cf-da0f-4b52-8265-2219aa6f7e91","name":"srrqihaj","location":"qfcjhccfzubqgfjpkclhqdszi","code":"962934466592018","is_active":1,"added_by_id":1,"deleted_at":null,"created_at":"2023-06-22T11:57:28.000000Z","updated_at":"2023-06-22T11:57:28.000000Z"}}'
         headers: []
         description: ''
         custom: []

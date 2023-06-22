@@ -8,6 +8,7 @@ use App\Models\Restaurant;
 use App\Services\RestaurantService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
+use Knuckles\Scribe\Attributes\ResponseFromApiResource;
 use Spatie\QueryBuilder\QueryBuilder;
 
 /**
@@ -25,8 +26,8 @@ class RestaurantController extends Controller
      * Filter: /restaurants?filter[name]=kofibusy lounge [can be filtered by name and location].
      * Sort: /restaurants?sort=name(Ascending) or restaurants?sort=-name (Descending)
      * [can be ordered by name and location].
-     * @apiResource App\Http\Resources\RestaurantResource
-     * @apiResourceModel App\Models\Restaurant
+     * @apiResourceCollection App\Http\Resources\RestaurantResource
+     * @apiResourceModel App\Models\Restaurant paginate=15
      */
     public function index(): JsonResponse{
 
@@ -50,9 +51,9 @@ class RestaurantController extends Controller
      * @authenticated
      * @header Authorization Bearer
      * Create New Restaurants.
-     * @apiResource App\Http\Resources\RestaurantResource
      * @apiResourceModel App\Models\Restaurant
      */
+    #[ResponseFromApiResource(RestaurantResource::class, Restaurant::class, 201)]
     public function store(StoreRequest $request): JsonResponse{
         DB::beginTransaction();
         try {
@@ -63,5 +64,15 @@ class RestaurantController extends Controller
         } catch (\Exception $exception){
             return $this->errorOccurred($exception->getMessage());
         }
+    }
+
+    /**
+     * Fetch Single Restaurants.
+     * @apiResource App\Http\Resources\RestaurantResource
+     * @apiResourceModel App\Models\Restaurant
+     */
+    public function show(Restaurant $restaurant){
+        $restaurant = RestaurantResource::make($restaurant);
+        return $this->successRead($restaurant);
     }
 }
