@@ -49,10 +49,10 @@ class MenuItemController extends Controller
     }
 
     /**
-     * @authenticated
-     * @header Authorization Bearer
      * Create New Menu Item.
-     * @apiResourceModel App\Models\MenuItem
+     * @authenticated
+     * @header Authorization Bearer.
+     * @apiResourceModel App\Models\MenuItem.
      */
     #[ResponseFromApiResource(MenuItemResource::class, MenuItem::class, 201)]
     public function store(StoreRequest $request): JsonResponse{
@@ -79,9 +79,9 @@ class MenuItemController extends Controller
     }
 
     /**
+     * Update Menu Item.
      * @authenticated
      * @header Authorization Bearer
-     * Update Menu Item.
      * @apiResourceModel App\Models\MenuItem
      */
     #[ResponseFromApiResource(MenuItemResource::class, MenuItem::class, 202)]
@@ -99,9 +99,9 @@ class MenuItemController extends Controller
     }
 
     /**
+     * Delete Menu Item.
      * @authenticated
      * @header Authorization Bearer
-     * Delete Menu Item.
      * @apiResourceModel App\Models\MenuItem
      */
     public function destroy(MenuItem $item): JsonResponse{

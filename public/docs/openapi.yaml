@@ -22,22 +22,22 @@ paths:
                 type: object
                 example:
                   data:
-                    id: null
-                    uuid: null
+                    id: 6
+                    uuid: b73f91fc-0a2e-4b31-84ad-8da42581db9a
                     name: 'Arhinful Emmanuel'
                     email: kofibusy@gmail.com
-                    created_at: null
+                    created_at: '2023-06-22T16:23:35.000000Z'
                     roles: []
                 properties:
                   data:
                     type: object
                     properties:
                       id:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 6
                       uuid:
                         type: string
-                        example: null
+                        example: b73f91fc-0a2e-4b31-84ad-8da42581db9a
                       name:
                         type: string
                         example: 'Arhinful Emmanuel'
@@ -46,7 +46,7 @@ paths:
                         example: kofibusy@gmail.com
                       created_at:
                         type: string
-                        example: null
+                        example: '2023-06-22T16:23:35.000000Z'
                       roles:
                         type: array
                         example: []
@@ -62,19 +62,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ivdesqwxazrqkpirpb
+                  example: bfrhnpiomylnyhhvonzndil
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: nthompson@example.net
+                  example: kristoffer56@example.net
                 password:
                   type: string
                   description: ''
-                  example: odio
+                  example: nulla
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: cupiditate
+                  example: vero
               required:
                 - name
                 - email
@@ -131,11 +131,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: urunte@example.net
+                  example: abernathy.katelyn@example.net
                 password:
                   type: string
                   description: ''
-                  example: 'oJoSnZG/}8)<@J"h%"'
+                  example: "&4cX*:^>)`'XgGo!O*?"
               required:
                 - email
                 - password
@@ -159,7 +159,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: allen.welch@example.org
+                  example: icarroll@example.net
               required:
                 - email
       security: []
@@ -182,15 +182,15 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: ut
+                  example: voluptatem
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: matt45@example.net
+                  example: colin.bayer@example.net
                 password:
                   type: string
                   description: ''
-                  example: quisquam
+                  example: dolor
               required:
                 - token
                 - email
@@ -223,7 +223,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the verify email.'
-        example: qui
+        example: sed
         required: true
         schema:
           type: string
@@ -231,7 +231,7 @@ paths:
         in: path
         name: hash
         description: ''
-        example: consequatur
+        example: quia
         required: true
         schema:
           type: string
@@ -1151,7 +1151,7 @@ paths:
         in: path
         name: fallbackPlaceholder
         description: ''
-        example: I
+        example: V
         required: true
         schema:
           type: string
@@ -1276,15 +1276,15 @@ paths:
         - 'Menu Items'
       security: []
     post:
-      summary: ''
-      operationId: postApiV1MenuItems
+      summary: 'Create New Menu Item.'
+      operationId: createNewMenuItem
       description: ''
       parameters:
         -
           in: header
           name: Authorization
           description: ''
-          example: Bearer
+          example: Bearer.
           schema:
             type: string
       responses:
@@ -1312,19 +1312,19 @@ paths:
                 restaurant_id:
                   type: string
                   description: ''
-                  example: numquam
+                  example: ut
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: rwkgo
+                  example: zjyhpjyu
                 price:
                   type: string
-                  description: 'Must not be greater than 199 characters.'
-                  example: tmobwscuswuevjpe
+                  description: ''
+                  example: dolor
                 description:
                   type: string
                   description: 'Must not be greater than 299 characters.'
-                  example: 'A occaecati blanditiis qui voluptatibus.'
+                  example: 'Eligendi aut illum et molestiae autem.'
               required:
                 - restaurant_id
                 - name
@@ -1353,8 +1353,8 @@ paths:
         - 'Menu Items'
       security: []
     put:
-      summary: ''
-      operationId: putApiV1MenuItemsId
+      summary: 'Update Menu Item.'
+      operationId: updateMenuItem
       description: ''
       parameters:
         -
@@ -1379,9 +1379,32 @@ paths:
                     example: []
       tags:
         - 'Menu Items'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: bdknyzhmbdwqmyfoxoyg
+                price:
+                  type: string
+                  description: ''
+                  example: eos
+                description:
+                  type: string
+                  description: 'Must not be greater than 299 characters.'
+                  example: 'Veritatis eum quidem dolore voluptatum voluptate numquam consequuntur accusamus.'
+              required:
+                - name
+                - price
+                - description
     delete:
-      summary: ''
-      operationId: deleteApiV1MenuItemsId
+      summary: 'Delete Menu Item.'
+      operationId: deleteMenuItem
       description: ''
       parameters:
         -
@@ -1399,7 +1422,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the menu item.'
-        example: 9
+        example: 2
         required: true
         schema:
           type: integer
@@ -1418,28 +1441,8 @@ paths:
                 type: object
                 example:
                   data:
-                    -
-                      id: 2
-                      uuid: afa96bf1-6c96-44d9-9232-3979a645de7d
-                      name: xip
-                      location: jcdy
-                      code: '408764477147633'
-                      is_active: 1
-                      added_by_id: 1
-                      deleted_at: null
-                      created_at: '2023-06-22T13:48:35.000000Z'
-                      updated_at: '2023-06-22T13:48:35.000000Z'
-                    -
-                      id: 2
-                      uuid: afa96bf1-6c96-44d9-9232-3979a645de7d
-                      name: xip
-                      location: jcdy
-                      code: '408764477147633'
-                      is_active: 1
-                      added_by_id: 1
-                      deleted_at: null
-                      created_at: '2023-06-22T13:48:35.000000Z'
-                      updated_at: '2023-06-22T13:48:35.000000Z'
+                    - []
+                    - []
                   links:
                     first: '/?page=1'
                     last: '/?page=1'
@@ -1470,61 +1473,10 @@ paths:
                   data:
                     type: array
                     example:
-                      -
-                        id: 2
-                        uuid: afa96bf1-6c96-44d9-9232-3979a645de7d
-                        name: xip
-                        location: jcdy
-                        code: '408764477147633'
-                        is_active: 1
-                        added_by_id: 1
-                        deleted_at: null
-                        created_at: '2023-06-22T13:48:35.000000Z'
-                        updated_at: '2023-06-22T13:48:35.000000Z'
-                      -
-                        id: 2
-                        uuid: afa96bf1-6c96-44d9-9232-3979a645de7d
-                        name: xip
-                        location: jcdy
-                        code: '408764477147633'
-                        is_active: 1
-                        added_by_id: 1
-                        deleted_at: null
-                        created_at: '2023-06-22T13:48:35.000000Z'
-                        updated_at: '2023-06-22T13:48:35.000000Z'
+                      - []
+                      - []
                     items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 2
-                        uuid:
-                          type: string
-                          example: afa96bf1-6c96-44d9-9232-3979a645de7d
-                        name:
-                          type: string
-                          example: xip
-                        location:
-                          type: string
-                          example: jcdy
-                        code:
-                          type: string
-                          example: '408764477147633'
-                        is_active:
-                          type: integer
-                          example: 1
-                        added_by_id:
-                          type: integer
-                          example: 1
-                        deleted_at:
-                          type: string
-                          example: null
-                        created_at:
-                          type: string
-                          example: '2023-06-22T13:48:35.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2023-06-22T13:48:35.000000Z'
+                      type: array
                   links:
                     type: object
                     properties:
@@ -1595,8 +1547,8 @@ paths:
         - Restaurants
       security: []
     post:
-      summary: ''
-      operationId: postApiV1Restaurants
+      summary: 'Create New Restaurant.'
+      operationId: createNewRestaurant
       description: ''
       parameters:
         -
@@ -1606,59 +1558,7 @@ paths:
           example: Bearer
           schema:
             type: string
-      responses:
-        201:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  data:
-                    id: 2
-                    uuid: afa96bf1-6c96-44d9-9232-3979a645de7d
-                    name: xip
-                    location: jcdy
-                    code: '408764477147633'
-                    is_active: 1
-                    added_by_id: 1
-                    deleted_at: null
-                    created_at: '2023-06-22T13:48:35.000000Z'
-                    updated_at: '2023-06-22T13:48:35.000000Z'
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                        example: 2
-                      uuid:
-                        type: string
-                        example: afa96bf1-6c96-44d9-9232-3979a645de7d
-                      name:
-                        type: string
-                        example: xip
-                      location:
-                        type: string
-                        example: jcdy
-                      code:
-                        type: string
-                        example: '408764477147633'
-                      is_active:
-                        type: integer
-                        example: 1
-                      added_by_id:
-                        type: integer
-                        example: 1
-                      deleted_at:
-                        type: string
-                        example: null
-                      created_at:
-                        type: string
-                        example: '2023-06-22T13:48:35.000000Z'
-                      updated_at:
-                        type: string
-                        example: '2023-06-22T13:48:35.000000Z'
+      responses: {  }
       tags:
         - Restaurants
       requestBody:
@@ -1671,11 +1571,11 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: qcsle
+                  example: yhzcdjp
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: mewlua
+                  example: tc
               required:
                 - name
                 - location
@@ -1693,57 +1593,17 @@ paths:
               schema:
                 type: object
                 example:
-                  data:
-                    id: 2
-                    uuid: afa96bf1-6c96-44d9-9232-3979a645de7d
-                    name: xip
-                    location: jcdy
-                    code: '408764477147633'
-                    is_active: 1
-                    added_by_id: 1
-                    deleted_at: null
-                    created_at: '2023-06-22T13:48:35.000000Z'
-                    updated_at: '2023-06-22T13:48:35.000000Z'
+                  data: []
                 properties:
                   data:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                        example: 2
-                      uuid:
-                        type: string
-                        example: afa96bf1-6c96-44d9-9232-3979a645de7d
-                      name:
-                        type: string
-                        example: xip
-                      location:
-                        type: string
-                        example: jcdy
-                      code:
-                        type: string
-                        example: '408764477147633'
-                      is_active:
-                        type: integer
-                        example: 1
-                      added_by_id:
-                        type: integer
-                        example: 1
-                      deleted_at:
-                        type: string
-                        example: null
-                      created_at:
-                        type: string
-                        example: '2023-06-22T13:48:35.000000Z'
-                      updated_at:
-                        type: string
-                        example: '2023-06-22T13:48:35.000000Z'
+                    type: array
+                    example: []
       tags:
         - Restaurants
       security: []
     put:
-      summary: ''
-      operationId: putApiV1RestaurantsId
+      summary: 'Update Restaurant.'
+      operationId: updateRestaurant
       description: ''
       parameters:
         -
@@ -1761,51 +1621,11 @@ paths:
               schema:
                 type: object
                 example:
-                  data:
-                    id: 2
-                    uuid: afa96bf1-6c96-44d9-9232-3979a645de7d
-                    name: xip
-                    location: jcdy
-                    code: '408764477147633'
-                    is_active: 1
-                    added_by_id: 1
-                    deleted_at: null
-                    created_at: '2023-06-22T13:48:35.000000Z'
-                    updated_at: '2023-06-22T13:48:35.000000Z'
+                  data: []
                 properties:
                   data:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                        example: 2
-                      uuid:
-                        type: string
-                        example: afa96bf1-6c96-44d9-9232-3979a645de7d
-                      name:
-                        type: string
-                        example: xip
-                      location:
-                        type: string
-                        example: jcdy
-                      code:
-                        type: string
-                        example: '408764477147633'
-                      is_active:
-                        type: integer
-                        example: 1
-                      added_by_id:
-                        type: integer
-                        example: 1
-                      deleted_at:
-                        type: string
-                        example: null
-                      created_at:
-                        type: string
-                        example: '2023-06-22T13:48:35.000000Z'
-                      updated_at:
-                        type: string
-                        example: '2023-06-22T13:48:35.000000Z'
+                    type: array
+                    example: []
       tags:
         - Restaurants
       requestBody:
@@ -1818,17 +1638,17 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: cysbjbeiqppenfdx
+                  example: qyqsuquvp
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: hnverxukcrbca
+                  example: qz
               required:
                 - name
                 - location
     delete:
-      summary: ''
-      operationId: deleteApiV1RestaurantsId
+      summary: 'Delete Restaurant.'
+      operationId: deleteRestaurant
       description: ''
       parameters:
         -
@@ -1846,51 +1666,11 @@ paths:
               schema:
                 type: object
                 example:
-                  data:
-                    id: 2
-                    uuid: afa96bf1-6c96-44d9-9232-3979a645de7d
-                    name: xip
-                    location: jcdy
-                    code: '408764477147633'
-                    is_active: 1
-                    added_by_id: 1
-                    deleted_at: null
-                    created_at: '2023-06-22T13:48:35.000000Z'
-                    updated_at: '2023-06-22T13:48:35.000000Z'
+                  data: []
                 properties:
                   data:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                        example: 2
-                      uuid:
-                        type: string
-                        example: afa96bf1-6c96-44d9-9232-3979a645de7d
-                      name:
-                        type: string
-                        example: xip
-                      location:
-                        type: string
-                        example: jcdy
-                      code:
-                        type: string
-                        example: '408764477147633'
-                      is_active:
-                        type: integer
-                        example: 1
-                      added_by_id:
-                        type: integer
-                        example: 1
-                      deleted_at:
-                        type: string
-                        example: null
-                      created_at:
-                        type: string
-                        example: '2023-06-22T13:48:35.000000Z'
-                      updated_at:
-                        type: string
-                        example: '2023-06-22T13:48:35.000000Z'
+                    type: array
+                    example: []
       tags:
         - Restaurants
     parameters:
@@ -1898,7 +1678,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the restaurant.'
-        example: 2
+        example: 1
         required: true
         schema:
           type: integer

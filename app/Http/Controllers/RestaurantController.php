@@ -49,12 +49,11 @@ class RestaurantController extends Controller
     }
 
     /**
+     * Create New Restaurant.
      * @authenticated
      * @header Authorization Bearer
-     * Create New Restaurant.
      * @apiResourceModel App\Models\Restaurant
      */
-    #[ResponseFromApiResource(RestaurantResource::class, Restaurant::class, 201)]
     public function store(StoreRequest $request): JsonResponse{
         DB::beginTransaction();
         try {
@@ -79,9 +78,9 @@ class RestaurantController extends Controller
     }
 
     /**
+     * Update Restaurant.
      * @authenticated
      * @header Authorization Bearer
-     * Update Restaurant.
      * @apiResourceModel App\Models\Restaurant
      */
     #[ResponseFromApiResource(RestaurantResource::class, Restaurant::class, 202)]
@@ -99,9 +98,9 @@ class RestaurantController extends Controller
     }
 
     /**
+     * Delete Restaurant.
      * @authenticated
      * @header Authorization Bearer
-     * Delete Restaurant.
      * @apiResourceModel App\Models\Restaurant
      */
     #[ResponseFromApiResource(RestaurantResource::class, Restaurant::class, 202)]

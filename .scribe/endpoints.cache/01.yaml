@@ -50,14 +50,14 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Create New Menu Item.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-      Authorization: Bearer
+      Authorization: Bearer.
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -67,35 +67,35 @@ endpoints:
         name: restaurant_id
         description: ''
         required: true
-        example: numquam
+        example: ut
         type: string
         custom: []
       name:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: rwkgo
+        example: zjyhpjyu
         type: string
         custom: []
       price:
         name: price
-        description: 'Must not be greater than 199 characters.'
+        description: ''
         required: true
-        example: tmobwscuswuevjpe
+        example: dolor
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'A occaecati blanditiis qui voluptatibus.'
+        example: 'Eligendi aut illum et molestiae autem.'
         type: string
         custom: []
     cleanBodyParameters:
-      restaurant_id: numquam
-      name: rwkgo
-      price: tmobwscuswuevjpe
-      description: 'A occaecati blanditiis qui voluptatibus.'
+      restaurant_id: ut
+      name: zjyhpjyu
+      price: dolor
+      description: 'Eligendi aut illum et molestiae autem.'
     fileParameters: []
     responses:
       -
@@ -131,11 +131,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 9
+        example: 2
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 9
+      id: 2
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -164,7 +164,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Update Menu Item.'
       description: ''
       authenticated: true
       custom: []
@@ -177,15 +177,39 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 14
+        example: 2
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 14
+      id: 2
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: bdknyzhmbdwqmyfoxoyg
+        type: string
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: eos
+        type: string
+        custom: []
+      description:
+        name: description
+        description: 'Must not be greater than 299 characters.'
+        required: true
+        example: 'Veritatis eum quidem dolore voluptatum voluptate numquam consequuntur accusamus.'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: bdknyzhmbdwqmyfoxoyg
+      price: eos
+      description: 'Veritatis eum quidem dolore voluptatum voluptate numquam consequuntur accusamus.'
     fileParameters: []
     responses:
       -
@@ -209,7 +233,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Delete Menu Item.'
       description: ''
       authenticated: true
       custom: []
@@ -222,11 +246,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 8
+        example: 17
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 8
+      id: 17
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -22,11 +22,11 @@ endpoints:
         name: fallbackPlaceholder
         description: ''
         required: true
-        example: I
+        example: V
         type: string
         custom: []
     cleanUrlParameters:
-      fallbackPlaceholder: I
+      fallbackPlaceholder: V
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
