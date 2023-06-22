@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Menu\StoreRequest;
 use App\Http\Resources\MenuResource;
 use App\Models\Menu;
+use App\Services\MenuService;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\DB;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
@@ -41,5 +44,16 @@ class MenuController extends Controller
             ->paginate();
         $menus = MenuResource::collection($menus)->response()->getData(true);
         return $this->successReadCollection($menus);
+    }
+
+    public function store(StoreRequest $request){
+        DB::beginTransaction();
+        try {
+            $menu = MenuService::store($request->validated());
+            $menu = MenuResource::make($menu);
+            return $this->successCreated($menu);
+        } catch (\Exception $exception){
+            return $this->errorOccurred($exception->getMessage());
+        }
     }
 }
