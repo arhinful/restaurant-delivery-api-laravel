@@ -11,8 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('menus', function (Blueprint $table) {
+        Schema::create('menu_items', function (Blueprint $table) {
             $table->id();
+            $table->uuid();
+            $table->string('code');
+
+            $table->foreignId('restaurant_id')->constrained('restaurants')->cascadeOnDelete();
+            $table->string('name');
+            $table->float('price');
+            $table->mediumText('description')->nullable();
+
+            $table->boolean('is_active')->default(true);
+            $table->foreignId('added_by_id')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
