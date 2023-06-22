@@ -8,5 +8,6 @@ class UserService
 {
     public static function store(array $data): User{
         $user = User::create($data);
+        return $user;
     }
 }

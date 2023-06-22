@@ -8,7 +8,6 @@ use App\Http\Resources\UserResource;
 use App\Services\UserService;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class RegisteredUserController extends Controller
@@ -19,7 +18,10 @@ class RegisteredUserController extends Controller
             $user = UserService::store($request->validated());
             event(new Registered($user));
             $user = UserResource::make($user);
-            return $this->successCreated(data: $user, message: "Your account has been created successfully");
+            return $this->successCreated(
+                data: $user, message:
+                "Your account has been created successfully"
+            );
         } catch (\Exception $exception){
             return $this->errorOccurred($exception->getMessage());
         }
