@@ -68,19 +68,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: vwiwackbsdt
+        example: hiqdavsmsoxjwnuyl
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: copkdwoiejsgxdvaqe
+        example: essnmxng
         type: string
         custom: []
     cleanBodyParameters:
-      name: vwiwackbsdt
-      location: copkdwoiejsgxdvaqe
+      name: hiqdavsmsoxjwnuyl
+      location: essnmxng
     fileParameters: []
     responses:
       -
@@ -174,19 +174,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: ai
+        example: qvx
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: xyjjoffnweetdnoi
+        example: dfijbqydiju
         type: string
         custom: []
     cleanBodyParameters:
-      name: ai
-      location: xyjjoffnweetdnoi
+      name: qvx
+      location: dfijbqydiju
     fileParameters: []
     responses:
       -

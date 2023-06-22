@@ -68,7 +68,7 @@ class RestaurantController extends Controller
     }
 
     /**
-     * Fetch Single Restaurants.
+     * Fetch Single Restaurant.
      * @apiResource App\Http\Resources\RestaurantResource
      * @apiResourceModel App\Models\Restaurant
      */

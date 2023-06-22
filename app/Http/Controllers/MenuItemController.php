@@ -21,7 +21,7 @@ class MenuItemController extends Controller
 {
     public function __construct(){
         $this->middleware(['auth'])->only(['store', 'update', 'delete']);
-        $this->authorizeResource(MenuItem::class, 'menu');
+        $this->authorizeResource(MenuItem::class, 'item');
     }
 
     /**
@@ -65,5 +65,15 @@ class MenuItemController extends Controller
         } catch (\Exception $exception){
             return $this->errorOccurred($exception->getMessage());
         }
+    }
+
+    /**
+     * Fetch Single Menu Item.
+     * @apiResource App\Http\Resources\MenuItemResource
+     * @apiResourceModel App\Models\MenuItem
+     */
+    public function view(MenuItem $item){
+        $item = MenuItemResource::make($item);
+        return $this->successRead($item);
     }
 }

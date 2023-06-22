@@ -64,4 +64,10 @@ You can switch the language used with the tabs at the top right (or from the nav
 }
 </aside>
 
+<aside>
+<aside class="warning">Status code: 403(FORBIDDEN, the request is not authorized) - Example Response</aside>
+<div>{</div>
+    <div style="margin-left: 30px">"message": This action is unauthorized.,</div>
+}
+</aside>
 

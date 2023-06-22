@@ -67,35 +67,35 @@ endpoints:
         name: restaurant_id
         description: ''
         required: true
-        example: aliquid
+        example: sint
         type: string
         custom: []
       name:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: wp
+        example: horvttvtogsoqfsdj
         type: string
         custom: []
       price:
         name: price
         description: 'Must not be greater than 199 characters.'
         required: true
-        example: prs
+        example: imvdkpjnfdtmdtdarqhv
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Quasi optio voluptatem tempore eveniet.'
+        example: 'Laudantium omnis voluptatem repellat dolorem iure.'
         type: string
         custom: []
     cleanBodyParameters:
-      restaurant_id: aliquid
-      name: wp
-      price: prs
-      description: 'Quasi optio voluptatem tempore eveniet.'
+      restaurant_id: sint
+      name: horvttvtogsoqfsdj
+      price: imvdkpjnfdtmdtdarqhv
+      description: 'Laudantium omnis voluptatem repellat dolorem iure.'
     fileParameters: []
     responses:
       -
