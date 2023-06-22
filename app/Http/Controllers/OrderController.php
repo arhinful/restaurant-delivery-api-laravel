@@ -71,4 +71,14 @@ class OrderController extends Controller
             return $this->errorOccurred($exception->getMessage());
         }
     }
+
+    /**
+     * Fetch Single Order.
+     * @apiResource App\Http\Resources\OrderResource
+     * @apiResourceModel App\Models\Order
+     */
+    public function show(Order $order): JsonResponse{
+        $order = OrderResource::make($order);
+        return $this->successRead($order);
+    }
 }
