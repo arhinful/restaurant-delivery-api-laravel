@@ -62,8 +62,10 @@ class MenuItemController extends Controller
         try {
             $menu_item = MenuItemService::store($request->validated());
             $menu_item = MenuItemResource::make($menu_item);
+            DB::commit();
             return $this->successCreated($menu_item);
         } catch (\Exception $exception){
+            DB::rollBack();
             return $this->errorOccurred($exception->getMessage());
         }
     }
@@ -90,6 +92,7 @@ class MenuItemController extends Controller
         try {
             $item = MenuItemService::update($item, $request->validated());
             $item = MenuItemResource::make($item);
+            DB::commit();
             return $this->successUpdated($item);
         } catch (\Exception $exception){
             DB::rollBack();

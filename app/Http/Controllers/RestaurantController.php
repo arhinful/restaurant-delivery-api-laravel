@@ -63,6 +63,7 @@ class RestaurantController extends Controller
             DB::commit();
             return $this->successCreated($restaurant);
         } catch (\Exception $exception){
+            DB::rollBack();
             return $this->errorOccurred($exception->getMessage());
         }
     }
@@ -92,6 +93,7 @@ class RestaurantController extends Controller
             DB::commit();
             return $this->successUpdated($restaurant);
         } catch (\Exception $exception){
+            DB::rollBack();
             return $this->errorOccurred($exception->getMessage());
         }
     }
@@ -110,6 +112,7 @@ class RestaurantController extends Controller
             DB::commit();
             return $this->successDeleted();
         } catch (\Exception $exception){
+            DB::rollBack();
             return $this->errorOccurred($exception->getMessage());
         }
     }
