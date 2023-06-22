@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Restaurant\StoreRequest;
+use App\Http\Requests\Restaurant\UpdateRequest;
 use App\Http\Resources\RestaurantResource;
 use App\Models\Restaurant;
 use App\Services\RestaurantService;
@@ -74,5 +75,24 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant){
         $restaurant = RestaurantResource::make($restaurant);
         return $this->successRead($restaurant);
+    }
+
+    /**
+     * @authenticated
+     * @header Authorization Bearer
+     * Update Restaurants.
+     * @apiResourceModel App\Models\Restaurant
+     */
+    #[ResponseFromApiResource(RestaurantResource::class, Restaurant::class, 202)]
+    public function update(Restaurant $restaurant, UpdateRequest $request): JsonResponse{
+        DB::beginTransaction();
+        try {
+            $restaurant = RestaurantService::update($restaurant, $request->validated());
+            $restaurant = RestaurantResource::make($restaurant);
+            DB::commit();
+            return $this->successUpdated($restaurant);
+        } catch (\Exception $exception){
+            return $this->errorOccurred($exception->getMessage());
+        }
     }
 }
