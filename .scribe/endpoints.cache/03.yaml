@@ -24,11 +24,11 @@ endpoints:
         name: fallbackPlaceholder
         description: ''
         required: true
-        example: 'wrK}prv'
+        example: I
         type: string
         custom: []
     cleanUrlParameters:
-      fallbackPlaceholder: 'wrK}prv'
+      fallbackPlaceholder: I
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

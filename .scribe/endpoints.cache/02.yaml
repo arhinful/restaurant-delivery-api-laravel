@@ -68,19 +68,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: wlufumfbpihpfabhjyengeg
+        example: qcsle
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: hahjlysstralfvibjqhyz
+        example: mewlua
         type: string
         custom: []
     cleanBodyParameters:
-      name: wlufumfbpihpfabhjyengeg
-      location: hahjlysstralfvibjqhyz
+      name: qcsle
+      location: mewlua
     fileParameters: []
     responses:
       -
@@ -174,19 +174,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: cidprlmdkips
+        example: cysbjbeiqppenfdx
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: olgkueavq
+        example: hnverxukcrbca
         type: string
         custom: []
     cleanBodyParameters:
-      name: cidprlmdkips
-      location: olgkueavq
+      name: cysbjbeiqppenfdx
+      location: hnverxukcrbca
     fileParameters: []
     responses:
       -

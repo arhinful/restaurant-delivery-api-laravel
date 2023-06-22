@@ -62,19 +62,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: sfuhvpaeyiudx
+                  example: ivdesqwxazrqkpirpb
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: ziemann.amari@example.net
+                  example: nthompson@example.net
                 password:
                   type: string
                   description: ''
-                  example: veritatis
+                  example: odio
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: optio
+                  example: cupiditate
               required:
                 - name
                 - email
@@ -131,11 +131,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: toy.webster@example.net
+                  example: urunte@example.net
                 password:
                   type: string
                   description: ''
-                  example: 'u2]x@^JU&535wF3.'
+                  example: 'oJoSnZG/}8)<@J"h%"'
               required:
                 - email
                 - password
@@ -159,7 +159,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: stanton.sven@example.net
+                  example: allen.welch@example.org
               required:
                 - email
       security: []
@@ -182,15 +182,15 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: beatae
+                  example: ut
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: nico.zboncak@example.org
+                  example: matt45@example.net
                 password:
                   type: string
                   description: ''
-                  example: expedita
+                  example: quisquam
               required:
                 - token
                 - email
@@ -223,7 +223,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the verify email.'
-        example: vel
+        example: qui
         required: true
         schema:
           type: string
@@ -231,7 +231,7 @@ paths:
         in: path
         name: hash
         description: ''
-        example: aut
+        example: consequatur
         required: true
         schema:
           type: string
@@ -1151,7 +1151,7 @@ paths:
         in: path
         name: fallbackPlaceholder
         description: ''
-        example: 'wrK}prv'
+        example: I
         required: true
         schema:
           type: string
@@ -1312,19 +1312,19 @@ paths:
                 restaurant_id:
                   type: string
                   description: ''
-                  example: magni
+                  example: numquam
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: uexfkwi
+                  example: rwkgo
                 price:
                   type: string
                   description: 'Must not be greater than 199 characters.'
-                  example: rlq
+                  example: tmobwscuswuevjpe
                 description:
                   type: string
                   description: 'Must not be greater than 299 characters.'
-                  example: 'Saepe aperiam qui in et quos placeat architecto.'
+                  example: 'A occaecati blanditiis qui voluptatibus.'
               required:
                 - restaurant_id
                 - name
@@ -1383,17 +1383,23 @@ paths:
       summary: ''
       operationId: deleteApiV1MenuItemsId
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: Bearer
+          schema:
+            type: string
       responses: {  }
       tags:
         - 'Menu Items'
-      security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the menu item.'
-        example: 4
+        example: 9
         required: true
         schema:
           type: integer
@@ -1665,11 +1671,11 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: wlufumfbpihpfabhjyengeg
+                  example: qcsle
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: hahjlysstralfvibjqhyz
+                  example: mewlua
               required:
                 - name
                 - location
@@ -1812,11 +1818,11 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: cidprlmdkips
+                  example: cysbjbeiqppenfdx
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: olgkueavq
+                  example: hnverxukcrbca
               required:
                 - name
                 - location

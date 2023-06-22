@@ -290,10 +290,6 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <aside>
 <aside class="success">Status code: 202(NO_CONTENT, deletion was successful) - Example Response</aside>
-<div>{</div>
-    <div style="margin-left: 30px">"success": true,</div>
-    <div style="margin-left: 30px">"message": "Item updated successfully"</div>
-}
 </aside>
 
 <aside>
@@ -305,7 +301,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 </aside>
 
 <aside>
-<aside class="warning">Status code: 202(NO_CONTENT, internal server error) - Example Response</aside>
+<aside class="warning">Status code: 500(SERVER_ERROR, internal server error) - Example Response</aside>
 <div>{</div>
     <div style="margin-left: 30px">"success": false,</div>
     <div style="margin-left: 30px">"message": "An error occurred, please try again later"</div>

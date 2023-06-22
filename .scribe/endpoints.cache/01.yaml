@@ -67,35 +67,35 @@ endpoints:
         name: restaurant_id
         description: ''
         required: true
-        example: magni
+        example: numquam
         type: string
         custom: []
       name:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: uexfkwi
+        example: rwkgo
         type: string
         custom: []
       price:
         name: price
         description: 'Must not be greater than 199 characters.'
         required: true
-        example: rlq
+        example: tmobwscuswuevjpe
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Saepe aperiam qui in et quos placeat architecto.'
+        example: 'A occaecati blanditiis qui voluptatibus.'
         type: string
         custom: []
     cleanBodyParameters:
-      restaurant_id: magni
-      name: uexfkwi
-      price: rlq
-      description: 'Saepe aperiam qui in et quos placeat architecto.'
+      restaurant_id: numquam
+      name: rwkgo
+      price: tmobwscuswuevjpe
+      description: 'A occaecati blanditiis qui voluptatibus.'
     fileParameters: []
     responses:
       -
@@ -131,11 +131,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 4
+        example: 9
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 4
+      id: 9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -177,11 +177,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 17
+        example: 14
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 17
+      id: 14
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -211,21 +211,22 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
+      Authorization: Bearer
     urlParameters:
       id:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 17
+        example: 8
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 17
+      id: 8
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
