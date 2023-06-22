@@ -62,19 +62,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vusnjdngnsprsrnhsgrasfxee
+                  example: tnlsjxxoanaszxtffexdz
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: araceli.wintheiser@example.com
+                  example: adah26@example.org
                 password:
                   type: string
                   description: ''
-                  example: rerum
+                  example: totam
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: fugit
+                  example: ut
               required:
                 - name
                 - email
@@ -131,11 +131,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: cbarrows@example.com
+                  example: sid.goldner@example.com
                 password:
                   type: string
                   description: ''
-                  example: 'H($Tk:=KO:9]k_&6'
+                  example: 'o5x:M9M)^V(L'
               required:
                 - email
                 - password
@@ -159,7 +159,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: hmosciski@example.com
+                  example: jermaine53@example.com
               required:
                 - email
       security: []
@@ -182,15 +182,15 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: eum
+                  example: et
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: pgutkowski@example.net
+                  example: gusikowski.alicia@example.net
                 password:
                   type: string
                   description: ''
-                  example: rem
+                  example: animi
               required:
                 - token
                 - email
@@ -223,7 +223,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the verify email.'
-        example: reprehenderit
+        example: ullam
         required: true
         schema:
           type: string
@@ -231,7 +231,7 @@ paths:
         in: path
         name: hash
         description: ''
-        example: dolorem
+        example: error
         required: true
         schema:
           type: string
@@ -1151,7 +1151,7 @@ paths:
         in: path
         name: fallbackPlaceholder
         description: ''
-        example: V_
+        example: px
         required: true
         schema:
           type: string
@@ -1159,7 +1159,7 @@ paths:
     get:
       summary: 'Fetch Restaurants.'
       operationId: fetchRestaurants
-      description: "Filter: /restaurants?filter[name]=kofibusy lounge\nSort: /restaurants?sort=name(Ascending) or restaurants?sort=-name (Descending)"
+      description: "Filter: /restaurants?filter[name]=kofibusy lounge [can be filtered by name and location].\nSort: /restaurants?sort=name(Ascending) or restaurants?sort=-name (Descending)\n[can be ordered by name and location]."
       parameters: []
       responses:
         200:

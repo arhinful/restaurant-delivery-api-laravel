@@ -12,8 +12,9 @@ endpoints:
       subgroupDescription: ''
       title: 'Fetch Restaurants.'
       description: |-
-        Filter: /restaurants?filter[name]=kofibusy lounge
+        Filter: /restaurants?filter[name]=kofibusy lounge [can be filtered by name and location].
         Sort: /restaurants?sort=name(Ascending) or restaurants?sort=-name (Descending)
+        [can be ordered by name and location].
       authenticated: false
       custom: []
     headers:

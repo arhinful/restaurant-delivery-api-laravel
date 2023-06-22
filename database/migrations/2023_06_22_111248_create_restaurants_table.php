@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
+            $table->uuid();
+
+            $table->string('name');
+            $table->string('location');
+
+            $table->string('code');
+            $table->boolean('is_active')->default(true);
+            $table->foreignId('added_by_id')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
