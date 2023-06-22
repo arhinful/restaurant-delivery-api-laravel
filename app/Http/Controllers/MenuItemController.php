@@ -99,4 +99,16 @@ class MenuItemController extends Controller
             return $this->errorOccurred($exception->getMessage());
         }
     }
+
+    public function destroy(MenuItem $item){
+        DB::beginTransaction();
+        try {
+            $item->delete();
+            DB::commit();
+            return $this->successDeleted();
+        } catch (\Exception $exception){
+            DB::rollBack();
+            return $this->errorOccurred($exception->getMessage());
+        }
+    }
 }
