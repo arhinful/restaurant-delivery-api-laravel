@@ -24,7 +24,7 @@ class RestaurantController extends Controller
 
     /**
      * Fetch Restaurants.
-     * Filter: /restaurants?filter[name]=kofibusy lounge [can be filtered by name and location].
+     * Filter: /restaurants?filter[name]=kofibusy lounge [can be filtered by name and or location].
      * Sort: /restaurants?sort=name(Ascending) or restaurants?sort=-name (Descending)
      * [can be ordered by name and location].
      * @apiResourceCollection App\Http\Resources\RestaurantResource
