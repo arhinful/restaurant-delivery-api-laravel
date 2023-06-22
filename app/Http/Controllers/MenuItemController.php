@@ -15,7 +15,7 @@ use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
 /**
- * @group Menus
+ * @group Menu Items
  */
 class MenuItemController extends Controller
 {
@@ -26,13 +26,13 @@ class MenuItemController extends Controller
 
     /**
      * Fetch Menus.
-     * Filter: /menus?filter[name]=kofibusy lounge [can be filtered by name and or price and or restaurant.id].
-     * Sort: /menus?sort=name(Ascending) or -name, price, -price,
+     * Filter: /menu-items?filter[name]=kofibusy lounge [can be filtered by name and or price and or restaurant.id].
+     * Sort: /menu-items?sort=name(Ascending) or -name, price, -price,
      * @apiResourceCollection App\Http\Resources\RestaurantResource
      * @apiResourceModel App\Models\Menu paginate=15
      */
     public function index(): JsonResponse{
-        $menus = QueryBuilder::for(MenuItem::class)
+        $menu_items = QueryBuilder::for(MenuItem::class)
             ->allowedFilters([
                 'name',
                 'price',
@@ -45,23 +45,23 @@ class MenuItemController extends Controller
                 '-price',
             ])
             ->paginate();
-        $menus = MenuItemResource::collection($menus)->response()->getData(true);
-        return $this->successReadCollection($menus);
+        $menu_items = MenuItemResource::collection($menu_items)->response()->getData(true);
+        return $this->successReadCollection($menu_items);
     }
 
     /**
      * @authenticated
      * @header Authorization Bearer
-     * Create New Menu.
-     * @apiResourceModel App\Models\Menu
+     * Create New Menu Item.
+     * @apiResourceModel App\Models\MenuItem
      */
     #[ResponseFromApiResource(MenuItemResource::class, MenuItem::class, 201)]
     public function store(StoreRequest $request): JsonResponse{
         DB::beginTransaction();
         try {
-            $menu = MenuItemService::store($request->validated());
-            $menu = MenuItemResource::make($menu);
-            return $this->successCreated($menu);
+            $menu_item = MenuItemService::store($request->validated());
+            $menu_item = MenuItemResource::make($menu_item);
+            return $this->successCreated($menu_item);
         } catch (\Exception $exception){
             return $this->errorOccurred($exception->getMessage());
         }
