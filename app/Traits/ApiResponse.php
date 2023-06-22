@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Traits;
 
 use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 
-class ApiResponse extends Controller
+trait ApiResponse
 {
     protected function success($message, $data = [], $status = 200): JsonResponse
     {
