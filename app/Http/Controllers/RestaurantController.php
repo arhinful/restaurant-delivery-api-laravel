@@ -16,7 +16,7 @@ use Spatie\QueryBuilder\QueryBuilder;
 class RestaurantController extends Controller
 {
     public function __construct(){
-        $this->middleware(['auth'])->only([]);
+        $this->middleware(['auth'])->only(['store']);
         $this->authorizeResource(Restaurant::class, 'restaurant');
     }
 
@@ -46,7 +46,13 @@ class RestaurantController extends Controller
         return $this->successReadCollection($restaurants);
     }
 
-    public function store(StoreRequest $request){
+    /**
+     * @authenticated
+     * Create New Restaurants.
+     * @apiResource App\Http\Resources\RestaurantResource
+     * @apiResourceModel App\Models\Restaurant
+     */
+    public function store(StoreRequest $request): JsonResponse{
         DB::beginTransaction();
         try {
             $restaurant = RestaurantService::store($request->validated());

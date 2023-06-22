@@ -42,3 +42,55 @@ endpoints:
     method: null
     route: null
     custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/restaurants
+    metadata:
+      groupName: Restaurants
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: kpapzyxczjli
+        type: string
+        custom: []
+      location:
+        name: location
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: qdykjtjceqliasiqnuty
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: kpapzyxczjli
+      location: qdykjtjceqliasiqnuty
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[]}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

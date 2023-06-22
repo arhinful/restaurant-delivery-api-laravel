@@ -62,19 +62,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: tnlsjxxoanaszxtffexdz
+                  example: kjhqnlbvvzb
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: adah26@example.org
+                  example: margarett53@example.net
                 password:
                   type: string
                   description: ''
-                  example: totam
+                  example: qui
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: ut
+                  example: laborum
               required:
                 - name
                 - email
@@ -131,11 +131,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: sid.goldner@example.com
+                  example: kfahey@example.net
                 password:
                   type: string
                   description: ''
-                  example: 'o5x:M9M)^V(L'
+                  example: 'TvIuIZ+J)nLt]<'
               required:
                 - email
                 - password
@@ -159,7 +159,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: jermaine53@example.com
+                  example: angelita40@example.org
               required:
                 - email
       security: []
@@ -182,15 +182,15 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: et
+                  example: sed
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: gusikowski.alicia@example.net
+                  example: erica16@example.org
                 password:
                   type: string
                   description: ''
-                  example: animi
+                  example: et
               required:
                 - token
                 - email
@@ -223,7 +223,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the verify email.'
-        example: ullam
+        example: voluptas
         required: true
         schema:
           type: string
@@ -231,7 +231,7 @@ paths:
         in: path
         name: hash
         description: ''
-        example: error
+        example: saepe
         required: true
         schema:
           type: string
@@ -1151,7 +1151,7 @@ paths:
         in: path
         name: fallbackPlaceholder
         description: ''
-        example: px
+        example: '-kx'
         required: true
         schema:
           type: string
@@ -1177,6 +1177,44 @@ paths:
       tags:
         - Restaurants
       security: []
+    post:
+      summary: ''
+      operationId: postApiV1Restaurants
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                properties:
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Restaurants
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: kpapzyxczjli
+                location:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: qdykjtjceqliasiqnuty
+              required:
+                - name
+                - location
 tags:
   -
     name: Authentication
