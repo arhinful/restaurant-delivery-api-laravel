@@ -100,7 +100,7 @@ class MenuItemController extends Controller
         }
     }
 
-    public function destroy(MenuItem $item){
+    public function destroy(MenuItem $item): JsonResponse{
         DB::beginTransaction();
         try {
             $item->delete();
