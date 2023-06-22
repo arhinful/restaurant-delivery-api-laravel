@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Order\StoreRequest;
 use App\Http\Resources\OrderResource;
 use App\Models\Order;
+use App\Services\OrderService;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\DB;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
@@ -44,5 +47,18 @@ class OrderController extends Controller
             ->paginate();
         $orders = OrderResource::collection($orders)->response()->getData(true);
         return $this->successCreated($orders);
+    }
+
+    public function store(StoreRequest $request): JsonResponse{
+        DB::beginTransaction();
+        try {
+            $order = OrderService::store($request->validated());
+            $order = OrderResource::make($order);
+            DB::commit();
+            return $this->successCreated($order);
+        } catch (\Exception $exception){
+            DB::rollBack();
+            return $this->errorOccurred($exception->getMessage());
+        }
     }
 }
