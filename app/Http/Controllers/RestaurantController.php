@@ -99,12 +99,11 @@ class RestaurantController extends Controller
     }
 
     /**
-     * Delete Restaurant.
+     * Delete Order.
      * @authenticated
      * @header Authorization Bearer
-     * @apiResourceModel App\Models\Restaurant
+     * @apiResourceModel App\Models\Order
      */
-    #[ResponseFromApiResource(RestaurantResource::class, Restaurant::class, 202)]
     public function destroy(Restaurant $restaurant): JsonResponse{
         DB::beginTransaction();
         try {

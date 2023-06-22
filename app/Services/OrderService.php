@@ -16,4 +16,9 @@ class OrderService
         $order = Order::create($data);
         return $order;
     }
+
+    public static function update(Order $order, array $data): Order{
+        $order->update($data);
+        return $order;
+    }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Order\StoreRequest;
+use App\Http\Requests\Order\UpdateRequest;
 use App\Http\Resources\OrderResource;
 use App\Http\Resources\RestaurantResource;
 use App\Models\Order;
@@ -59,6 +60,7 @@ class OrderController extends Controller
      * @apiResourceModel App\Models\Order
      */
     #[ResponseFromApiResource(OrderResource::class, Order::class, 201)]
+
     public function store(StoreRequest $request): JsonResponse{
         DB::beginTransaction();
         try {
@@ -80,5 +82,44 @@ class OrderController extends Controller
     public function show(Order $order): JsonResponse{
         $order = OrderResource::make($order);
         return $this->successRead($order);
+    }
+
+    /**
+     * Update Order.
+     * @authenticated
+     * @header Authorization Bearer
+     * @apiResourceModel App\Models\Order
+     */
+    #[ResponseFromApiResource(OrderResource::class, Order::class, 202)]
+
+    public function update(Order $order, UpdateRequest $request): JsonResponse{
+        DB::beginTransaction();
+        try {
+            $order = OrderService::update($order, $request->validated());
+            $order = OrderResource::make($order);
+            DB::commit();
+            return $this->successUpdated($order);
+        } catch (\Exception $exception){
+            DB::rollBack();
+            return $this->errorOccurred($exception->getMessage());
+        }
+    }
+
+    /**
+     * Delete Restaurant.
+     * @authenticated
+     * @header Authorization Bearer
+     * @apiResourceModel App\Models\Restaurant
+     */
+    public function destroy(Order $order): JsonResponse{
+        DB::beginTransaction();
+        try {
+            $order->delete();
+            DB::commit();
+            return $this->successDeleted();
+        } catch (\Exception $exception){
+            DB::rollBack();
+            return $this->errorOccurred($exception->getMessage());
+        }
     }
 }
