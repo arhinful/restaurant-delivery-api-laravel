@@ -48,6 +48,7 @@ class RestaurantController extends Controller
 
     /**
      * @authenticated
+     * @header Authorization Bearer
      * Create New Restaurants.
      * @apiResource App\Http\Resources\RestaurantResource
      * @apiResourceModel App\Models\Restaurant
