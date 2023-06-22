@@ -14,6 +14,9 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, ModelBootingTrait;
 
+    // guard to use for roles and permissions
+    protected $guard_name = 'sanctum';
+
     protected $fillable = [
         'name',
         'email',
