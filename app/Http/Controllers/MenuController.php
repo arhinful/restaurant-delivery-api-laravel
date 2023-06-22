@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\MenuResource;
 use App\Models\Menu;
+use Illuminate\Http\JsonResponse;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
@@ -19,13 +20,12 @@ class MenuController extends Controller
 
     /**
      * Fetch Menus.
-     * Filter: /restaurants?filter[name]=kofibusy lounge [can be filtered by name and or price and or restaurant.id].
-     * Sort: /restaurants?sort=name(Ascending) or restaurants?sort=-name (Descending)
-     * [can be ordered by name and location].
+     * Filter: /menus?filter[name]=kofibusy lounge [can be filtered by name and or price and or restaurant.id].
+     * Sort: /menus?sort=name(Ascending) or restaurants?sort=-name (Descending), price, -price,
      * @apiResourceCollection App\Http\Resources\RestaurantResource
      * @apiResourceModel App\Models\Restaurant paginate=15
      */
-    public function index(){
+    public function index(): JsonResponse{
         $menus = QueryBuilder::for(Menu::class)
             ->allowedFilters([
                 'name',
