@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\MenuItem\StoreRequest;
 use App\Http\Requests\MenuItem\UpdateRequest;
 use App\Http\Resources\MenuItemResource;
-use App\Http\Resources\RestaurantResource;
 use App\Models\MenuItem;
-use App\Models\Restaurant;
 use App\Services\MenuItemService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
@@ -100,6 +98,12 @@ class MenuItemController extends Controller
         }
     }
 
+    /**
+     * @authenticated
+     * @header Authorization Bearer
+     * Delete Menu Item.
+     * @apiResourceModel App\Models\MenuItem
+     */
     public function destroy(MenuItem $item): JsonResponse{
         DB::beginTransaction();
         try {

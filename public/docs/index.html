@@ -119,6 +119,15 @@
                                                                                 <li class="tocify-item level-2" data-unique="menu-items-POSTapi-v1-menu-items">
                                 <a href="#menu-items-POSTapi-v1-menu-items">POST api/v1/menu-items</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="menu-items-GETapi-v1-menu-items--id-">
+                                <a href="#menu-items-GETapi-v1-menu-items--id-">Fetch Single Menu Item.</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="menu-items-PUTapi-v1-menu-items--id-">
+                                <a href="#menu-items-PUTapi-v1-menu-items--id-">PUT api/v1/menu-items/{id}</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="menu-items-DELETEapi-v1-menu-items--id-">
+                                <a href="#menu-items-DELETEapi-v1-menu-items--id-">DELETE api/v1/menu-items/{id}</a>
+                            </li>
                                                                         </ul>
                             </ul>
                     <ul id="tocify-header-restaurants" class="tocify-header">
@@ -133,7 +142,7 @@
                                 <a href="#restaurants-POSTapi-v1-restaurants">POST api/v1/restaurants</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="restaurants-GETapi-v1-restaurants--id-">
-                                <a href="#restaurants-GETapi-v1-restaurants--id-">Fetch Single Restaurants.</a>
+                                <a href="#restaurants-GETapi-v1-restaurants--id-">Fetch Single Restaurant.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="restaurants-PUTapi-v1-restaurants--id-">
                                 <a href="#restaurants-PUTapi-v1-restaurants--id-">PUT api/v1/restaurants/{id}</a>
@@ -244,10 +253,10 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"jnhsoyvmlq\",
-    \"email\": \"pierce90@example.com\",
-    \"password\": \"est\",
-    \"password_confirmation\": \"voluptatum\"
+    \"name\": \"sfuhvpaeyiudx\",
+    \"email\": \"ziemann.amari@example.net\",
+    \"password\": \"veritatis\",
+    \"password_confirmation\": \"optio\"
 }"
 </code></pre></div>
 
@@ -263,10 +272,10 @@ const headers = {
 };
 
 let body = {
-    "name": "jnhsoyvmlq",
-    "email": "pierce90@example.com",
-    "password": "est",
-    "password_confirmation": "voluptatum"
+    "name": "sfuhvpaeyiudx",
+    "email": "ziemann.amari@example.net",
+    "password": "veritatis",
+    "password_confirmation": "optio"
 };
 
 fetch(url, {
@@ -282,10 +291,10 @@ import json
 
 url = 'http://delivery.test/api/v1/register'
 payload = {
-    "name": "jnhsoyvmlq",
-    "email": "pierce90@example.com",
-    "password": "est",
-    "password_confirmation": "voluptatum"
+    "name": "sfuhvpaeyiudx",
+    "email": "ziemann.amari@example.net",
+    "password": "veritatis",
+    "password_confirmation": "optio"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -306,10 +315,10 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'name' =&gt; 'jnhsoyvmlq',
-            'email' =&gt; 'pierce90@example.com',
-            'password' =&gt; 'est',
-            'password_confirmation' =&gt; 'voluptatum',
+            'name' =&gt; 'sfuhvpaeyiudx',
+            'email' =&gt; 'ziemann.amari@example.net',
+            'password' =&gt; 'veritatis',
+            'password_confirmation' =&gt; 'optio',
         ],
     ]
 );
@@ -412,10 +421,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="POSTapi-v1-register"
-               value="jnhsoyvmlq"
+               value="sfuhvpaeyiudx"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>jnhsoyvmlq</code></p>
+<p>Must not be greater than 255 characters. Example: <code>sfuhvpaeyiudx</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -423,10 +432,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-v1-register"
-               value="pierce90@example.com"
+               value="ziemann.amari@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>pierce90@example.com</code></p>
+<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>ziemann.amari@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -434,10 +443,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-v1-register"
-               value="est"
+               value="veritatis"
                data-component="body">
     <br>
-<p>Example: <code>est</code></p>
+<p>Example: <code>veritatis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password_confirmation</code></b>&nbsp;&nbsp;
@@ -445,10 +454,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password_confirmation"                data-endpoint="POSTapi-v1-register"
-               value="voluptatum"
+               value="optio"
                data-component="body">
     <br>
-<p>The value and <code>password</code> must match. Example: <code>voluptatum</code></p>
+<p>The value and <code>password</code> must match. Example: <code>optio</code></p>
         </div>
         </form>
 
@@ -469,8 +478,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"alaina89@example.net\",
-    \"password\": \"gwuyIXI$]MW\"
+    \"email\": \"toy.webster@example.net\",
+    \"password\": \"u2]x@^JU&amp;535wF3.\"
 }"
 </code></pre></div>
 
@@ -486,8 +495,8 @@ const headers = {
 };
 
 let body = {
-    "email": "alaina89@example.net",
-    "password": "gwuyIXI$]MW"
+    "email": "toy.webster@example.net",
+    "password": "u2]x@^JU&amp;535wF3."
 };
 
 fetch(url, {
@@ -503,8 +512,8 @@ import json
 
 url = 'http://delivery.test/api/v1/login'
 payload = {
-    "email": "alaina89@example.net",
-    "password": "gwuyIXI$]MW"
+    "email": "toy.webster@example.net",
+    "password": "u2]x@^JU&amp;535wF3."
 }
 headers = {
   'Content-Type': 'application/json',
@@ -525,8 +534,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'alaina89@example.net',
-            'password' =&gt; 'gwuyIXI$]MW',
+            'email' =&gt; 'toy.webster@example.net',
+            'password' =&gt; 'u2]x@^JU&amp;535wF3.',
         ],
     ]
 );
@@ -642,10 +651,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-v1-login"
-               value="alaina89@example.net"
+               value="toy.webster@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>alaina89@example.net</code></p>
+<p>Must be a valid email address. Example: <code>toy.webster@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -653,10 +662,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-v1-login"
-               value="gwuyIXI$]MW"
+               value="u2]x@^JU&535wF3."
                data-component="body">
     <br>
-<p>Example: <code>gwuyIXI$]MW</code></p>
+<p>Example: <code>u2]x@^JU&amp;535wF3.</code></p>
         </div>
         </form>
 
@@ -677,7 +686,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"xweissnat@example.net\"
+    \"email\": \"stanton.sven@example.net\"
 }"
 </code></pre></div>
 
@@ -693,7 +702,7 @@ const headers = {
 };
 
 let body = {
-    "email": "xweissnat@example.net"
+    "email": "stanton.sven@example.net"
 };
 
 fetch(url, {
@@ -709,7 +718,7 @@ import json
 
 url = 'http://delivery.test/api/v1/forgot-password'
 payload = {
-    "email": "xweissnat@example.net"
+    "email": "stanton.sven@example.net"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -730,7 +739,7 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'xweissnat@example.net',
+            'email' =&gt; 'stanton.sven@example.net',
         ],
     ]
 );
@@ -817,10 +826,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-v1-forgot-password"
-               value="xweissnat@example.net"
+               value="stanton.sven@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>xweissnat@example.net</code></p>
+<p>Must be a valid email address. Example: <code>stanton.sven@example.net</code></p>
         </div>
         </form>
 
@@ -841,9 +850,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"token\": \"voluptate\",
-    \"email\": \"vidal10@example.org\",
-    \"password\": \"quia\"
+    \"token\": \"beatae\",
+    \"email\": \"nico.zboncak@example.org\",
+    \"password\": \"expedita\"
 }"
 </code></pre></div>
 
@@ -859,9 +868,9 @@ const headers = {
 };
 
 let body = {
-    "token": "voluptate",
-    "email": "vidal10@example.org",
-    "password": "quia"
+    "token": "beatae",
+    "email": "nico.zboncak@example.org",
+    "password": "expedita"
 };
 
 fetch(url, {
@@ -877,9 +886,9 @@ import json
 
 url = 'http://delivery.test/api/v1/reset-password'
 payload = {
-    "token": "voluptate",
-    "email": "vidal10@example.org",
-    "password": "quia"
+    "token": "beatae",
+    "email": "nico.zboncak@example.org",
+    "password": "expedita"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -900,9 +909,9 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'token' =&gt; 'voluptate',
-            'email' =&gt; 'vidal10@example.org',
-            'password' =&gt; 'quia',
+            'token' =&gt; 'beatae',
+            'email' =&gt; 'nico.zboncak@example.org',
+            'password' =&gt; 'expedita',
         ],
     ]
 );
@@ -989,10 +998,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="token"                data-endpoint="POSTapi-v1-reset-password"
-               value="voluptate"
+               value="beatae"
                data-component="body">
     <br>
-<p>Example: <code>voluptate</code></p>
+<p>Example: <code>beatae</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -1000,10 +1009,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-v1-reset-password"
-               value="vidal10@example.org"
+               value="nico.zboncak@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>vidal10@example.org</code></p>
+<p>Must be a valid email address. Example: <code>nico.zboncak@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -1011,10 +1020,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-v1-reset-password"
-               value="quia"
+               value="expedita"
                data-component="body">
     <br>
-<p>Example: <code>quia</code></p>
+<p>Example: <code>expedita</code></p>
         </div>
         </form>
 
@@ -1031,14 +1040,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://delivery.test/api/v1/verify-email/voluptatibus/voluptas" \
+    --get "http://delivery.test/api/v1/verify-email/vel/aut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://delivery.test/api/v1/verify-email/voluptatibus/voluptas"
+    "http://delivery.test/api/v1/verify-email/vel/aut"
 );
 
 const headers = {
@@ -1056,7 +1065,7 @@ fetch(url, {
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://delivery.test/api/v1/verify-email/voluptatibus/voluptas'
+url = 'http://delivery.test/api/v1/verify-email/vel/aut'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1069,7 +1078,7 @@ response.json()</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://delivery.test/api/v1/verify-email/voluptatibus/voluptas',
+    'http://delivery.test/api/v1/verify-email/vel/aut',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1177,10 +1186,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="GETapi-v1-verify-email--id---hash-"
-               value="voluptatibus"
+               value="vel"
                data-component="url">
     <br>
-<p>The ID of the verify email. Example: <code>voluptatibus</code></p>
+<p>The ID of the verify email. Example: <code>vel</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>hash</code></b>&nbsp;&nbsp;
@@ -1188,10 +1197,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="hash"                data-endpoint="GETapi-v1-verify-email--id---hash-"
-               value="voluptas"
+               value="aut"
                data-component="url">
     <br>
-<p>Example: <code>voluptas</code></p>
+<p>Example: <code>aut</code></p>
             </div>
                     </form>
 
@@ -1487,14 +1496,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://delivery.test/api/v1/C" \
+    --get "http://delivery.test/api/v1/wrK}prv" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://delivery.test/api/v1/C"
+    "http://delivery.test/api/v1/wrK}prv"
 );
 
 const headers = {
@@ -1512,7 +1521,7 @@ fetch(url, {
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://delivery.test/api/v1/C'
+url = 'http://delivery.test/api/v1/wrK}prv'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -1525,7 +1534,7 @@ response.json()</code></pre></div>
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://delivery.test/api/v1/C',
+    'http://delivery.test/api/v1/wrK}prv',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1555,7 +1564,500 @@ access-control-allow-credentials: true
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;API resource not found&quot;
+    &quot;message&quot;: &quot;API resource not found&quot;,
+    &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException&quot;,
+    &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php&quot;,
+    &quot;line&quot;: 1221,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;abort&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\routes\\api.php&quot;,
+            &quot;line&quot;: 25,
+            &quot;function&quot;: &quot;abort&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\CallableDispatcher.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\RouteFileRegistrar&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 237,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\CallableDispatcher&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 208,
+            &quot;function&quot;: &quot;runCallable&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 799,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 159,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 90,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 159,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 87,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php&quot;,
+            &quot;line&quot;: 25,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\{closure}&quot;,
+            &quot;class&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php&quot;,
+            &quot;line&quot;: 24,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 798,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 777,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 741,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 730,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 86,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 92,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 209,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 124,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 71,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 49,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 208,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;line&quot;: 326,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 177,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 1081,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 320,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 174,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\laragon\\www\\delivery\\artisan&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
 }</code>
  </pre>
     </span>
@@ -1635,10 +2137,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="fallbackPlaceholder"                data-endpoint="GETapi-v1--fallbackPlaceholder-"
-               value="C"
+               value="wrK}prv"
                data-component="url">
     <br>
-<p>Example: <code>C</code></p>
+<p>Example: <code>wrK}prv</code></p>
             </div>
                     </form>
 
@@ -1847,10 +2349,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "Authorization: Bearer" \
     --data "{
-    \"restaurant_id\": \"sint\",
-    \"name\": \"horvttvtogsoqfsdj\",
-    \"price\": \"imvdkpjnfdtmdtdarqhv\",
-    \"description\": \"Laudantium omnis voluptatem repellat dolorem iure.\"
+    \"restaurant_id\": \"magni\",
+    \"name\": \"uexfkwi\",
+    \"price\": \"rlq\",
+    \"description\": \"Saepe aperiam qui in et quos placeat architecto.\"
 }"
 </code></pre></div>
 
@@ -1867,10 +2369,10 @@ const headers = {
 };
 
 let body = {
-    "restaurant_id": "sint",
-    "name": "horvttvtogsoqfsdj",
-    "price": "imvdkpjnfdtmdtdarqhv",
-    "description": "Laudantium omnis voluptatem repellat dolorem iure."
+    "restaurant_id": "magni",
+    "name": "uexfkwi",
+    "price": "rlq",
+    "description": "Saepe aperiam qui in et quos placeat architecto."
 };
 
 fetch(url, {
@@ -1886,10 +2388,10 @@ import json
 
 url = 'http://delivery.test/api/v1/menu-items'
 payload = {
-    "restaurant_id": "sint",
-    "name": "horvttvtogsoqfsdj",
-    "price": "imvdkpjnfdtmdtdarqhv",
-    "description": "Laudantium omnis voluptatem repellat dolorem iure."
+    "restaurant_id": "magni",
+    "name": "uexfkwi",
+    "price": "rlq",
+    "description": "Saepe aperiam qui in et quos placeat architecto."
 }
 headers = {
   'Content-Type': 'application/json',
@@ -1912,10 +2414,10 @@ $response = $client-&gt;post(
             'Authorization' =&gt; 'Bearer',
         ],
         'json' =&gt; [
-            'restaurant_id' =&gt; 'sint',
-            'name' =&gt; 'horvttvtogsoqfsdj',
-            'price' =&gt; 'imvdkpjnfdtmdtdarqhv',
-            'description' =&gt; 'Laudantium omnis voluptatem repellat dolorem iure.',
+            'restaurant_id' =&gt; 'magni',
+            'name' =&gt; 'uexfkwi',
+            'price' =&gt; 'rlq',
+            'description' =&gt; 'Saepe aperiam qui in et quos placeat architecto.',
         ],
     ]
 );
@@ -2022,10 +2524,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="restaurant_id"                data-endpoint="POSTapi-v1-menu-items"
-               value="sint"
+               value="magni"
                data-component="body">
     <br>
-<p>Example: <code>sint</code></p>
+<p>Example: <code>magni</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -2033,10 +2535,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="POSTapi-v1-menu-items"
-               value="horvttvtogsoqfsdj"
+               value="uexfkwi"
                data-component="body">
     <br>
-<p>Must not be greater than 100 characters. Example: <code>horvttvtogsoqfsdj</code></p>
+<p>Must not be greater than 100 characters. Example: <code>uexfkwi</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
@@ -2044,10 +2546,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="price"                data-endpoint="POSTapi-v1-menu-items"
-               value="imvdkpjnfdtmdtdarqhv"
+               value="rlq"
                data-component="body">
     <br>
-<p>Must not be greater than 199 characters. Example: <code>imvdkpjnfdtmdtdarqhv</code></p>
+<p>Must not be greater than 199 characters. Example: <code>rlq</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -2055,12 +2557,497 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="description"                data-endpoint="POSTapi-v1-menu-items"
-               value="Laudantium omnis voluptatem repellat dolorem iure."
+               value="Saepe aperiam qui in et quos placeat architecto."
                data-component="body">
     <br>
-<p>Must not be greater than 299 characters. Example: <code>Laudantium omnis voluptatem repellat dolorem iure.</code></p>
+<p>Must not be greater than 299 characters. Example: <code>Saepe aperiam qui in et quos placeat architecto.</code></p>
         </div>
         </form>
+
+                    <h2 id="menu-items-GETapi-v1-menu-items--id-">Fetch Single Menu Item.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-menu-items--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://delivery.test/api/v1/menu-items/4" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://delivery.test/api/v1/menu-items/4"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://delivery.test/api/v1/menu-items/4'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://delivery.test/api/v1/menu-items/4',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-menu-items--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-menu-items--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-menu-items--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-menu-items--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-menu-items--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-menu-items--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-menu-items--id-" data-method="GET"
+      data-path="api/v1/menu-items/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-menu-items--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-menu-items--id-"
+                    onclick="tryItOut('GETapi-v1-menu-items--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-menu-items--id-"
+                    onclick="cancelTryOut('GETapi-v1-menu-items--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-menu-items--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/menu-items/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-v1-menu-items--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-v1-menu-items--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               name="id"                data-endpoint="GETapi-v1-menu-items--id-"
+               value="4"
+               data-component="url">
+    <br>
+<p>The ID of the menu item. Example: <code>4</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="menu-items-PUTapi-v1-menu-items--id-">PUT api/v1/menu-items/{id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-v1-menu-items--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://delivery.test/api/v1/menu-items/17" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "Authorization: Bearer"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://delivery.test/api/v1/menu-items/17"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Authorization": "Bearer",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://delivery.test/api/v1/menu-items/17'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'Authorization': 'Bearer'
+}
+
+response = requests.request('PUT', url, headers=headers)
+response.json()</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://delivery.test/api/v1/menu-items/17',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'Authorization' =&gt; 'Bearer',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-v1-menu-items--id-">
+            <blockquote>
+            <p>Example response (202):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: []
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-v1-menu-items--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-v1-menu-items--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-v1-menu-items--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-PUTapi-v1-menu-items--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-v1-menu-items--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-PUTapi-v1-menu-items--id-" data-method="PUT"
+      data-path="api/v1/menu-items/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-v1-menu-items--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-v1-menu-items--id-"
+                    onclick="tryItOut('PUTapi-v1-menu-items--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-v1-menu-items--id-"
+                    onclick="cancelTryOut('PUTapi-v1-menu-items--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-v1-menu-items--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/v1/menu-items/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/v1/menu-items/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="PUTapi-v1-menu-items--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="PUTapi-v1-menu-items--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-menu-items--id-"
+               value="Bearer"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               name="id"                data-endpoint="PUTapi-v1-menu-items--id-"
+               value="17"
+               data-component="url">
+    <br>
+<p>The ID of the menu item. Example: <code>17</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="menu-items-DELETEapi-v1-menu-items--id-">DELETE api/v1/menu-items/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-v1-menu-items--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://delivery.test/api/v1/menu-items/17" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://delivery.test/api/v1/menu-items/17"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://delivery.test/api/v1/menu-items/17'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://delivery.test/api/v1/menu-items/17',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-v1-menu-items--id-">
+</span>
+<span id="execution-results-DELETEapi-v1-menu-items--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-v1-menu-items--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-v1-menu-items--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-v1-menu-items--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-v1-menu-items--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-DELETEapi-v1-menu-items--id-" data-method="DELETE"
+      data-path="api/v1/menu-items/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-v1-menu-items--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-v1-menu-items--id-"
+                    onclick="tryItOut('DELETEapi-v1-menu-items--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-v1-menu-items--id-"
+                    onclick="cancelTryOut('DELETEapi-v1-menu-items--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-v1-menu-items--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/v1/menu-items/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="DELETEapi-v1-menu-items--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="DELETEapi-v1-menu-items--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               name="id"                data-endpoint="DELETEapi-v1-menu-items--id-"
+               value="17"
+               data-component="url">
+    <br>
+<p>The ID of the menu item. Example: <code>17</code></p>
+            </div>
+                    </form>
 
                 <h1 id="restaurants">Restaurants</h1>
 
@@ -2290,8 +3277,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "Authorization: Bearer" \
     --data "{
-    \"name\": \"hiqdavsmsoxjwnuyl\",
-    \"location\": \"essnmxng\"
+    \"name\": \"wlufumfbpihpfabhjyengeg\",
+    \"location\": \"hahjlysstralfvibjqhyz\"
 }"
 </code></pre></div>
 
@@ -2308,8 +3295,8 @@ const headers = {
 };
 
 let body = {
-    "name": "hiqdavsmsoxjwnuyl",
-    "location": "essnmxng"
+    "name": "wlufumfbpihpfabhjyengeg",
+    "location": "hahjlysstralfvibjqhyz"
 };
 
 fetch(url, {
@@ -2325,8 +3312,8 @@ import json
 
 url = 'http://delivery.test/api/v1/restaurants'
 payload = {
-    "name": "hiqdavsmsoxjwnuyl",
-    "location": "essnmxng"
+    "name": "wlufumfbpihpfabhjyengeg",
+    "location": "hahjlysstralfvibjqhyz"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -2349,8 +3336,8 @@ $response = $client-&gt;post(
             'Authorization' =&gt; 'Bearer',
         ],
         'json' =&gt; [
-            'name' =&gt; 'hiqdavsmsoxjwnuyl',
-            'location' =&gt; 'essnmxng',
+            'name' =&gt; 'wlufumfbpihpfabhjyengeg',
+            'location' =&gt; 'hahjlysstralfvibjqhyz',
         ],
     ]
 );
@@ -2468,10 +3455,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="POSTapi-v1-restaurants"
-               value="hiqdavsmsoxjwnuyl"
+               value="wlufumfbpihpfabhjyengeg"
                data-component="body">
     <br>
-<p>Must not be greater than 100 characters. Example: <code>hiqdavsmsoxjwnuyl</code></p>
+<p>Must not be greater than 100 characters. Example: <code>wlufumfbpihpfabhjyengeg</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
@@ -2479,14 +3466,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="location"                data-endpoint="POSTapi-v1-restaurants"
-               value="essnmxng"
+               value="hahjlysstralfvibjqhyz"
                data-component="body">
     <br>
-<p>Must not be greater than 100 characters. Example: <code>essnmxng</code></p>
+<p>Must not be greater than 100 characters. Example: <code>hahjlysstralfvibjqhyz</code></p>
         </div>
         </form>
 
-                    <h2 id="restaurants-GETapi-v1-restaurants--id-">Fetch Single Restaurants.</h2>
+                    <h2 id="restaurants-GETapi-v1-restaurants--id-">Fetch Single Restaurant.</h2>
 
 <p>
 </p>
@@ -2674,8 +3661,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "Authorization: Bearer" \
     --data "{
-    \"name\": \"qvx\",
-    \"location\": \"dfijbqydiju\"
+    \"name\": \"cidprlmdkips\",
+    \"location\": \"olgkueavq\"
 }"
 </code></pre></div>
 
@@ -2692,8 +3679,8 @@ const headers = {
 };
 
 let body = {
-    "name": "qvx",
-    "location": "dfijbqydiju"
+    "name": "cidprlmdkips",
+    "location": "olgkueavq"
 };
 
 fetch(url, {
@@ -2709,8 +3696,8 @@ import json
 
 url = 'http://delivery.test/api/v1/restaurants/2'
 payload = {
-    "name": "qvx",
-    "location": "dfijbqydiju"
+    "name": "cidprlmdkips",
+    "location": "olgkueavq"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -2733,8 +3720,8 @@ $response = $client-&gt;put(
             'Authorization' =&gt; 'Bearer',
         ],
         'json' =&gt; [
-            'name' =&gt; 'qvx',
-            'location' =&gt; 'dfijbqydiju',
+            'name' =&gt; 'cidprlmdkips',
+            'location' =&gt; 'olgkueavq',
         ],
     ]
 );
@@ -2868,10 +3855,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="PUTapi-v1-restaurants--id-"
-               value="qvx"
+               value="cidprlmdkips"
                data-component="body">
     <br>
-<p>Must not be greater than 100 characters. Example: <code>qvx</code></p>
+<p>Must not be greater than 100 characters. Example: <code>cidprlmdkips</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
@@ -2879,10 +3866,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="location"                data-endpoint="PUTapi-v1-restaurants--id-"
-               value="dfijbqydiju"
+               value="olgkueavq"
                data-component="body">
     <br>
-<p>Must not be greater than 100 characters. Example: <code>dfijbqydiju</code></p>
+<p>Must not be greater than 100 characters. Example: <code>olgkueavq</code></p>
         </div>
         </form>
 

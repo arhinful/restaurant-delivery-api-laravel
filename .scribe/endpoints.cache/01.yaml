@@ -67,35 +67,35 @@ endpoints:
         name: restaurant_id
         description: ''
         required: true
-        example: sint
+        example: magni
         type: string
         custom: []
       name:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: horvttvtogsoqfsdj
+        example: uexfkwi
         type: string
         custom: []
       price:
         name: price
         description: 'Must not be greater than 199 characters.'
         required: true
-        example: imvdkpjnfdtmdtdarqhv
+        example: rlq
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Laudantium omnis voluptatem repellat dolorem iure.'
+        example: 'Saepe aperiam qui in et quos placeat architecto.'
         type: string
         custom: []
     cleanBodyParameters:
-      restaurant_id: sint
-      name: horvttvtogsoqfsdj
-      price: imvdkpjnfdtmdtdarqhv
-      description: 'Laudantium omnis voluptatem repellat dolorem iure.'
+      restaurant_id: magni
+      name: uexfkwi
+      price: rlq
+      description: 'Saepe aperiam qui in et quos placeat architecto.'
     fileParameters: []
     responses:
       -
@@ -104,6 +104,134 @@ endpoints:
         headers: []
         description: ''
         custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/menu-items/{id}'
+    metadata:
+      groupName: 'Menu Items'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Fetch Single Menu Item.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the menu item.'
+        required: true
+        example: 4
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 4
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[]}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/menu-items/{id}'
+    metadata:
+      groupName: 'Menu Items'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: Bearer
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the menu item.'
+        required: true
+        example: 17
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 17
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 202
+        content: '{"data":[]}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/menu-items/{id}'
+    metadata:
+      groupName: 'Menu Items'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the menu item.'
+        required: true
+        example: 17
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 17
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
     responseFields: []
     auth: []
     controller: null

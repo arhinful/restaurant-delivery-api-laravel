@@ -68,19 +68,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: hiqdavsmsoxjwnuyl
+        example: wlufumfbpihpfabhjyengeg
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: essnmxng
+        example: hahjlysstralfvibjqhyz
         type: string
         custom: []
     cleanBodyParameters:
-      name: hiqdavsmsoxjwnuyl
-      location: essnmxng
+      name: wlufumfbpihpfabhjyengeg
+      location: hahjlysstralfvibjqhyz
     fileParameters: []
     responses:
       -
@@ -104,7 +104,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetch Single Restaurants.'
+      title: 'Fetch Single Restaurant.'
       description: ''
       authenticated: false
       custom: []
@@ -174,19 +174,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: qvx
+        example: cidprlmdkips
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: dfijbqydiju
+        example: olgkueavq
         type: string
         custom: []
     cleanBodyParameters:
-      name: qvx
-      location: dfijbqydiju
+      name: cidprlmdkips
+      location: olgkueavq
     fileParameters: []
     responses:
       -
