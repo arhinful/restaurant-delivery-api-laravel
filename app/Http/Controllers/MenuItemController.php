@@ -29,7 +29,7 @@ class MenuItemController extends Controller
      * Filter: /menu-items?filter[name]=kofibusy lounge [can be filtered by name and or price and or restaurant.id].
      * Sort: /menu-items?sort=name(Ascending) or -name, price, -price,
      * @apiResourceCollection App\Http\Resources\RestaurantResource
-     * @apiResourceModel App\Models\Menu paginate=15
+     * @apiResourceModel App\Models\MenuItem paginate=15
      */
     public function index(): JsonResponse{
         $menu_items = QueryBuilder::for(MenuItem::class)
