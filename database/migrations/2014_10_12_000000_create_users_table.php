@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
 
-            $table->boolean('is_active')->default(false);
+            $table->boolean('is_active')->default(true);
             $table->foreignId('added_by_id')->nullable();
             $table->softDeletes();
             $table->timestamps();

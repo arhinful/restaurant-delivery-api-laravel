@@ -21,7 +21,7 @@ class UserFactory extends Factory
             'name' => 'Arhinful Emmanuel',
             'email' => 'kofibusy@gmail.com',
             'email_verified_at' => now(),
-            'password' => bcrypt('12345678'),
+            'password' => '12345678',
             'remember_token' => Str::random(10),
         ];
     }

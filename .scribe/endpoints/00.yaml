@@ -26,43 +26,148 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: djjuajfcilhnagoob
+        example: bdfwjzsffvkxjovjwejws
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: aswift@example.com
+        example: connie37@example.org
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: voluptas
+        example: sequi
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'The value and <code>password</code> must match.'
         required: true
-        example: voluptatum
+        example: ut
         type: string
         custom: []
     cleanBodyParameters:
-      name: djjuajfcilhnagoob
-      email: aswift@example.com
-      password: voluptas
-      password_confirmation: voluptatum
+      name: bdfwjzsffvkxjovjwejws
+      email: connie37@example.org
+      password: sequi
+      password_confirmation: ut
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":{"id":null,"name":"Mr. Jeremie Williamson","email":"sauer.robb@example.com","created_at":null}}'
+        content: '{"data":{"id":null,"uuid":null,"name":"Arhinful Emmanuel","email":"kofibusy@gmail.com","created_at":null}}'
         headers: []
         description: ''
         custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/login
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Login.
+      description: 'This endpoint allows users to login.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: remmerich@example.net
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: 9nzlZYk3%
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: remmerich@example.net
+      password: 9nzlZYk3%
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+           "user": {
+               ....,
+               "roles":[{
+                   ....
+               }]
+           },
+           "token": "1cds1s64c...",
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+               "message": "These credentials do not match our records.",
+               "errors": {
+                   "email": [
+                       "These credentials do not match our records."
+                   ]
+               }
+           }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/logout
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
     responseFields: []
     auth: []
     controller: null

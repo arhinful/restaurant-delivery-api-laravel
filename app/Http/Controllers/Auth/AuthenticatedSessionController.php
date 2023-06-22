@@ -4,35 +4,54 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\UserResource;
+use Illuminate\Http\JsonResponse;
 
+/**
+ * @group Authentication
+ */
 class AuthenticatedSessionController extends Controller
 {
     /**
-     * Handle an incoming authentication request.
+     * Login.
+     * This endpoint allows users to login.
+     * @response {
+     *  "user": {
+     *      ....,
+     *      "roles":[{
+     *          ....
+     *      }]
+     *  },
+     *  "token": "1cds1s64c...",
+     * }
+     * @response 422 {
+     *      "message": "These credentials do not match our records.",
+     *      "errors": {
+     *          "email": [
+     *              "These credentials do not match our records."
+     *          ]
+     *      }
+     *  }
      */
-    public function store(LoginRequest $request): Response
-    {
-        $request->authenticate();
-
-        $request->session()->regenerate();
-
-        return response()->noContent();
+    public function store(LoginRequest $request): JsonResponse{
+        $user = $request->authenticate();
+        $success['user'] = UserResource::make($user);
+        $success['token'] = $user->createToken('token')->plainTextToken;
+        return $this->success(
+            message: "Login successful",
+            data: $success,
+        );
     }
 
     /**
-     * Destroy an authenticated session.
+     * @authenticated
+     * Logout.
+     * This endpoint allows users to logout
      */
-    public function destroy(Request $request): Response
-    {
-        Auth::guard('web')->logout();
-
-        $request->session()->invalidate();
-
-        $request->session()->regenerateToken();
-
-        return response()->noContent();
+    public function destroy(): JsonResponse{
+        auth()->user()->currentAccessToken()->delete();
+        return $this->success(
+            message: "Logged out successful",
+        );
     }
 }
