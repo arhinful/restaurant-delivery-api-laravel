@@ -18,6 +18,7 @@ return new class extends Migration
 
             $table->foreignId('restaurant_id')->constrained('restaurants')->cascadeOnDelete();
             $table->string('name');
+            $table->string('slug')->unique();
             $table->float('price');
             $table->mediumText('description')->nullable();
 
