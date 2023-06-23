@@ -14,6 +14,15 @@ class MenuItemResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'uuid' => $this->uuid,
+            'name' => $this->name,
+            'slug' => $this->slug,
+            'price' => $this->location,
+            'created_at' => $this->formattedCreatedAt,
+            'restaurant' => RestaurantResource::make($this->whenLoaded('restaurant')),
+            'orders' => OrderResource::collection($this->whenLoaded('orders'))
+        ];
     }
 }

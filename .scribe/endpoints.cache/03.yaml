@@ -74,19 +74,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: nvephookdgiqrqqdb
+        example: ttqfitqouxnjgcgf
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: fxqqtefzphtk
+        example: gglrwfylictlqvmypteyxcfyz
         type: string
         custom: []
     cleanBodyParameters:
-      name: nvephookdgiqrqqdb
-      location: fxqqtefzphtk
+      name: ttqfitqouxnjgcgf
+      location: gglrwfylictlqvmypteyxcfyz
     fileParameters: []
     responses:
       -
@@ -122,11 +122,11 @@ endpoints:
         name: id
         description: 'The ID of the restaurant.'
         required: true
-        example: 13
+        example: 7
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 13
+      id: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -180,19 +180,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: ndcrkw
+        example: sgzxlxmbunbjxihq
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: xqj
+        example: inlknhgirttht
         type: string
         custom: []
     cleanBodyParameters:
-      name: ndcrkw
-      location: xqj
+      name: sgzxlxmbunbjxihq
+      location: inlknhgirttht
     fileParameters: []
     responses:
       -
@@ -229,11 +229,11 @@ endpoints:
         name: id
         description: 'The ID of the restaurant.'
         required: true
-        example: 12
+        example: 10
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 12
+      id: 10
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

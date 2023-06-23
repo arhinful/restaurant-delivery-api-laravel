@@ -52,6 +52,7 @@ class MenuItemController extends Controller
                 'price',
                 '-price',
             ])
+            ->with(['restaurant',])
             ->paginate();
         $menu_items = MenuItemResource::collection($menu_items)->response()->getData(true);
         return $this->successReadCollection($menu_items);
@@ -85,6 +86,7 @@ class MenuItemController extends Controller
      * @apiResourceModel App\Models\MenuItem
      */
     public function show(MenuItem $item): JsonResponse{
+        $item->loadMissing(['restaurant',]);
         $item = MenuItemResource::make($item);
         return $this->successRead($item);
     }
@@ -101,6 +103,7 @@ class MenuItemController extends Controller
         DB::beginTransaction();
         try {
             $item = MenuItemService::update($item, $request->validated());
+            $item->loadMissing(['restaurant']);
             $item = MenuItemResource::make($item);
             DB::commit();
             return $this->successUpdated($item);
