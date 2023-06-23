@@ -18,7 +18,9 @@ class RegisteredUserController extends Controller
 {
     /**
      * Register New User.
+     *
      * This endpoint allows a user to register
+     *
      * @apiResource App\Http\Resources\UserResource
      * @apiResourceModel App\Models\User
      */
