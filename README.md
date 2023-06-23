@@ -18,7 +18,7 @@ services. It allows you to manage restaurants, menus and orders.
 
 Before setting up the Laravel project, ensure that you have the following software installed on your machine:
 
-- PHP (>= 7.4)
+- PHP (>= 8.1)
 - Composer
 - MySQL
 - Laravel CLI
