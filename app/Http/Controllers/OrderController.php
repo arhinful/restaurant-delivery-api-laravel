@@ -89,6 +89,7 @@ class OrderController extends Controller
         DB::beginTransaction();
         try {
             $order = OrderService::store($request->validated());
+            $order->loadMissing(['user', 'menuItem', 'menuItem.restaurant']);
             $order = OrderResource::make($order);
             DB::commit();
             return $this->successCreated($order);

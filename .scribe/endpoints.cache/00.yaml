@@ -28,40 +28,40 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: fwmhuzgvmtgjagpof
+        example: pniyhhsfilkpttnqrdz
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: piper71@example.net
+        example: hcruickshank@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: labore
+        example: qui
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'The value and <code>password</code> must match.'
         required: true
-        example: consequuntur
+        example: molestiae
         type: string
         custom: []
     cleanBodyParameters:
-      name: fwmhuzgvmtgjagpof
-      email: piper71@example.net
-      password: labore
-      password_confirmation: consequuntur
+      name: pniyhhsfilkpttnqrdz
+      email: hcruickshank@example.net
+      password: qui
+      password_confirmation: molestiae
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":{"id":56,"uuid":"bf9d5785-1599-4a46-8123-57f85bab20c6","name":"Arhinful Emmanuel","email":"kofibusy@gmail.com","created_at":"2023-06-23T12:01:49.000000Z","roles":[]}}'
+        content: '{"data":{"id":1,"uuid":"761a3740-47c0-4f26-98da-cdcc893dced0","name":"Arhinful Emmanuel","email":"kofibusy@gmail.com","created_at":"2023-06-23T14:14:19.000000Z","roles":[]}}'
         headers: []
         description: ''
         custom: []
@@ -96,19 +96,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: magali.fritsch@example.net
+        example: verona16@example.org
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: 'DA`TdD#Wh'
+        example: 'Mcm2towD''WH\1f~Nc'
         type: string
         custom: []
     cleanBodyParameters:
-      email: magali.fritsch@example.net
-      password: 'DA`TdD#Wh'
+      email: verona16@example.org
+      password: 'Mcm2towD''WH\1f~Nc'
     fileParameters: []
     responses:
       -
@@ -171,11 +171,11 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: zferry@example.net
+        example: jamir32@example.org
         type: string
         custom: []
     cleanBodyParameters:
-      email: zferry@example.net
+      email: jamir32@example.org
     fileParameters: []
     responses: []
     responseFields: []
@@ -209,27 +209,27 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: sequi
+        example: eum
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: hgleason@example.net
+        example: lily87@example.org
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: rerum
+        example: sit
         type: string
         custom: []
     cleanBodyParameters:
-      token: sequi
-      email: hgleason@example.net
-      password: rerum
+      token: eum
+      email: lily87@example.org
+      password: sit
     fileParameters: []
     responses: []
     responseFields: []
@@ -259,19 +259,19 @@ endpoints:
         name: id
         description: 'The ID of the verify email.'
         required: true
-        example: earum
+        example: praesentium
         type: string
         custom: []
       hash:
         name: hash
         description: ''
         required: true
-        example: cumque
+        example: excepturi
         type: string
         custom: []
     cleanUrlParameters:
-      id: earum
-      hash: cumque
+      id: praesentium
+      hash: excepturi
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -348,6 +348,42 @@ endpoints:
     cleanBodyParameters: []
     fileParameters: []
     responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/users/me
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Fetch Authenticated User.'
+      description: 'This endpoint allows a user to register'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":null,"uuid":null,"name":null,"email":null,"created_at":null,"roles":[]}}'
+        headers: []
+        description: ''
+        custom: []
     responseFields: []
     auth: []
     controller: null

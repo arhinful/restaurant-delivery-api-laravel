@@ -21,10 +21,15 @@ class OrderResource extends JsonResource
             'location' => $this->location,
             'gps' => $this->gps,
             'mobile_number' => $this->mobile_number,
+
+            'delivery_status' => $this->delivery_status,
+            'payment_status' => $this->payment_status,
+            'payment_channel' => $this->payment_channel,
+            'price' => $this->price,
+
             'created_at' => $this->formattedCreatedAt,
             'user' => UserResource::make($this->whenLoaded('user')),
             'menu_item' => MenuItemResource::make($this->whenLoaded('menuItem')),
-            'restaurant' => RestaurantResource::make($this->whenLoaded('menuItem.restaurant')),
         ];
     }
 }

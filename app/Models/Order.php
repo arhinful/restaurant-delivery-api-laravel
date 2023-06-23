@@ -14,14 +14,24 @@ class Order extends Model
 
     protected $fillable = [
         'menu_item_id',
+        'user_id',
+
         'quantity',
         'location',
         'gps',
         'mobile_number',
+        'delivery_status',
+        'payment_status',
+        'payment_channel',
+        'price',
     ];
 
     public function menuItem(): BelongsTo{
         return $this->belongsTo(MenuItem::class);
+    }
+
+    public function user(): BelongsTo{
+        return $this->belongsTo(User::class);
     }
 
 }

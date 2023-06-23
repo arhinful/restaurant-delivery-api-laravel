@@ -4,6 +4,7 @@ namespace App\Http\Requests\Order;
 
 use App\Rules\MobileNumber;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateRequest extends FormRequest
 {
@@ -27,6 +28,7 @@ class UpdateRequest extends FormRequest
             'location' => ['required', 'string', 'max:100'],
             'gps' => ['required', 'string', 'max:50'],
             'mobile_number' => ['required', 'max:20', new MobileNumber()],
+            'delivery_status' => ['required', Rule::in(['pending', 'on_way', 'delivered'])]
         ];
     }
 }

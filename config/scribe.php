@@ -315,6 +315,13 @@ You can switch the language used with the tabs at the top right (or from the nav
 }
 </aside>
 
+<aside>
+<aside class="warning">Status code: 404(NOT_FOUND, the resource or route not found) - Example Response</aside>
+<div>{</div>
+    <div style="margin-left: 30px">"message":     "message": "No query results for model [App\\Models\\Restaurant] 144"</div>
+}
+</aside>
+
 <h2>Filtering</h2>
 Filtering only works on fetching a collection <br>
 and can be done by appending ?filter[key]=value

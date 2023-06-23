@@ -6,7 +6,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/v1/menu-items
+    uri: api/v1/menu/items
     metadata:
       groupName: 'Menu Items'
       groupDescription: ''
@@ -51,7 +51,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/v1/menu-items
+    uri: api/v1/menu/items
     metadata:
       groupName: 'Menu Items'
       groupDescription: ''
@@ -74,35 +74,35 @@ endpoints:
         name: restaurant_id
         description: ''
         required: true
-        example: maxime
-        type: string
+        example: 4
+        type: integer
         custom: []
       name:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: ofnuuebozcznlixizdkquxey
+        example: xrjwoldmzlvyied
         type: string
         custom: []
       price:
         name: price
-        description: ''
+        description: 'Must be between 0 and 9999999999.99.'
         required: true
-        example: voluptate
-        type: string
+        example: 1
+        type: number
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Dolores eaque ut nobis a.'
+        example: 'Ipsum odit atque doloribus repellendus iure assumenda.'
         type: string
         custom: []
     cleanBodyParameters:
-      restaurant_id: maxime
-      name: ofnuuebozcznlixizdkquxey
-      price: voluptate
-      description: 'Dolores eaque ut nobis a.'
+      restaurant_id: 4
+      name: xrjwoldmzlvyied
+      price: 1
+      description: 'Ipsum odit atque doloribus repellendus iure assumenda.'
     fileParameters: []
     responses:
       -
@@ -120,7 +120,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/v1/menu-items/{id}'
+    uri: 'api/v1/menu/items/{id}'
     metadata:
       groupName: 'Menu Items'
       groupDescription: ''
@@ -136,13 +136,13 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the menu item.'
+        description: 'The ID of the item.'
         required: true
-        example: 9
+        example: 8
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 9
+      id: 8
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -165,7 +165,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'api/v1/menu-items/{id}'
+    uri: 'api/v1/menu/items/{id}'
     metadata:
       groupName: 'Menu Items'
       groupDescription: ''
@@ -182,13 +182,13 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the menu item.'
+        description: 'The ID of the item.'
         required: true
-        example: 10
+        example: 7
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 10
+      id: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -196,27 +196,27 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: hxwnbifgiaupokldsvfn
+        example: zohybdz
         type: string
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: quia
+        example: aut
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Quis autem nihil reprehenderit eveniet suscipit.'
+        example: 'Asperiores quidem rem quia aut ut eum.'
         type: string
         custom: []
     cleanBodyParameters:
-      name: hxwnbifgiaupokldsvfn
-      price: quia
-      description: 'Quis autem nihil reprehenderit eveniet suscipit.'
+      name: zohybdz
+      price: aut
+      description: 'Asperiores quidem rem quia aut ut eum.'
     fileParameters: []
     responses:
       -
@@ -234,7 +234,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/v1/menu-items/{id}'
+    uri: 'api/v1/menu/items/{id}'
     metadata:
       groupName: 'Menu Items'
       groupDescription: ''
@@ -251,13 +251,13 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the menu item.'
+        description: 'The ID of the item.'
         required: true
-        example: 7
+        example: 3
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 7
+      id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

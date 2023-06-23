@@ -23,9 +23,9 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'restaurant_id' => ['required', 'string', 'exists:restaurants,id'],
+            'restaurant_id' => ['required', 'integer', 'exists:restaurants,id'],
             'name' => ['required', 'string', 'max:100'],
-            'price' => ['required', new Money()],
+            'price' => ['required', 'numeric', 'between:0,9999999999.99'],
             'description' => ['required', 'string', 'max:299'],
         ];
     }
