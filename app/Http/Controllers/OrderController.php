@@ -44,7 +44,7 @@ class OrderController extends Controller
      * @authenticated
      * @header Authorization Bearer
      * @apiResourceCollection App\Http\Resources\RestaurantResource
-     * @apiResourceModel App\Models\Restaurant paginate=15
+     * @apiResourceModel App\Models\Restaurant paginate=15 with=menuItem,menuItem.restaurant,user
      */
     public function index(): JsonResponse{
         // check auth user type(admin or user)
@@ -81,7 +81,7 @@ class OrderController extends Controller
      *
      * @authenticated
      * @header Authorization Bearer
-     * @apiResourceModel App\Models\Order
+     * @apiResourceModel App\Models\Order with=menuItem,menuItem.restaurant,user
      */
     #[ResponseFromApiResource(OrderResource::class, Order::class, 201)]
 
@@ -105,7 +105,7 @@ class OrderController extends Controller
      * user is a normal user, only order belonging to them will be accessible
      *
      * @apiResource App\Http\Resources\OrderResource
-     * @apiResourceModel App\Models\Order
+     * @apiResourceModel App\Models\Order with=menuItem,menuItem.restaurant,user
      */
     public function show(Order $order): JsonResponse{
         $order->loadMissing(['menuItem', 'menuItem.restaurant', 'user']);
@@ -121,7 +121,7 @@ class OrderController extends Controller
      *
      * @authenticated
      * @header Authorization Bearer
-     * @apiResourceModel App\Models\Order
+     * @apiResourceModel App\Models\Order with=menuItem,menuItem.restaurant,user
      */
     #[ResponseFromApiResource(OrderResource::class, Order::class, 202)]
 
@@ -147,7 +147,7 @@ class OrderController extends Controller
      *
      * @authenticated
      * @header Authorization Bearer
-     * @apiResourceModel App\Models\Restaurant
+     * @apiResourceModel App\Models\Restaurant with=menuItem,menuItem.restaurant,user
      */
     public function destroy(Order $order): JsonResponse{
         DB::beginTransaction();
