@@ -70,6 +70,7 @@ class OrderController extends Controller
                 // default, we know authenticated user is an admin, hence we will return all orders
                 return $query;
             })
+            ->with(['menuItem', 'menuItem.restaurant', 'user'])
             ->paginate();
         $orders = OrderResource::collection($orders)->response()->getData(true);
         return $this->successCreated($orders);
@@ -107,6 +108,7 @@ class OrderController extends Controller
      * @apiResourceModel App\Models\Order
      */
     public function show(Order $order): JsonResponse{
+        $order->loadMissing(['menuItem', 'menuItem.restaurant', 'user']);
         $order = OrderResource::make($order);
         return $this->successRead($order);
     }
@@ -127,6 +129,7 @@ class OrderController extends Controller
         DB::beginTransaction();
         try {
             $order = OrderService::update($order, $request->validated());
+            $order->loadMissing(['menuItem', 'menuItem.restaurant', 'user']);
             $order = OrderResource::make($order);
             DB::commit();
             return $this->successUpdated($order);

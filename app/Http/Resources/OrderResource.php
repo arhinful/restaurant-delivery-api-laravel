@@ -14,6 +14,17 @@ class OrderResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'uuid' => $this->uuid,
+            'quantity' => $this->quantity,
+            'location' => $this->location,
+            'gps' => $this->gps,
+            'mobile_number' => $this->mobile_number,
+            'created_at' => $this->formattedCreatedAt,
+            'user' => UserResource::make($this->whenLoaded('user')),
+            'menu_item' => MenuItemResource::make($this->whenLoaded('menuItem')),
+            'restaurant' => RestaurantResource::make($this->whenLoaded('menuItem.restaurant')),
+        ];
     }
 }
