@@ -78,35 +78,35 @@ endpoints:
         name: menu_item_id
         description: ''
         required: true
-        example: vitae
+        example: et
         type: string
         custom: []
       quantity:
         name: quantity
         description: ''
         required: true
-        example: 18
+        example: 7
         type: integer
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: crvgcnwoebilvgmv
+        example: epaxcwkrqzutxpwniepkmxj
         type: string
         custom: []
       gps:
         name: gps
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: sskeojrjpgfsou
+        example: mymgcoprasvtwkpgwihz
         type: string
         custom: []
       mobile_number:
         name: mobile_number
         description: 'Must not be greater than 20 characters.'
         required: true
-        example: uvrxntcvqew
+        example: xxdnoluzixwgc
         type: string
         custom: []
       custom_user_id:
@@ -117,16 +117,16 @@ endpoints:
         type: string
         custom: []
     cleanBodyParameters:
-      menu_item_id: vitae
-      quantity: 18
-      location: crvgcnwoebilvgmv
-      gps: sskeojrjpgfsou
-      mobile_number: uvrxntcvqew
+      menu_item_id: et
+      quantity: 7
+      location: epaxcwkrqzutxpwniepkmxj
+      gps: mymgcoprasvtwkpgwihz
+      mobile_number: xxdnoluzixwgc
     fileParameters: []
     responses:
       -
         status: 201
-        content: '{"data":[]}'
+        content: '{"data":{"id":null,"uuid":null,"quantity":null,"location":null,"gps":null,"mobile_number":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -172,7 +172,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[]}'
+        content: '{"data":{"id":null,"uuid":null,"quantity":null,"location":null,"gps":null,"mobile_number":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -207,11 +207,11 @@ endpoints:
         name: id
         description: 'The ID of the order.'
         required: true
-        example: 1
+        example: 6
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -219,40 +219,40 @@ endpoints:
         name: quantity
         description: ''
         required: true
-        example: 6
+        example: 1
         type: integer
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: qgbhssya
+        example: crcpwthkhfwevzquhmnkuhqjd
         type: string
         custom: []
       gps:
         name: gps
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: bcdggedmmact
+        example: gttibjc
         type: string
         custom: []
       mobile_number:
         name: mobile_number
         description: 'Must not be greater than 20 characters.'
         required: true
-        example: xwjdelhwrjtmmwapfyxr
+        example: twavflxbd
         type: string
         custom: []
     cleanBodyParameters:
-      quantity: 6
-      location: qgbhssya
-      gps: bcdggedmmact
-      mobile_number: xwjdelhwrjtmmwapfyxr
+      quantity: 1
+      location: crcpwthkhfwevzquhmnkuhqjd
+      gps: gttibjc
+      mobile_number: twavflxbd
     fileParameters: []
     responses:
       -
         status: 202
-        content: '{"data":[]}'
+        content: '{"data":{"id":null,"uuid":null,"quantity":null,"location":null,"gps":null,"mobile_number":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -286,11 +286,11 @@ endpoints:
         name: id
         description: 'The ID of the order.'
         required: true
-        example: 13
+        example: 6
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 13
+      id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

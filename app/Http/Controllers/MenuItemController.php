@@ -37,7 +37,7 @@ class MenuItemController extends Controller
      * </aside>
      *
      * @apiResourceCollection App\Http\Resources\RestaurantResource
-     * @apiResourceModel App\Models\MenuItem paginate=15
+     * @apiResourceModel App\Models\MenuItem paginate=15 with=restaurant
      */
     public function index(): JsonResponse{
         $menu_items = QueryBuilder::for(MenuItem::class)
@@ -63,7 +63,7 @@ class MenuItemController extends Controller
      *
      * @authenticated
      * @header Authorization Bearer.
-     * @apiResourceModel App\Models\MenuItem.
+     * @apiResourceModel App\Models\MenuItem with=restaurant
      */
     #[ResponseFromApiResource(MenuItemResource::class, MenuItem::class, 201)]
     public function store(StoreRequest $request): JsonResponse{
@@ -83,7 +83,7 @@ class MenuItemController extends Controller
      * Fetch Single Menu Item.
      *
      * @apiResource App\Http\Resources\MenuItemResource
-     * @apiResourceModel App\Models\MenuItem
+     * @apiResourceModel App\Models\MenuItem with=restaurant
      */
     public function show(MenuItem $item): JsonResponse{
         $item->loadMissing(['restaurant',]);
@@ -96,7 +96,7 @@ class MenuItemController extends Controller
      *
      * @authenticated
      * @header Authorization Bearer
-     * @apiResourceModel App\Models\MenuItem
+     * @apiResourceModel App\Models\MenuItem with=restaurant
      */
     #[ResponseFromApiResource(MenuItemResource::class, MenuItem::class, 202)]
     public function update(MenuItem $item, UpdateRequest $request): JsonResponse{
@@ -118,7 +118,7 @@ class MenuItemController extends Controller
      *
      * @authenticated
      * @header Authorization Bearer
-     * @apiResourceModel App\Models\MenuItem
+     * @apiResourceModel App\Models\MenuItem with=restaurant
      */
     public function destroy(MenuItem $item): JsonResponse{
         DB::beginTransaction();

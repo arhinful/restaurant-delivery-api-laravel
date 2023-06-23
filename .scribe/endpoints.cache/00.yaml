@@ -28,40 +28,40 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: c
+        example: fwmhuzgvmtgjagpof
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: dillan.smith@example.org
+        example: piper71@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: sunt
+        example: labore
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'The value and <code>password</code> must match.'
         required: true
-        example: sed
+        example: consequuntur
         type: string
         custom: []
     cleanBodyParameters:
-      name: c
-      email: dillan.smith@example.org
-      password: sunt
-      password_confirmation: sed
+      name: fwmhuzgvmtgjagpof
+      email: piper71@example.net
+      password: labore
+      password_confirmation: consequuntur
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":{"id":53,"uuid":"f03cafb7-b605-4ffa-b080-2a1192964c86","name":"Arhinful Emmanuel","email":"kofibusy@gmail.com","created_at":"2023-06-23T11:37:31.000000Z","roles":[]}}'
+        content: '{"data":{"id":56,"uuid":"bf9d5785-1599-4a46-8123-57f85bab20c6","name":"Arhinful Emmanuel","email":"kofibusy@gmail.com","created_at":"2023-06-23T12:01:49.000000Z","roles":[]}}'
         headers: []
         description: ''
         custom: []
@@ -96,19 +96,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: ford10@example.net
+        example: magali.fritsch@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: 'QMuZ,cyG?$'
+        example: 'DA`TdD#Wh'
         type: string
         custom: []
     cleanBodyParameters:
-      email: ford10@example.net
-      password: 'QMuZ,cyG?$'
+      email: magali.fritsch@example.net
+      password: 'DA`TdD#Wh'
     fileParameters: []
     responses:
       -
@@ -171,11 +171,11 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: nspencer@example.com
+        example: zferry@example.net
         type: string
         custom: []
     cleanBodyParameters:
-      email: nspencer@example.com
+      email: zferry@example.net
     fileParameters: []
     responses: []
     responseFields: []
@@ -209,27 +209,27 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: nulla
+        example: sequi
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: aniya58@example.org
+        example: hgleason@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: molestias
+        example: rerum
         type: string
         custom: []
     cleanBodyParameters:
-      token: nulla
-      email: aniya58@example.org
-      password: molestias
+      token: sequi
+      email: hgleason@example.net
+      password: rerum
     fileParameters: []
     responses: []
     responseFields: []
@@ -259,19 +259,19 @@ endpoints:
         name: id
         description: 'The ID of the verify email.'
         required: true
-        example: est
+        example: earum
         type: string
         custom: []
       hash:
         name: hash
         description: ''
         required: true
-        example: dolores
+        example: cumque
         type: string
         custom: []
     cleanUrlParameters:
-      id: est
-      hash: dolores
+      id: earum
+      hash: cumque
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

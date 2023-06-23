@@ -74,40 +74,40 @@ endpoints:
         name: restaurant_id
         description: ''
         required: true
-        example: nobis
+        example: maxime
         type: string
         custom: []
       name:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: skofjjavptljofignfpl
+        example: ofnuuebozcznlixizdkquxey
         type: string
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: autem
+        example: voluptate
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Odit voluptatem esse facere nam inventore nostrum sunt.'
+        example: 'Dolores eaque ut nobis a.'
         type: string
         custom: []
     cleanBodyParameters:
-      restaurant_id: nobis
-      name: skofjjavptljofignfpl
-      price: autem
-      description: 'Odit voluptatem esse facere nam inventore nostrum sunt.'
+      restaurant_id: maxime
+      name: ofnuuebozcznlixizdkquxey
+      price: voluptate
+      description: 'Dolores eaque ut nobis a.'
     fileParameters: []
     responses:
       -
         status: 201
-        content: '{"data":[]}'
+        content: '{"data":{"id":null,"uuid":null,"name":null,"slug":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -138,11 +138,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 16
+        example: 9
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -151,7 +151,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[]}'
+        content: '{"data":{"id":null,"uuid":null,"name":null,"slug":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -184,11 +184,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 20
+        example: 10
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 20
+      id: 10
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -196,32 +196,32 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: scumsexg
+        example: hxwnbifgiaupokldsvfn
         type: string
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: quis
+        example: quia
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Harum ab hic eos in qui voluptatibus rerum.'
+        example: 'Quis autem nihil reprehenderit eveniet suscipit.'
         type: string
         custom: []
     cleanBodyParameters:
-      name: scumsexg
-      price: quis
-      description: 'Harum ab hic eos in qui voluptatibus rerum.'
+      name: hxwnbifgiaupokldsvfn
+      price: quia
+      description: 'Quis autem nihil reprehenderit eveniet suscipit.'
     fileParameters: []
     responses:
       -
         status: 202
-        content: '{"data":[]}'
+        content: '{"data":{"id":null,"uuid":null,"name":null,"slug":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -253,11 +253,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 19
+        example: 7
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 19
+      id: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
