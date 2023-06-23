@@ -11,7 +11,7 @@ services. It allows you to manage restaurants, menus and orders.
 - [Database Setup](#database-setup)
 - [Running the Application](#running-the-application)
 - [API Documentation](#api-documentation)
-- [Contributing](#contributor)
+- [Contributor](#contributor)
 - [License](#license)
 
 ## Prerequisites
