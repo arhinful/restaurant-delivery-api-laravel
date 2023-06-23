@@ -38,7 +38,7 @@ class OrderController extends Controller
      *
      * <aside>
      * <h3>Sorting<h3>
-     * Can sorted by: created_at and or location
+     * Can sorted by: created_at, location
      * </aside>
      *
      * @authenticated

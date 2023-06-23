@@ -24,9 +24,18 @@ class MenuItemController extends Controller
     }
 
     /**
-     * Fetch Menus.
-     * Filter: /menu-items?filter[name]=kofibusy lounge [can be filtered by name and or price and or restaurant.id].
-     * Sort: /menu-items?sort=name(Ascending) or -name, price, -price,
+     * Fetch Menu Items.
+     *
+     * <aside>
+     * <h3>Filtering<h3>
+     * Can be filtered by: [name], [price], [restaurant.id].
+     * </aside>
+     *
+     * <aside>
+     * <h3>Sorting<h3>
+     * Can sorted by: name, price
+     * </aside>
+     *
      * @apiResourceCollection App\Http\Resources\RestaurantResource
      * @apiResourceModel App\Models\MenuItem paginate=15
      */
@@ -50,6 +59,7 @@ class MenuItemController extends Controller
 
     /**
      * Create New Menu Item.
+     *
      * @authenticated
      * @header Authorization Bearer.
      * @apiResourceModel App\Models\MenuItem.
@@ -70,6 +80,7 @@ class MenuItemController extends Controller
 
     /**
      * Fetch Single Menu Item.
+     *
      * @apiResource App\Http\Resources\MenuItemResource
      * @apiResourceModel App\Models\MenuItem
      */
@@ -80,6 +91,7 @@ class MenuItemController extends Controller
 
     /**
      * Update Menu Item.
+     *
      * @authenticated
      * @header Authorization Bearer
      * @apiResourceModel App\Models\MenuItem
@@ -100,6 +112,7 @@ class MenuItemController extends Controller
 
     /**
      * Delete Menu Item.
+     *
      * @authenticated
      * @header Authorization Bearer
      * @apiResourceModel App\Models\MenuItem

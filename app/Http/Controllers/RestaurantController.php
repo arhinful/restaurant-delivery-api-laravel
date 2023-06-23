@@ -27,12 +27,12 @@ class RestaurantController extends Controller
      *
      * <aside>
      * <h3>Filtering<h3>
-     * Can be filtered by: [name] and or [location].
+     * Can be filtered by: [name], [location].
      * </aside>
      *
      * <aside>
      * <h3>Sorting<h3>
-     * Can sorted by: name and or location
+     * Can sorted by: name, location
      * </aside>
      *
      * @apiResourceCollection App\Http\Resources\RestaurantResource
