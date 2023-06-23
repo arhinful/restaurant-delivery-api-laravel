@@ -22,11 +22,11 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 6
-                    uuid: b73f91fc-0a2e-4b31-84ad-8da42581db9a
+                    id: 47
+                    uuid: edacdae0-012b-4229-a223-78315b7e484c
                     name: 'Arhinful Emmanuel'
                     email: kofibusy@gmail.com
-                    created_at: '2023-06-22T16:23:35.000000Z'
+                    created_at: '2023-06-23T10:57:05.000000Z'
                     roles: []
                 properties:
                   data:
@@ -34,10 +34,10 @@ paths:
                     properties:
                       id:
                         type: integer
-                        example: 6
+                        example: 47
                       uuid:
                         type: string
-                        example: b73f91fc-0a2e-4b31-84ad-8da42581db9a
+                        example: edacdae0-012b-4229-a223-78315b7e484c
                       name:
                         type: string
                         example: 'Arhinful Emmanuel'
@@ -46,7 +46,7 @@ paths:
                         example: kofibusy@gmail.com
                       created_at:
                         type: string
-                        example: '2023-06-22T16:23:35.000000Z'
+                        example: '2023-06-23T10:57:05.000000Z'
                       roles:
                         type: array
                         example: []
@@ -62,19 +62,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: bfrhnpiomylnyhhvonzndil
+                  example: ih
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: kristoffer56@example.net
+                  example: trent90@example.com
                 password:
                   type: string
                   description: ''
-                  example: nulla
+                  example: dicta
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: vero
+                  example: explicabo
               required:
                 - name
                 - email
@@ -131,11 +131,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: abernathy.katelyn@example.net
+                  example: joshua.davis@example.net
                 password:
                   type: string
                   description: ''
-                  example: "&4cX*:^>)`'XgGo!O*?"
+                  example: gc1\pO
               required:
                 - email
                 - password
@@ -159,7 +159,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: icarroll@example.net
+                  example: hailie16@example.org
               required:
                 - email
       security: []
@@ -182,15 +182,15 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: velit
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: colin.bayer@example.net
+                  example: raphaelle.mcglynn@example.net
                 password:
                   type: string
                   description: ''
-                  example: dolor
+                  example: minus
               required:
                 - token
                 - email
@@ -223,7 +223,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the verify email.'
-        example: sed
+        example: in
         required: true
         schema:
           type: string
@@ -231,7 +231,7 @@ paths:
         in: path
         name: hash
         description: ''
-        example: quia
+        example: id
         required: true
         schema:
           type: string
@@ -1151,7 +1151,7 @@ paths:
         in: path
         name: fallbackPlaceholder
         description: ''
-        example: V
+        example: nZQ
         required: true
         schema:
           type: string
@@ -1312,19 +1312,19 @@ paths:
                 restaurant_id:
                   type: string
                   description: ''
-                  example: ut
+                  example: repellat
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: zjyhpjyu
+                  example: yjgcdnlodmcfll
                 price:
                   type: string
                   description: ''
-                  example: dolor
+                  example: hic
                 description:
                   type: string
                   description: 'Must not be greater than 299 characters.'
-                  example: 'Eligendi aut illum et molestiae autem.'
+                  example: 'Ut quia sed laudantium eligendi recusandae suscipit tenetur.'
               required:
                 - restaurant_id
                 - name
@@ -1389,15 +1389,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: bdknyzhmbdwqmyfoxoyg
+                  example: m
                 price:
                   type: string
                   description: ''
-                  example: eos
+                  example: ea
                 description:
                   type: string
                   description: 'Must not be greater than 299 characters.'
-                  example: 'Veritatis eum quidem dolore voluptatum voluptate numquam consequuntur accusamus.'
+                  example: 'Non alias rerum illo sit voluptatem explicabo.'
               required:
                 - name
                 - price
@@ -1422,7 +1422,298 @@ paths:
         in: path
         name: id
         description: 'The ID of the menu item.'
-        example: 2
+        example: 6
+        required: true
+        schema:
+          type: integer
+  /api/v1/orders:
+    get:
+      summary: 'Fetch Orders.'
+      operationId: fetchOrders
+      description: "<p>\nIf authenticated user is an admin, they will have access to all orders, on the other hand if authenticated\nuser is a normal user, only orders belonging to them will be returned\n</p>\n\n<aside>\n<h3>Filtering<h3>\nCan be filtered by: [location], [user.id], [menuItem.id], [menuItem.restaurant.id]\n</aside>\n\n<aside>\n<h3>Sorting<h3>\nCan sorted by: created_at and or location\n</aside>"
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: Bearer
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - []
+                    - []
+                  links:
+                    first: '/?page=1'
+                    last: '/?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: '/?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: /
+                    per_page: 15
+                    to: 2
+                    total: 2
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - []
+                      - []
+                    items:
+                      type: array
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: '/?page=1'
+                      last:
+                        type: string
+                        example: '/?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: '/?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: /
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: integer
+                        example: 2
+                      total:
+                        type: integer
+                        example: 2
+      tags:
+        - Orders
+    post:
+      summary: 'Create New Order.'
+      operationId: createNewOrder
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: Bearer
+          schema:
+            type: string
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                properties:
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Orders
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                menu_item_id:
+                  type: string
+                  description: ''
+                  example: consectetur
+                quantity:
+                  type: integer
+                  description: ''
+                  example: 17
+                location:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: uhgwevhwomepd
+                gps:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: rqgtbdmpeqfclcsa
+                mobile_number:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: akbhkpoiezv
+                custom_user_id:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - menu_item_id
+                - quantity
+                - location
+                - gps
+                - mobile_number
+  '/api/v1/orders/{id}':
+    get:
+      summary: 'Fetch Single Order.'
+      operationId: fetchSingleOrder
+      description: "If authenticated user is an admin, they will have access to any order, on the other hand if authenticated\nuser is a normal user, only order belonging to them will be accessible"
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                properties:
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Orders
+      security: []
+    put:
+      summary: 'Update Order.'
+      operationId: updateOrder
+      description: "If authenticated user is an admin, they will have access to any order, on the other hand if authenticated\nuser is a normal user, only order belonging to them will be accessible"
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: Bearer
+          schema:
+            type: string
+      responses:
+        202:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                properties:
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Orders
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quantity:
+                  type: integer
+                  description: ''
+                  example: 1
+                location:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: kpwxxzndtmiitnbhod
+                gps:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: towfxvvbhbjawrloqp
+                mobile_number:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: qdyowsiix
+              required:
+                - quantity
+                - location
+                - gps
+                - mobile_number
+    delete:
+      summary: 'Delete Restaurant.'
+      operationId: deleteRestaurant
+      description: "If authenticated user is an admin, they will have access to any order, on the other hand if authenticated\nuser is a normal user, only order belonging to them will be accessible"
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: Bearer
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Orders
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the order.'
+        example: 9
         required: true
         schema:
           type: integer
@@ -1430,7 +1721,7 @@ paths:
     get:
       summary: 'Fetch Restaurants.'
       operationId: fetchRestaurants
-      description: "Filter: /restaurants?filter[name]=kofibusy lounge [can be filtered by name and or location].\nSort: /restaurants?sort=name(Ascending) or restaurants?sort=-name (Descending)\n[can be ordered by name and location]."
+      description: "<aside>\n<h3>Filtering<h3>\nCan be filtered by: [name] and or [location].\n</aside>\n\n<aside>\n<h3>Sorting<h3>\nCan sorted by: name and or location\n</aside>"
       parameters: []
       responses:
         200:
@@ -1558,7 +1849,19 @@ paths:
           example: Bearer
           schema:
             type: string
-      responses: {  }
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                properties:
+                  data:
+                    type: array
+                    example: []
       tags:
         - Restaurants
       requestBody:
@@ -1571,11 +1874,11 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: yhzcdjp
+                  example: cghuxmlsrefepqa
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: tc
+                  example: zxnuthytwehwjz
               required:
                 - name
                 - location
@@ -1638,17 +1941,17 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: qyqsuquvp
+                  example: vnyjunkukanbgrwuukqnaph
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: qz
+                  example: ohsrdrpw
               required:
                 - name
                 - location
     delete:
-      summary: 'Delete Restaurant.'
-      operationId: deleteRestaurant
+      summary: 'Delete Order.'
+      operationId: deleteOrder
       description: ''
       parameters:
         -
@@ -1658,19 +1961,7 @@ paths:
           example: Bearer
           schema:
             type: string
-      responses:
-        202:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  data: []
-                properties:
-                  data:
-                    type: array
-                    example: []
+      responses: {  }
       tags:
         - Restaurants
     parameters:
@@ -1678,7 +1969,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the restaurant.'
-        example: 1
+        example: 19
         required: true
         schema:
           type: integer
@@ -1691,6 +1982,9 @@ tags:
     description: ''
   -
     name: 'Menu Items'
+    description: ''
+  -
+    name: Orders
     description: ''
   -
     name: Restaurants

@@ -65,35 +65,35 @@ endpoints:
         name: restaurant_id
         description: ''
         required: true
-        example: ut
+        example: repellat
         type: string
         custom: []
       name:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: zjyhpjyu
+        example: yjgcdnlodmcfll
         type: string
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: dolor
+        example: hic
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Eligendi aut illum et molestiae autem.'
+        example: 'Ut quia sed laudantium eligendi recusandae suscipit tenetur.'
         type: string
         custom: []
     cleanBodyParameters:
-      restaurant_id: ut
-      name: zjyhpjyu
-      price: dolor
-      description: 'Eligendi aut illum et molestiae autem.'
+      restaurant_id: repellat
+      name: yjgcdnlodmcfll
+      price: hic
+      description: 'Ut quia sed laudantium eligendi recusandae suscipit tenetur.'
     fileParameters: []
     responses:
       -
@@ -129,11 +129,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 2
+        example: 6
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 2
+      id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -175,11 +175,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 2
+        example: 3
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 2
+      id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -187,27 +187,27 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: bdknyzhmbdwqmyfoxoyg
+        example: m
         type: string
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: eos
+        example: ea
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Veritatis eum quidem dolore voluptatum voluptate numquam consequuntur accusamus.'
+        example: 'Non alias rerum illo sit voluptatem explicabo.'
         type: string
         custom: []
     cleanBodyParameters:
-      name: bdknyzhmbdwqmyfoxoyg
-      price: eos
-      description: 'Veritatis eum quidem dolore voluptatum voluptate numquam consequuntur accusamus.'
+      name: m
+      price: ea
+      description: 'Non alias rerum illo sit voluptatem explicabo.'
     fileParameters: []
     responses:
       -
@@ -244,11 +244,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 17
+        example: 7
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 17
+      id: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

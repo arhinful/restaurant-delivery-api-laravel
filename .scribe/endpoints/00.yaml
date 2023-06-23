@@ -26,40 +26,40 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: bfrhnpiomylnyhhvonzndil
+        example: ih
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: kristoffer56@example.net
+        example: trent90@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: nulla
+        example: dicta
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'The value and <code>password</code> must match.'
         required: true
-        example: vero
+        example: explicabo
         type: string
         custom: []
     cleanBodyParameters:
-      name: bfrhnpiomylnyhhvonzndil
-      email: kristoffer56@example.net
-      password: nulla
-      password_confirmation: vero
+      name: ih
+      email: trent90@example.com
+      password: dicta
+      password_confirmation: explicabo
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":{"id":6,"uuid":"b73f91fc-0a2e-4b31-84ad-8da42581db9a","name":"Arhinful Emmanuel","email":"kofibusy@gmail.com","created_at":"2023-06-22T16:23:35.000000Z","roles":[]}}'
+        content: '{"data":{"id":47,"uuid":"edacdae0-012b-4229-a223-78315b7e484c","name":"Arhinful Emmanuel","email":"kofibusy@gmail.com","created_at":"2023-06-23T10:57:05.000000Z","roles":[]}}'
         headers: []
         description: ''
         custom: []
@@ -94,19 +94,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: abernathy.katelyn@example.net
+        example: joshua.davis@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: "&4cX*:^>)`'XgGo!O*?"
+        example: gc1\pO
         type: string
         custom: []
     cleanBodyParameters:
-      email: abernathy.katelyn@example.net
-      password: "&4cX*:^>)`'XgGo!O*?"
+      email: joshua.davis@example.net
+      password: gc1\pO
     fileParameters: []
     responses:
       -
@@ -169,11 +169,11 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: icarroll@example.net
+        example: hailie16@example.org
         type: string
         custom: []
     cleanBodyParameters:
-      email: icarroll@example.net
+      email: hailie16@example.org
     fileParameters: []
     responses: []
     responseFields: []
@@ -207,27 +207,27 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: voluptatem
+        example: velit
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: colin.bayer@example.net
+        example: raphaelle.mcglynn@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: dolor
+        example: minus
         type: string
         custom: []
     cleanBodyParameters:
-      token: voluptatem
-      email: colin.bayer@example.net
-      password: dolor
+      token: velit
+      email: raphaelle.mcglynn@example.net
+      password: minus
     fileParameters: []
     responses: []
     responseFields: []
@@ -257,19 +257,19 @@ endpoints:
         name: id
         description: 'The ID of the verify email.'
         required: true
-        example: sed
+        example: in
         type: string
         custom: []
       hash:
         name: hash
         description: ''
         required: true
-        example: quia
+        example: id
         type: string
         custom: []
     cleanUrlParameters:
-      id: sed
-      hash: quia
+      id: in
+      hash: id
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
