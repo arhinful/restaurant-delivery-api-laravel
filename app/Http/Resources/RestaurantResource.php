@@ -14,6 +14,14 @@ class RestaurantResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'uuid' => $this->uuid,
+            'name' => $this->name,
+            'location' => $this->location,
+            'created_at' => $this->formattedCreatedAt,
+            'menu_items' => $this->whenLoaded('menuItems'),
+            'orders' => $this->whenLoaded('orders')
+        ];
     }
 }

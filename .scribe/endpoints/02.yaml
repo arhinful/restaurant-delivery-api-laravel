@@ -24,7 +24,7 @@ endpoints:
 
         <aside>
         <h3>Sorting<h3>
-        Can sorted by: created_at and or location
+        Can sorted by: created_at, location
         </aside>
       authenticated: true
       custom: []
@@ -42,7 +42,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[[],[]],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
+        content: '{"data":[{"id":null,"uuid":null,"name":null,"location":null,"created_at":"Thu, 1st Jan 1970"},{"id":null,"uuid":null,"name":null,"location":null,"created_at":"Thu, 1st Jan 1970"}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
         headers: []
         description: ''
         custom: []
@@ -78,35 +78,35 @@ endpoints:
         name: menu_item_id
         description: ''
         required: true
-        example: consectetur
+        example: beatae
         type: string
         custom: []
       quantity:
         name: quantity
         description: ''
         required: true
-        example: 17
+        example: 11
         type: integer
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: uhgwevhwomepd
+        example: dzpnqsypt
         type: string
         custom: []
       gps:
         name: gps
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: rqgtbdmpeqfclcsa
+        example: oeabwmqjefpnp
         type: string
         custom: []
       mobile_number:
         name: mobile_number
         description: 'Must not be greater than 20 characters.'
         required: true
-        example: akbhkpoiezv
+        example: nivqi
         type: string
         custom: []
       custom_user_id:
@@ -117,11 +117,11 @@ endpoints:
         type: string
         custom: []
     cleanBodyParameters:
-      menu_item_id: consectetur
-      quantity: 17
-      location: uhgwevhwomepd
-      gps: rqgtbdmpeqfclcsa
-      mobile_number: akbhkpoiezv
+      menu_item_id: beatae
+      quantity: 11
+      location: dzpnqsypt
+      gps: oeabwmqjefpnp
+      mobile_number: nivqi
     fileParameters: []
     responses:
       -
@@ -159,11 +159,11 @@ endpoints:
         name: id
         description: 'The ID of the order.'
         required: true
-        example: 9
+        example: 5
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 9
+      id: 5
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -207,11 +207,11 @@ endpoints:
         name: id
         description: 'The ID of the order.'
         required: true
-        example: 18
+        example: 19
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 18
+      id: 19
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -219,35 +219,35 @@ endpoints:
         name: quantity
         description: ''
         required: true
-        example: 1
+        example: 4
         type: integer
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: kpwxxzndtmiitnbhod
+        example: nkpwucndjkgkmxl
         type: string
         custom: []
       gps:
         name: gps
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: towfxvvbhbjawrloqp
+        example: wghl
         type: string
         custom: []
       mobile_number:
         name: mobile_number
         description: 'Must not be greater than 20 characters.'
         required: true
-        example: qdyowsiix
+        example: ufwbkaafaq
         type: string
         custom: []
     cleanBodyParameters:
-      quantity: 1
-      location: kpwxxzndtmiitnbhod
-      gps: towfxvvbhbjawrloqp
-      mobile_number: qdyowsiix
+      quantity: 4
+      location: nkpwucndjkgkmxl
+      gps: wghl
+      mobile_number: ufwbkaafaq
     fileParameters: []
     responses:
       -
@@ -286,11 +286,11 @@ endpoints:
         name: id
         description: 'The ID of the order.'
         required: true
-        example: 5
+        example: 8
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 5
+      id: 8
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

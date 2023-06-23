@@ -14,12 +14,12 @@ endpoints:
       description: |-
         <aside>
         <h3>Filtering<h3>
-        Can be filtered by: [name] and or [location].
+        Can be filtered by: [name], [location].
         </aside>
 
         <aside>
         <h3>Sorting<h3>
-        Can sorted by: name and or location
+        Can sorted by: name, location
         </aside>
       authenticated: false
       custom: []
@@ -36,7 +36,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[[],[]],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
+        content: '{"data":[{"id":null,"uuid":null,"name":null,"location":null,"created_at":"Thu, 1st Jan 1970"},{"id":null,"uuid":null,"name":null,"location":null,"created_at":"Thu, 1st Jan 1970"}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
         headers: []
         description: ''
         custom: []
@@ -72,24 +72,24 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: cghuxmlsrefepqa
+        example: nvephookdgiqrqqdb
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: zxnuthytwehwjz
+        example: fxqqtefzphtk
         type: string
         custom: []
     cleanBodyParameters:
-      name: cghuxmlsrefepqa
-      location: zxnuthytwehwjz
+      name: nvephookdgiqrqqdb
+      location: fxqqtefzphtk
     fileParameters: []
     responses:
       -
         status: 201
-        content: '{"data":[]}'
+        content: '{"data":{"id":null,"uuid":null,"name":null,"location":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -120,11 +120,11 @@ endpoints:
         name: id
         description: 'The ID of the restaurant.'
         required: true
-        example: 19
+        example: 13
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 19
+      id: 13
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -133,7 +133,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[]}'
+        content: '{"data":{"id":null,"uuid":null,"name":null,"location":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -166,11 +166,11 @@ endpoints:
         name: id
         description: 'The ID of the restaurant.'
         required: true
-        example: 3
+        example: 11
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 3
+      id: 11
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -178,24 +178,24 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: vnyjunkukanbgrwuukqnaph
+        example: ndcrkw
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: ohsrdrpw
+        example: xqj
         type: string
         custom: []
     cleanBodyParameters:
-      name: vnyjunkukanbgrwuukqnaph
-      location: ohsrdrpw
+      name: ndcrkw
+      location: xqj
     fileParameters: []
     responses:
       -
         status: 202
-        content: '{"data":[]}'
+        content: '{"data":{"id":null,"uuid":null,"name":null,"location":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -227,11 +227,11 @@ endpoints:
         name: id
         description: 'The ID of the restaurant.'
         required: true
-        example: 13
+        example: 12
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 13
+      id: 12
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

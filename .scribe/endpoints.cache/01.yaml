@@ -12,10 +12,17 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetch Menus.'
+      title: 'Fetch Menu Items.'
       description: |-
-        Filter: /menu-items?filter[name]=kofibusy lounge [can be filtered by name and or price and or restaurant.id].
-        Sort: /menu-items?sort=name(Ascending) or -name, price, -price,
+        <aside>
+        <h3>Filtering<h3>
+        Can be filtered by: [name], [price], [restaurant.id].
+        </aside>
+
+        <aside>
+        <h3>Sorting<h3>
+        Can sorted by: name, price
+        </aside>
       authenticated: false
       custom: []
     headers:
@@ -31,7 +38,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[[],[]],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
+        content: '{"data":[{"id":null,"uuid":null,"name":null,"location":null,"created_at":"Thu, 1st Jan 1970"},{"id":null,"uuid":null,"name":null,"location":null,"created_at":"Thu, 1st Jan 1970"}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
         headers: []
         description: ''
         custom: []
@@ -67,35 +74,35 @@ endpoints:
         name: restaurant_id
         description: ''
         required: true
-        example: repellat
+        example: cum
         type: string
         custom: []
       name:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: yjgcdnlodmcfll
+        example: hxhacmykrablhywzrmbmktuy
         type: string
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: hic
+        example: sint
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Ut quia sed laudantium eligendi recusandae suscipit tenetur.'
+        example: 'Eum ducimus vel odio qui nostrum eaque.'
         type: string
         custom: []
     cleanBodyParameters:
-      restaurant_id: repellat
-      name: yjgcdnlodmcfll
-      price: hic
-      description: 'Ut quia sed laudantium eligendi recusandae suscipit tenetur.'
+      restaurant_id: cum
+      name: hxhacmykrablhywzrmbmktuy
+      price: sint
+      description: 'Eum ducimus vel odio qui nostrum eaque.'
     fileParameters: []
     responses:
       -
@@ -131,11 +138,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 6
+        example: 19
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 6
+      id: 19
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -177,11 +184,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 3
+        example: 9
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 3
+      id: 9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -189,27 +196,27 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: m
+        example: exkcgvzdc
         type: string
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: ea
+        example: qui
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Non alias rerum illo sit voluptatem explicabo.'
+        example: 'Inventore blanditiis praesentium ipsa repudiandae.'
         type: string
         custom: []
     cleanBodyParameters:
-      name: m
-      price: ea
-      description: 'Non alias rerum illo sit voluptatem explicabo.'
+      name: exkcgvzdc
+      price: qui
+      description: 'Inventore blanditiis praesentium ipsa repudiandae.'
     fileParameters: []
     responses:
       -
@@ -246,11 +253,11 @@ endpoints:
         name: id
         description: 'The ID of the menu item.'
         required: true
-        example: 7
+        example: 8
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 7
+      id: 8
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -22,11 +22,11 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 47
-                    uuid: edacdae0-012b-4229-a223-78315b7e484c
+                    id: 52
+                    uuid: a9659631-b324-4774-9cc2-5bfedb5cab52
                     name: 'Arhinful Emmanuel'
                     email: kofibusy@gmail.com
-                    created_at: '2023-06-23T10:57:05.000000Z'
+                    created_at: '2023-06-23T11:17:23.000000Z'
                     roles: []
                 properties:
                   data:
@@ -34,10 +34,10 @@ paths:
                     properties:
                       id:
                         type: integer
-                        example: 47
+                        example: 52
                       uuid:
                         type: string
-                        example: edacdae0-012b-4229-a223-78315b7e484c
+                        example: a9659631-b324-4774-9cc2-5bfedb5cab52
                       name:
                         type: string
                         example: 'Arhinful Emmanuel'
@@ -46,7 +46,7 @@ paths:
                         example: kofibusy@gmail.com
                       created_at:
                         type: string
-                        example: '2023-06-23T10:57:05.000000Z'
+                        example: '2023-06-23T11:17:23.000000Z'
                       roles:
                         type: array
                         example: []
@@ -62,19 +62,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ih
+                  example: anazitnbumcuw
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: trent90@example.com
+                  example: maiya61@example.com
                 password:
                   type: string
                   description: ''
-                  example: dicta
+                  example: quasi
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: explicabo
+                  example: deserunt
               required:
                 - name
                 - email
@@ -131,11 +131,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: joshua.davis@example.net
+                  example: iabshire@example.net
                 password:
                   type: string
                   description: ''
-                  example: gc1\pO
+                  example: '>Msy?Wo@1XvvBT}'
               required:
                 - email
                 - password
@@ -159,7 +159,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: hailie16@example.org
+                  example: edwin.aufderhar@example.net
               required:
                 - email
       security: []
@@ -182,15 +182,15 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: velit
+                  example: explicabo
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: raphaelle.mcglynn@example.net
+                  example: izaiah47@example.com
                 password:
                   type: string
                   description: ''
-                  example: minus
+                  example: dolores
               required:
                 - token
                 - email
@@ -223,7 +223,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the verify email.'
-        example: in
+        example: qui
         required: true
         schema:
           type: string
@@ -231,7 +231,7 @@ paths:
         in: path
         name: hash
         description: ''
-        example: id
+        example: fugiat
         required: true
         schema:
           type: string
@@ -268,157 +268,27 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'API resource not found'
+                  message: 'The route api/v1 could not be found.'
                   exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
-                  file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\Application.php'
-                  line: 1221
+                  file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\AbstractRouteCollection.php'
+                  line: 44
                   trace:
                     -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php'
-                      line: 45
-                      function: abort
-                      class: Illuminate\Foundation\Application
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\routes\api.php'
-                      line: 25
-                      function: abort
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\CallableDispatcher.php'
-                      line: 40
-                      function: '{closure}'
-                      class: Illuminate\Routing\RouteFileRegistrar
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                      line: 237
-                      function: dispatch
-                      class: Illuminate\Routing\CallableDispatcher
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                      line: 208
-                      function: runCallable
-                      class: Illuminate\Routing\Route
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\RouteCollection.php'
+                      line: 162
+                      function: handleMatchedRoute
+                      class: Illuminate\Routing\AbstractRouteCollection
                       type: '->'
                     -
                       file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 799
-                      function: run
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 141
-                      function: 'Illuminate\Routing\{closure}'
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php'
-                      line: 50
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\SubstituteBindings
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                      line: 159
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                      line: 90
-                      function: handleRequest
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                      line: 159
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                      line: 125
-                      function: handleRequest
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                      line: 87
-                      function: handleRequestUsingNamedLimiter
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
-                      line: 25
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 141
-                      function: 'Laravel\Sanctum\Http\Middleware\{closure}'
-                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
-                      line: 24
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 798
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 777
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
+                      line: 754
+                      function: match
+                      class: Illuminate\Routing\RouteCollection
                       type: '->'
                     -
                       file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
                       line: 741
-                      function: runRoute
+                      function: findRoute
                       class: Illuminate\Routing\Router
                       type: '->'
                     -
@@ -694,165 +564,35 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'API resource not found'
+                    example: 'The route api/v1 could not be found.'
                   exception:
                     type: string
                     example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file:
                     type: string
-                    example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\Application.php'
+                    example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\AbstractRouteCollection.php'
                   line:
                     type: integer
-                    example: 1221
+                    example: 44
                   trace:
                     type: array
                     example:
                       -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php'
-                        line: 45
-                        function: abort
-                        class: Illuminate\Foundation\Application
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\routes\api.php'
-                        line: 25
-                        function: abort
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\CallableDispatcher.php'
-                        line: 40
-                        function: '{closure}'
-                        class: Illuminate\Routing\RouteFileRegistrar
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                        line: 237
-                        function: dispatch
-                        class: Illuminate\Routing\CallableDispatcher
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                        line: 208
-                        function: runCallable
-                        class: Illuminate\Routing\Route
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\RouteCollection.php'
+                        line: 162
+                        function: handleMatchedRoute
+                        class: Illuminate\Routing\AbstractRouteCollection
                         type: '->'
                       -
                         file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 799
-                        function: run
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 141
-                        function: 'Illuminate\Routing\{closure}'
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php'
-                        line: 50
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\SubstituteBindings
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                        line: 159
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                        line: 90
-                        function: handleRequest
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                        line: 159
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                        line: 125
-                        function: handleRequest
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                        line: 87
-                        function: handleRequestUsingNamedLimiter
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
-                        line: 25
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 141
-                        function: 'Laravel\Sanctum\Http\Middleware\{closure}'
-                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
-                        line: 24
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 798
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 777
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
+                        line: 754
+                        function: match
+                        class: Illuminate\Routing\RouteCollection
                         type: '->'
                       -
                         file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
                         line: 741
-                        function: runRoute
+                        function: findRoute
                         class: Illuminate\Routing\Router
                         type: '->'
                       -
@@ -1130,16 +870,16 @@ paths:
                       properties:
                         file:
                           type: string
-                          example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php'
+                          example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\RouteCollection.php'
                         line:
                           type: integer
-                          example: 45
+                          example: 162
                         function:
                           type: string
-                          example: abort
+                          example: handleMatchedRoute
                         class:
                           type: string
-                          example: Illuminate\Foundation\Application
+                          example: Illuminate\Routing\AbstractRouteCollection
                         type:
                           type: string
                           example: '->'
@@ -1151,15 +891,15 @@ paths:
         in: path
         name: fallbackPlaceholder
         description: ''
-        example: nZQ
+        example: ''
         required: true
         schema:
           type: string
   /api/v1/menu-items:
     get:
-      summary: 'Fetch Menus.'
-      operationId: fetchMenus
-      description: "Filter: /menu-items?filter[name]=kofibusy lounge [can be filtered by name and or price and or restaurant.id].\nSort: /menu-items?sort=name(Ascending) or -name, price, -price,"
+      summary: 'Fetch Menu Items.'
+      operationId: fetchMenuItems
+      description: "<aside>\n<h3>Filtering<h3>\nCan be filtered by: [name], [price], [restaurant.id].\n</aside>\n\n<aside>\n<h3>Sorting<h3>\nCan sorted by: name, price\n</aside>"
       parameters: []
       responses:
         200:
@@ -1170,8 +910,18 @@ paths:
                 type: object
                 example:
                   data:
-                    - []
-                    - []
+                    -
+                      id: null
+                      uuid: null
+                      name: null
+                      location: null
+                      created_at: 'Thu, 1st Jan 1970'
+                    -
+                      id: null
+                      uuid: null
+                      name: null
+                      location: null
+                      created_at: 'Thu, 1st Jan 1970'
                   links:
                     first: '/?page=1'
                     last: '/?page=1'
@@ -1202,10 +952,36 @@ paths:
                   data:
                     type: array
                     example:
-                      - []
-                      - []
+                      -
+                        id: null
+                        uuid: null
+                        name: null
+                        location: null
+                        created_at: 'Thu, 1st Jan 1970'
+                      -
+                        id: null
+                        uuid: null
+                        name: null
+                        location: null
+                        created_at: 'Thu, 1st Jan 1970'
                     items:
-                      type: array
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: null
+                        uuid:
+                          type: string
+                          example: null
+                        name:
+                          type: string
+                          example: null
+                        location:
+                          type: string
+                          example: null
+                        created_at:
+                          type: string
+                          example: 'Thu, 1st Jan 1970'
                   links:
                     type: object
                     properties:
@@ -1312,19 +1088,19 @@ paths:
                 restaurant_id:
                   type: string
                   description: ''
-                  example: repellat
+                  example: cum
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: yjgcdnlodmcfll
+                  example: hxhacmykrablhywzrmbmktuy
                 price:
                   type: string
                   description: ''
-                  example: hic
+                  example: sint
                 description:
                   type: string
                   description: 'Must not be greater than 299 characters.'
-                  example: 'Ut quia sed laudantium eligendi recusandae suscipit tenetur.'
+                  example: 'Eum ducimus vel odio qui nostrum eaque.'
               required:
                 - restaurant_id
                 - name
@@ -1389,15 +1165,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: m
+                  example: exkcgvzdc
                 price:
                   type: string
                   description: ''
-                  example: ea
+                  example: qui
                 description:
                   type: string
                   description: 'Must not be greater than 299 characters.'
-                  example: 'Non alias rerum illo sit voluptatem explicabo.'
+                  example: 'Inventore blanditiis praesentium ipsa repudiandae.'
               required:
                 - name
                 - price
@@ -1422,7 +1198,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the menu item.'
-        example: 6
+        example: 19
         required: true
         schema:
           type: integer
@@ -1430,7 +1206,7 @@ paths:
     get:
       summary: 'Fetch Orders.'
       operationId: fetchOrders
-      description: "<p>\nIf authenticated user is an admin, they will have access to all orders, on the other hand if authenticated\nuser is a normal user, only orders belonging to them will be returned\n</p>\n\n<aside>\n<h3>Filtering<h3>\nCan be filtered by: [location], [user.id], [menuItem.id], [menuItem.restaurant.id]\n</aside>\n\n<aside>\n<h3>Sorting<h3>\nCan sorted by: created_at and or location\n</aside>"
+      description: "<p>\nIf authenticated user is an admin, they will have access to all orders, on the other hand if authenticated\nuser is a normal user, only orders belonging to them will be returned\n</p>\n\n<aside>\n<h3>Filtering<h3>\nCan be filtered by: [location], [user.id], [menuItem.id], [menuItem.restaurant.id]\n</aside>\n\n<aside>\n<h3>Sorting<h3>\nCan sorted by: created_at, location\n</aside>"
       parameters:
         -
           in: header
@@ -1448,8 +1224,18 @@ paths:
                 type: object
                 example:
                   data:
-                    - []
-                    - []
+                    -
+                      id: null
+                      uuid: null
+                      name: null
+                      location: null
+                      created_at: 'Thu, 1st Jan 1970'
+                    -
+                      id: null
+                      uuid: null
+                      name: null
+                      location: null
+                      created_at: 'Thu, 1st Jan 1970'
                   links:
                     first: '/?page=1'
                     last: '/?page=1'
@@ -1480,10 +1266,36 @@ paths:
                   data:
                     type: array
                     example:
-                      - []
-                      - []
+                      -
+                        id: null
+                        uuid: null
+                        name: null
+                        location: null
+                        created_at: 'Thu, 1st Jan 1970'
+                      -
+                        id: null
+                        uuid: null
+                        name: null
+                        location: null
+                        created_at: 'Thu, 1st Jan 1970'
                     items:
-                      type: array
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: null
+                        uuid:
+                          type: string
+                          example: null
+                        name:
+                          type: string
+                          example: null
+                        location:
+                          type: string
+                          example: null
+                        created_at:
+                          type: string
+                          example: 'Thu, 1st Jan 1970'
                   links:
                     type: object
                     properties:
@@ -1589,23 +1401,23 @@ paths:
                 menu_item_id:
                   type: string
                   description: ''
-                  example: consectetur
+                  example: beatae
                 quantity:
                   type: integer
                   description: ''
-                  example: 17
+                  example: 11
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: uhgwevhwomepd
+                  example: dzpnqsypt
                 gps:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: rqgtbdmpeqfclcsa
+                  example: oeabwmqjefpnp
                 mobile_number:
                   type: string
                   description: 'Must not be greater than 20 characters.'
-                  example: akbhkpoiezv
+                  example: nivqi
                 custom_user_id:
                   type: string
                   description: ''
@@ -1675,19 +1487,19 @@ paths:
                 quantity:
                   type: integer
                   description: ''
-                  example: 1
+                  example: 4
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: kpwxxzndtmiitnbhod
+                  example: nkpwucndjkgkmxl
                 gps:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: towfxvvbhbjawrloqp
+                  example: wghl
                 mobile_number:
                   type: string
                   description: 'Must not be greater than 20 characters.'
-                  example: qdyowsiix
+                  example: ufwbkaafaq
               required:
                 - quantity
                 - location
@@ -1713,7 +1525,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the order.'
-        example: 9
+        example: 5
         required: true
         schema:
           type: integer
@@ -1721,7 +1533,7 @@ paths:
     get:
       summary: 'Fetch Restaurants.'
       operationId: fetchRestaurants
-      description: "<aside>\n<h3>Filtering<h3>\nCan be filtered by: [name] and or [location].\n</aside>\n\n<aside>\n<h3>Sorting<h3>\nCan sorted by: name and or location\n</aside>"
+      description: "<aside>\n<h3>Filtering<h3>\nCan be filtered by: [name], [location].\n</aside>\n\n<aside>\n<h3>Sorting<h3>\nCan sorted by: name, location\n</aside>"
       parameters: []
       responses:
         200:
@@ -1732,8 +1544,18 @@ paths:
                 type: object
                 example:
                   data:
-                    - []
-                    - []
+                    -
+                      id: null
+                      uuid: null
+                      name: null
+                      location: null
+                      created_at: 'Thu, 1st Jan 1970'
+                    -
+                      id: null
+                      uuid: null
+                      name: null
+                      location: null
+                      created_at: 'Thu, 1st Jan 1970'
                   links:
                     first: '/?page=1'
                     last: '/?page=1'
@@ -1764,10 +1586,36 @@ paths:
                   data:
                     type: array
                     example:
-                      - []
-                      - []
+                      -
+                        id: null
+                        uuid: null
+                        name: null
+                        location: null
+                        created_at: 'Thu, 1st Jan 1970'
+                      -
+                        id: null
+                        uuid: null
+                        name: null
+                        location: null
+                        created_at: 'Thu, 1st Jan 1970'
                     items:
-                      type: array
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: null
+                        uuid:
+                          type: string
+                          example: null
+                        name:
+                          type: string
+                          example: null
+                        location:
+                          type: string
+                          example: null
+                        created_at:
+                          type: string
+                          example: 'Thu, 1st Jan 1970'
                   links:
                     type: object
                     properties:
@@ -1857,11 +1705,31 @@ paths:
               schema:
                 type: object
                 example:
-                  data: []
+                  data:
+                    id: null
+                    uuid: null
+                    name: null
+                    location: null
+                    created_at: 'Thu, 1st Jan 1970'
                 properties:
                   data:
-                    type: array
-                    example: []
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: null
+                      uuid:
+                        type: string
+                        example: null
+                      name:
+                        type: string
+                        example: null
+                      location:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: 'Thu, 1st Jan 1970'
       tags:
         - Restaurants
       requestBody:
@@ -1874,11 +1742,11 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: cghuxmlsrefepqa
+                  example: nvephookdgiqrqqdb
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: zxnuthytwehwjz
+                  example: fxqqtefzphtk
               required:
                 - name
                 - location
@@ -1896,11 +1764,31 @@ paths:
               schema:
                 type: object
                 example:
-                  data: []
+                  data:
+                    id: null
+                    uuid: null
+                    name: null
+                    location: null
+                    created_at: 'Thu, 1st Jan 1970'
                 properties:
                   data:
-                    type: array
-                    example: []
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: null
+                      uuid:
+                        type: string
+                        example: null
+                      name:
+                        type: string
+                        example: null
+                      location:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: 'Thu, 1st Jan 1970'
       tags:
         - Restaurants
       security: []
@@ -1924,11 +1812,31 @@ paths:
               schema:
                 type: object
                 example:
-                  data: []
+                  data:
+                    id: null
+                    uuid: null
+                    name: null
+                    location: null
+                    created_at: 'Thu, 1st Jan 1970'
                 properties:
                   data:
-                    type: array
-                    example: []
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: null
+                      uuid:
+                        type: string
+                        example: null
+                      name:
+                        type: string
+                        example: null
+                      location:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: 'Thu, 1st Jan 1970'
       tags:
         - Restaurants
       requestBody:
@@ -1941,11 +1849,11 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: vnyjunkukanbgrwuukqnaph
+                  example: ndcrkw
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: ohsrdrpw
+                  example: xqj
               required:
                 - name
                 - location
@@ -1969,7 +1877,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the restaurant.'
-        example: 19
+        example: 13
         required: true
         schema:
           type: integer
