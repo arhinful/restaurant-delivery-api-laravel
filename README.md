@@ -77,7 +77,7 @@ To set up the database for your Laravel app, follow these steps:
 ```
 This will create the necessary tables in your database .
 
-3. You populate your database to have dummy data for testing 
+3. You can populate your database to have dummy data for testing 
 by seeding.
 ```bash
    php artisan db:seed
