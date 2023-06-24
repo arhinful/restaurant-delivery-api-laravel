@@ -36,7 +36,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":61,"uuid":"0dcf45ce-e2ac-43dd-ab4c-2b1d113e285a","name":"Cheese Veggie Sandwich","location":null,"created_at":"Sat, 24th Jun 2023"},{"id":62,"uuid":"4c906ea2-db26-4275-8ca9-1e0e780ad61c","name":"Pasta","location":null,"created_at":"Sat, 24th Jun 2023"}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
+        content: '{"data":[{"id":201,"uuid":"6d844ff5-9f9b-40cb-a953-fe3ed6599262","name":"Cheese Dog","location":null,"created_at":"Sat, 24th Jun 2023"},{"id":202,"uuid":"61c0af63-ec9c-4407-a313-9a5af3739115","name":"Little Bacon Cheeseburger","location":null,"created_at":"Sat, 24th Jun 2023"}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
         headers: []
         description: ''
         custom: []
@@ -72,14 +72,14 @@ endpoints:
         name: restaurant_id
         description: ''
         required: true
-        example: 4
+        example: 19
         type: integer
         custom: []
       name:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: apgcty
+        example: pdsuehcgznsmndbwpud
         type: string
         custom: []
       price:
@@ -93,7 +93,7 @@ endpoints:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Porro voluptas mollitia quae consectetur.'
+        example: 'Praesentium reprehenderit illo eos ipsam aut.'
         type: string
         custom: []
       image:
@@ -104,16 +104,16 @@ endpoints:
         type: file
         custom: []
     cleanBodyParameters:
-      restaurant_id: 4
-      name: apgcty
+      restaurant_id: 19
+      name: pdsuehcgznsmndbwpud
       price: 1
-      description: 'Porro voluptas mollitia quae consectetur.'
+      description: 'Praesentium reprehenderit illo eos ipsam aut.'
     fileParameters:
       image: null
     responses:
       -
         status: 201
-        content: '{"data":{"id":null,"uuid":null,"name":"Veggie Sandwich","slug":null,"price":null,"image":null,"created_at":"Thu, 1st Jan 1970"}}'
+        content: '{"data":{"id":null,"uuid":null,"name":"Bacon Cheeseburger","slug":null,"price":null,"image":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -157,7 +157,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":63,"uuid":"d80d7adc-1c6c-4c38-800f-26ed8783d000","name":"Little Hamburger","slug":"little-hamburger-4","price":null,"image":null,"created_at":"Sat, 24th Jun 2023","restaurant":{"id":53,"uuid":"2e229963-fa57-4d6d-90d6-4bdf9ae639fa","name":"Mills, Muller and Turcotte","location":"East Micah","created_at":"Sat, 24th Jun 2023"}}}'
+        content: '{"data":{"id":203,"uuid":"5b2826ee-8f21-49bd-8300-e4193f79e203","name":"Little Cheeseburger","slug":"little-cheeseburger-6","price":null,"image":null,"created_at":"Sat, 24th Jun 2023","restaurant":{"id":53,"uuid":"068b7fac-6dc9-4cda-ad44-21e5488d6cf9","name":"Gleason, Blick and Bradtke","location":"East Josefina","created_at":"Sat, 24th Jun 2023"}}}'
         headers: []
         description: ''
         custom: []
@@ -202,21 +202,21 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: sylaluukfefrsrbdoxwxr
+        example: cyosyroehedtcscmuookbva
         type: string
         custom: []
       price:
         name: price
-        description: ''
+        description: 'Must be between 0 and 9999999999.99.'
         required: true
-        example: ex
-        type: string
+        example: 1
+        type: number
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Exercitationem labore consequatur accusantium esse dolorem molestiae.'
+        example: 'Asperiores rerum voluptates quisquam ut qui.'
         type: string
         custom: []
       image:
@@ -227,15 +227,15 @@ endpoints:
         type: file
         custom: []
     cleanBodyParameters:
-      name: sylaluukfefrsrbdoxwxr
-      price: ex
-      description: 'Exercitationem labore consequatur accusantium esse dolorem molestiae.'
+      name: cyosyroehedtcscmuookbva
+      price: 1
+      description: 'Asperiores rerum voluptates quisquam ut qui.'
     fileParameters:
       image: null
     responses:
       -
         status: 202
-        content: '{"data":{"id":null,"uuid":null,"name":"Cheese Dog","slug":null,"price":null,"image":null,"created_at":"Thu, 1st Jan 1970"}}'
+        content: '{"data":{"id":null,"uuid":null,"name":"Bacon Cheese Dog","slug":null,"price":null,"image":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []

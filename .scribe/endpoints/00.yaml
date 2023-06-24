@@ -26,40 +26,40 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ogiwxrmxyoytvagoevhia
+        example: nkagwxwlpzwpgrstqworext
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: eloy48@example.com
+        example: gilda.ratke@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: ut
+        example: maxime
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'The value and <code>password</code> must match.'
         required: true
-        example: omnis
+        example: odio
         type: string
         custom: []
     cleanBodyParameters:
-      name: ogiwxrmxyoytvagoevhia
-      email: eloy48@example.com
-      password: ut
-      password_confirmation: omnis
+      name: nkagwxwlpzwpgrstqworext
+      email: gilda.ratke@example.net
+      password: maxime
+      password_confirmation: odio
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":{"id":52,"uuid":"a6357f93-4ee0-488a-bea2-3fe9937e1909","name":"Miss Josianne Larson PhD","email":"leffler.kamron@example.net","created_at":"2023-06-24T07:35:02.000000Z","roles":[]}}'
+        content: '{"data":{"id":52,"uuid":"8c3b992f-0700-4b54-9043-de4b4bebad27","name":"Velma Morissette","email":"bkonopelski@example.org","created_at":"2023-06-24T11:09:25.000000Z","roles":[]}}'
         headers: []
         description: ''
         custom: []
@@ -94,19 +94,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: jacobi.damon@example.org
+        example: alfonzo.shields@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: 'LAQT"?)te''f-'
+        example: '.-X[`M2{Del'
         type: string
         custom: []
     cleanBodyParameters:
-      email: jacobi.damon@example.org
-      password: 'LAQT"?)te''f-'
+      email: alfonzo.shields@example.net
+      password: '.-X[`M2{Del'
     fileParameters: []
     responses:
       -
@@ -169,11 +169,11 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: jeffrey25@example.org
+        example: eunice19@example.net
         type: string
         custom: []
     cleanBodyParameters:
-      email: jeffrey25@example.org
+      email: eunice19@example.net
     fileParameters: []
     responses: []
     responseFields: []
@@ -207,27 +207,27 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: quidem
+        example: non
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: murl47@example.net
+        example: guido62@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: cum
+        example: quis
         type: string
         custom: []
     cleanBodyParameters:
-      token: quidem
-      email: murl47@example.net
-      password: cum
+      token: non
+      email: guido62@example.com
+      password: quis
     fileParameters: []
     responses: []
     responseFields: []
@@ -257,19 +257,19 @@ endpoints:
         name: id
         description: 'The ID of the verify email.'
         required: true
-        example: voluptatem
+        example: qui
         type: string
         custom: []
       hash:
         name: hash
         description: ''
         required: true
-        example: ut
+        example: iusto
         type: string
         custom: []
     cleanUrlParameters:
-      id: voluptatem
-      hash: ut
+      id: qui
+      hash: iusto
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -378,7 +378,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":1,"uuid":"e6f8ac03-3d75-4bb9-a747-dbd4ad4ad6db","name":"Arhinful Emmanuel","email":"kofibusy@gmail.com","created_at":"2023-06-23T15:15:51.000000Z","roles":[]}}'
+        content: '{"data":{"id":1,"uuid":"8688b6ce-de38-4260-96d7-27b6203fb3e4","name":"Arhinful Emmanuel","email":"kofibusy@gmail.com","created_at":"2023-06-24T11:06:30.000000Z","roles":[{"id":1,"name":"admin"}]}}'
         headers: []
         description: ''
         custom: []

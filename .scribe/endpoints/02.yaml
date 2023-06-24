@@ -78,35 +78,35 @@ endpoints:
         name: menu_item_id
         description: ''
         required: true
-        example: 6
+        example: 3
         type: integer
         custom: []
       quantity:
         name: quantity
         description: ''
         required: true
-        example: 13
+        example: 18
         type: integer
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: sszerkabqtqknapvnj
+        example: mrsbrnstslror
         type: string
         custom: []
       gps:
         name: gps
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: lqjwuk
+        example: lkapwrddrnkyogtvifvs
         type: string
         custom: []
       mobile_number:
         name: mobile_number
         description: 'Must not be greater than 20 characters.'
         required: true
-        example: royyssparddpg
+        example: awwaztoyhbu
         type: string
         custom: []
       custom_user_id:
@@ -117,16 +117,16 @@ endpoints:
         type: string
         custom: []
     cleanBodyParameters:
-      menu_item_id: 6
-      quantity: 13
-      location: sszerkabqtqknapvnj
-      gps: lqjwuk
-      mobile_number: royyssparddpg
+      menu_item_id: 3
+      quantity: 18
+      location: mrsbrnstslror
+      gps: lkapwrddrnkyogtvifvs
+      mobile_number: awwaztoyhbu
     fileParameters: []
     responses:
       -
         status: 201
-        content: '{"data":{"id":null,"uuid":null,"quantity":null,"location":"New Shadburgh","gps":644841,"mobile_number":"+1-248-527-6681","delivery_status":null,"payment_status":null,"payment_channel":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
+        content: '{"data":{"id":null,"uuid":null,"quantity":null,"location":"New Garnet","gps":257291,"mobile_number":"747.480.9488","delivery_status":null,"payment_status":null,"payment_channel":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -172,7 +172,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":null,"uuid":null,"quantity":null,"location":"East Mervin","gps":835028,"mobile_number":"762.945.9303","delivery_status":null,"payment_status":null,"payment_channel":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
+        content: '{"data":{"id":null,"uuid":null,"quantity":null,"location":"New Jedidiahfort","gps":405053,"mobile_number":"(551) 309-3186","delivery_status":null,"payment_status":null,"payment_channel":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -219,48 +219,48 @@ endpoints:
         name: quantity
         description: ''
         required: true
-        example: 4
+        example: 5
         type: integer
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: edqtlwnqustfgg
+        example: isrgfvngka
         type: string
         custom: []
       gps:
         name: gps
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: f
+        example: 'n'
         type: string
         custom: []
       mobile_number:
         name: mobile_number
         description: 'Must not be greater than 20 characters.'
         required: true
-        example: ielebntspeaw
+        example: rkatn
         type: string
         custom: []
       delivery_status:
         name: delivery_status
         description: 'Must be one of <code>pending</code>, <code>on_way</code>, or <code>delivered</code>.'
         required: true
-        example: pending
+        example: delivered
         type: string
         custom: []
     cleanBodyParameters:
-      quantity: 4
-      location: edqtlwnqustfgg
-      gps: f
-      mobile_number: ielebntspeaw
-      delivery_status: pending
+      quantity: 5
+      location: isrgfvngka
+      gps: 'n'
+      mobile_number: rkatn
+      delivery_status: delivered
     fileParameters: []
     responses:
       -
         status: 202
-        content: '{"data":{"id":null,"uuid":null,"quantity":null,"location":"Deannaville","gps":163227,"mobile_number":"1-760-462-9787","delivery_status":null,"payment_status":null,"payment_channel":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
+        content: '{"data":{"id":null,"uuid":null,"quantity":null,"location":"Mattshire","gps":516156,"mobile_number":"(941) 857-4293","delivery_status":null,"payment_status":null,"payment_channel":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []

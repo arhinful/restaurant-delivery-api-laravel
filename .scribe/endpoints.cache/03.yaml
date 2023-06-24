@@ -38,7 +38,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":56,"uuid":"e6dc0923-5c93-45f3-ba44-a1127dd32e35","name":"Bechtelar Ltd","location":"East Pedrostad","created_at":"Sat, 24th Jun 2023"},{"id":57,"uuid":"80c2bc24-f824-445c-ab43-e124195ef925","name":"Mayer-Lynch","location":"New Courtneytown","created_at":"Sat, 24th Jun 2023"}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
+        content: '{"data":[{"id":56,"uuid":"b85ea6fd-c0a3-4ab2-aea9-71ecfb3842b7","name":"Johnson PLC","location":"East Ezra","created_at":"Sat, 24th Jun 2023"},{"id":57,"uuid":"7bd66352-2454-4fc6-ab48-5e1546fd98c7","name":"Gerhold-Maggio","location":"Ortizfort","created_at":"Sat, 24th Jun 2023"}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
         headers: []
         description: ''
         custom: []
@@ -74,24 +74,24 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: bqwmqbnnqroszzjjbctevxmra
+        example: rjckeaxnxz
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: i
+        example: jwspz
         type: string
         custom: []
     cleanBodyParameters:
-      name: bqwmqbnnqroszzjjbctevxmra
-      location: i
+      name: rjckeaxnxz
+      location: jwspz
     fileParameters: []
     responses:
       -
         status: 201
-        content: '{"data":{"id":58,"uuid":"3a566545-cae5-424f-b0eb-d13f3293dd3e","name":"Roob Group","location":"Monahanport","created_at":"Sat, 24th Jun 2023"}}'
+        content: '{"data":{"id":58,"uuid":"e325f7d9-df35-4adc-b8e8-73595e71b8ff","name":"Strosin-Brakus","location":"Rosarioburgh","created_at":"Sat, 24th Jun 2023"}}'
         headers: []
         description: ''
         custom: []
@@ -135,7 +135,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":59,"uuid":"15c0b739-1f33-46be-aea6-f18dd0ce70a6","name":"Green PLC","location":"Lake Emerson","created_at":"Sat, 24th Jun 2023"}}'
+        content: '{"data":{"id":59,"uuid":"213675f4-44f3-4a7c-b702-29fba35e58e4","name":"Becker-Sauer","location":"West Paxtonburgh","created_at":"Sat, 24th Jun 2023"}}'
         headers: []
         description: ''
         custom: []
@@ -180,24 +180,24 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: xvqgw
+        example: ymks
         type: string
         custom: []
       location:
         name: location
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: v
+        example: r
         type: string
         custom: []
     cleanBodyParameters:
-      name: xvqgw
-      location: v
+      name: ymks
+      location: r
     fileParameters: []
     responses:
       -
         status: 202
-        content: '{"data":{"id":60,"uuid":"a247c7d3-8df5-4f83-bf0c-695389263cde","name":"Bartell, VonRueden and VonRueden","location":"Euniceville","created_at":"Sat, 24th Jun 2023"}}'
+        content: '{"data":{"id":60,"uuid":"0ccc28a9-3e9f-4027-8bd8-6213b94f7ee6","name":"Schumm, Mills and Pollich","location":"Stantonborough","created_at":"Sat, 24th Jun 2023"}}'
         headers: []
         description: ''
         custom: []
