@@ -33,6 +33,9 @@ class DatabaseSeeder extends Seeder
              'remember_token' => Str::random(10),
          ]);
 
+         // assign admin role to user
+        $admin->assignRole($role);
+
          // seed restaurant
         $restaurants = Restaurant::factory(50)->create();
 

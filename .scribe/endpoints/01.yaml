@@ -36,7 +36,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":null,"uuid":null,"name":null,"location":null,"created_at":"Thu, 1st Jan 1970"},{"id":null,"uuid":null,"name":null,"location":null,"created_at":"Thu, 1st Jan 1970"}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
+        content: '{"data":[{"id":61,"uuid":"0dcf45ce-e2ac-43dd-ab4c-2b1d113e285a","name":"Cheese Veggie Sandwich","location":null,"created_at":"Sat, 24th Jun 2023"},{"id":62,"uuid":"4c906ea2-db26-4275-8ca9-1e0e780ad61c","name":"Pasta","location":null,"created_at":"Sat, 24th Jun 2023"}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":15,"to":2,"total":2}}'
         headers: []
         description: ''
         custom: []
@@ -60,7 +60,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
       Authorization: Bearer.
     urlParameters: []
@@ -79,7 +79,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: xrjwoldmzlvyied
+        example: apgcty
         type: string
         custom: []
       price:
@@ -93,19 +93,27 @@ endpoints:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Ipsum odit atque doloribus repellendus iure assumenda.'
+        example: 'Porro voluptas mollitia quae consectetur.'
         type: string
+        custom: []
+      image:
+        name: image
+        description: 'Must be a file. Must not be greater than 2000 kilobytes.'
+        required: false
+        example: null
+        type: file
         custom: []
     cleanBodyParameters:
       restaurant_id: 4
-      name: xrjwoldmzlvyied
+      name: apgcty
       price: 1
-      description: 'Ipsum odit atque doloribus repellendus iure assumenda.'
-    fileParameters: []
+      description: 'Porro voluptas mollitia quae consectetur.'
+    fileParameters:
+      image: null
     responses:
       -
         status: 201
-        content: '{"data":{"id":null,"uuid":null,"name":null,"slug":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
+        content: '{"data":{"id":null,"uuid":null,"name":"Veggie Sandwich","slug":null,"price":null,"image":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -136,11 +144,11 @@ endpoints:
         name: id
         description: 'The ID of the item.'
         required: true
-        example: 8
+        example: 1
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 8
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -149,7 +157,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":null,"uuid":null,"name":null,"slug":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
+        content: '{"data":{"id":63,"uuid":"d80d7adc-1c6c-4c38-800f-26ed8783d000","name":"Little Hamburger","slug":"little-hamburger-4","price":null,"image":null,"created_at":"Sat, 24th Jun 2023","restaurant":{"id":53,"uuid":"2e229963-fa57-4d6d-90d6-4bdf9ae639fa","name":"Mills, Muller and Turcotte","location":"East Micah","created_at":"Sat, 24th Jun 2023"}}}'
         headers: []
         description: ''
         custom: []
@@ -174,7 +182,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
       Authorization: Bearer
     urlParameters:
@@ -182,11 +190,11 @@ endpoints:
         name: id
         description: 'The ID of the item.'
         required: true
-        example: 7
+        example: 1
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 7
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -194,32 +202,40 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: zohybdz
+        example: sylaluukfefrsrbdoxwxr
         type: string
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: aut
+        example: ex
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 299 characters.'
         required: true
-        example: 'Asperiores quidem rem quia aut ut eum.'
+        example: 'Exercitationem labore consequatur accusantium esse dolorem molestiae.'
         type: string
         custom: []
+      image:
+        name: image
+        description: 'Must be a file. Must not be greater than 2000 kilobytes.'
+        required: false
+        example: null
+        type: file
+        custom: []
     cleanBodyParameters:
-      name: zohybdz
-      price: aut
-      description: 'Asperiores quidem rem quia aut ut eum.'
-    fileParameters: []
+      name: sylaluukfefrsrbdoxwxr
+      price: ex
+      description: 'Exercitationem labore consequatur accusantium esse dolorem molestiae.'
+    fileParameters:
+      image: null
     responses:
       -
         status: 202
-        content: '{"data":{"id":null,"uuid":null,"name":null,"slug":null,"price":null,"created_at":"Thu, 1st Jan 1970"}}'
+        content: '{"data":{"id":null,"uuid":null,"name":"Cheese Dog","slug":null,"price":null,"image":null,"created_at":"Thu, 1st Jan 1970"}}'
         headers: []
         description: ''
         custom: []
@@ -251,11 +267,11 @@ endpoints:
         name: id
         description: 'The ID of the item.'
         required: true
-        example: 3
+        example: 1
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 3
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

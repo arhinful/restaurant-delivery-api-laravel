@@ -22,11 +22,11 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 1
-                    uuid: 761a3740-47c0-4f26-98da-cdcc893dced0
-                    name: 'Arhinful Emmanuel'
-                    email: kofibusy@gmail.com
-                    created_at: '2023-06-23T14:14:19.000000Z'
+                    id: 52
+                    uuid: a6357f93-4ee0-488a-bea2-3fe9937e1909
+                    name: 'Miss Josianne Larson PhD'
+                    email: leffler.kamron@example.net
+                    created_at: '2023-06-24T07:35:02.000000Z'
                     roles: []
                 properties:
                   data:
@@ -34,19 +34,19 @@ paths:
                     properties:
                       id:
                         type: integer
-                        example: 1
+                        example: 52
                       uuid:
                         type: string
-                        example: 761a3740-47c0-4f26-98da-cdcc893dced0
+                        example: a6357f93-4ee0-488a-bea2-3fe9937e1909
                       name:
                         type: string
-                        example: 'Arhinful Emmanuel'
+                        example: 'Miss Josianne Larson PhD'
                       email:
                         type: string
-                        example: kofibusy@gmail.com
+                        example: leffler.kamron@example.net
                       created_at:
                         type: string
-                        example: '2023-06-23T14:14:19.000000Z'
+                        example: '2023-06-24T07:35:02.000000Z'
                       roles:
                         type: array
                         example: []
@@ -62,19 +62,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: pniyhhsfilkpttnqrdz
+                  example: ogiwxrmxyoytvagoevhia
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: hcruickshank@example.net
+                  example: eloy48@example.com
                 password:
                   type: string
                   description: ''
-                  example: qui
+                  example: ut
                 password_confirmation:
                   type: string
                   description: 'The value and <code>password</code> must match.'
-                  example: molestiae
+                  example: omnis
               required:
                 - name
                 - email
@@ -131,11 +131,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: verona16@example.org
+                  example: jacobi.damon@example.org
                 password:
                   type: string
                   description: ''
-                  example: 'Mcm2towD''WH\1f~Nc'
+                  example: 'LAQT"?)te''f-'
               required:
                 - email
                 - password
@@ -159,7 +159,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: jamir32@example.org
+                  example: jeffrey25@example.org
               required:
                 - email
       security: []
@@ -182,15 +182,15 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: eum
+                  example: quidem
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: lily87@example.org
+                  example: murl47@example.net
                 password:
                   type: string
                   description: ''
-                  example: sit
+                  example: cum
               required:
                 - token
                 - email
@@ -223,7 +223,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the verify email.'
-        example: praesentium
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -231,7 +231,7 @@ paths:
         in: path
         name: hash
         description: ''
-        example: excepturi
+        example: ut
         required: true
         schema:
           type: string
@@ -269,31 +269,31 @@ paths:
                 type: object
                 example:
                   data:
-                    id: null
-                    uuid: null
-                    name: null
-                    email: null
-                    created_at: null
+                    id: 1
+                    uuid: e6f8ac03-3d75-4bb9-a747-dbd4ad4ad6db
+                    name: 'Arhinful Emmanuel'
+                    email: kofibusy@gmail.com
+                    created_at: '2023-06-23T15:15:51.000000Z'
                     roles: []
                 properties:
                   data:
                     type: object
                     properties:
                       id:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 1
                       uuid:
                         type: string
-                        example: null
+                        example: e6f8ac03-3d75-4bb9-a747-dbd4ad4ad6db
                       name:
                         type: string
-                        example: null
+                        example: 'Arhinful Emmanuel'
                       email:
                         type: string
-                        example: null
+                        example: kofibusy@gmail.com
                       created_at:
                         type: string
-                        example: null
+                        example: '2023-06-23T15:15:51.000000Z'
                       roles:
                         type: array
                         example: []
@@ -314,27 +314,157 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'The route api/v1 could not be found.'
+                  message: 'API resource not found'
                   exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
-                  file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\AbstractRouteCollection.php'
-                  line: 44
+                  file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\Application.php'
+                  line: 1221
                   trace:
                     -
-                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\RouteCollection.php'
-                      line: 162
-                      function: handleMatchedRoute
-                      class: Illuminate\Routing\AbstractRouteCollection
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php'
+                      line: 45
+                      function: abort
+                      class: Illuminate\Foundation\Application
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\routes\api.php'
+                      line: 25
+                      function: abort
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\CallableDispatcher.php'
+                      line: 40
+                      function: '{closure}'
+                      class: Illuminate\Routing\RouteFileRegistrar
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
+                      line: 237
+                      function: dispatch
+                      class: Illuminate\Routing\CallableDispatcher
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
+                      line: 208
+                      function: runCallable
+                      class: Illuminate\Routing\Route
                       type: '->'
                     -
                       file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 754
-                      function: match
-                      class: Illuminate\Routing\RouteCollection
+                      line: 799
+                      function: run
+                      class: Illuminate\Routing\Route
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 141
+                      function: 'Illuminate\Routing\{closure}'
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php'
+                      line: 50
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\SubstituteBindings
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 159
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 90
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 159
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 125
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 87
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
+                      line: 25
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 141
+                      function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
+                      line: 24
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 798
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 777
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
                       type: '->'
                     -
                       file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
                       line: 741
-                      function: findRoute
+                      function: runRoute
                       class: Illuminate\Routing\Router
                       type: '->'
                     -
@@ -610,35 +740,165 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'The route api/v1 could not be found.'
+                    example: 'API resource not found'
                   exception:
                     type: string
                     example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file:
                     type: string
-                    example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\AbstractRouteCollection.php'
+                    example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\Application.php'
                   line:
                     type: integer
-                    example: 44
+                    example: 1221
                   trace:
                     type: array
                     example:
                       -
-                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\RouteCollection.php'
-                        line: 162
-                        function: handleMatchedRoute
-                        class: Illuminate\Routing\AbstractRouteCollection
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php'
+                        line: 45
+                        function: abort
+                        class: Illuminate\Foundation\Application
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\routes\api.php'
+                        line: 25
+                        function: abort
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\CallableDispatcher.php'
+                        line: 40
+                        function: '{closure}'
+                        class: Illuminate\Routing\RouteFileRegistrar
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
+                        line: 237
+                        function: dispatch
+                        class: Illuminate\Routing\CallableDispatcher
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
+                        line: 208
+                        function: runCallable
+                        class: Illuminate\Routing\Route
                         type: '->'
                       -
                         file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 754
-                        function: match
-                        class: Illuminate\Routing\RouteCollection
+                        line: 799
+                        function: run
+                        class: Illuminate\Routing\Route
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 141
+                        function: 'Illuminate\Routing\{closure}'
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php'
+                        line: 50
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\SubstituteBindings
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 159
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 90
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 159
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 125
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 87
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
+                        line: 25
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 141
+                        function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php'
+                        line: 24
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 798
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 777
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
                         type: '->'
                       -
                         file: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
                         line: 741
-                        function: findRoute
+                        function: runRoute
                         class: Illuminate\Routing\Router
                         type: '->'
                       -
@@ -916,16 +1176,16 @@ paths:
                       properties:
                         file:
                           type: string
-                          example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Routing\RouteCollection.php'
+                          example: 'C:\laragon\www\delivery\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php'
                         line:
                           type: integer
-                          example: 162
+                          example: 45
                         function:
                           type: string
-                          example: handleMatchedRoute
+                          example: abort
                         class:
                           type: string
-                          example: Illuminate\Routing\AbstractRouteCollection
+                          example: Illuminate\Foundation\Application
                         type:
                           type: string
                           example: '->'
@@ -937,7 +1197,7 @@ paths:
         in: path
         name: fallbackPlaceholder
         description: ''
-        example: ''
+        example: _;
         required: true
         schema:
           type: string
@@ -957,17 +1217,17 @@ paths:
                 example:
                   data:
                     -
-                      id: null
-                      uuid: null
-                      name: null
+                      id: 61
+                      uuid: 0dcf45ce-e2ac-43dd-ab4c-2b1d113e285a
+                      name: 'Cheese Veggie Sandwich'
                       location: null
-                      created_at: 'Thu, 1st Jan 1970'
+                      created_at: 'Sat, 24th Jun 2023'
                     -
-                      id: null
-                      uuid: null
-                      name: null
+                      id: 62
+                      uuid: 4c906ea2-db26-4275-8ca9-1e0e780ad61c
+                      name: Pasta
                       location: null
-                      created_at: 'Thu, 1st Jan 1970'
+                      created_at: 'Sat, 24th Jun 2023'
                   links:
                     first: '/?page=1'
                     last: '/?page=1'
@@ -999,35 +1259,35 @@ paths:
                     type: array
                     example:
                       -
-                        id: null
-                        uuid: null
-                        name: null
+                        id: 61
+                        uuid: 0dcf45ce-e2ac-43dd-ab4c-2b1d113e285a
+                        name: 'Cheese Veggie Sandwich'
                         location: null
-                        created_at: 'Thu, 1st Jan 1970'
+                        created_at: 'Sat, 24th Jun 2023'
                       -
-                        id: null
-                        uuid: null
-                        name: null
+                        id: 62
+                        uuid: 4c906ea2-db26-4275-8ca9-1e0e780ad61c
+                        name: Pasta
                         location: null
-                        created_at: 'Thu, 1st Jan 1970'
+                        created_at: 'Sat, 24th Jun 2023'
                     items:
                       type: object
                       properties:
                         id:
-                          type: string
-                          example: null
+                          type: integer
+                          example: 61
                         uuid:
                           type: string
-                          example: null
+                          example: 0dcf45ce-e2ac-43dd-ab4c-2b1d113e285a
                         name:
                           type: string
-                          example: null
+                          example: 'Cheese Veggie Sandwich'
                         location:
                           type: string
                           example: null
                         created_at:
                           type: string
-                          example: 'Thu, 1st Jan 1970'
+                          example: 'Sat, 24th Jun 2023'
                   links:
                     type: object
                     properties:
@@ -1120,9 +1380,10 @@ paths:
                   data:
                     id: null
                     uuid: null
-                    name: null
+                    name: 'Veggie Sandwich'
                     slug: null
                     price: null
+                    image: null
                     created_at: 'Thu, 1st Jan 1970'
                 properties:
                   data:
@@ -1136,11 +1397,14 @@ paths:
                         example: null
                       name:
                         type: string
-                        example: null
+                        example: 'Veggie Sandwich'
                       slug:
                         type: string
                         example: null
                       price:
+                        type: string
+                        example: null
+                      image:
                         type: string
                         example: null
                       created_at:
@@ -1151,7 +1415,7 @@ paths:
       requestBody:
         required: true
         content:
-          application/json:
+          multipart/form-data:
             schema:
               type: object
               properties:
@@ -1162,7 +1426,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: xrjwoldmzlvyied
+                  example: apgcty
                 price:
                   type: number
                   description: 'Must be between 0 and 9999999999.99.'
@@ -1170,7 +1434,11 @@ paths:
                 description:
                   type: string
                   description: 'Must not be greater than 299 characters.'
-                  example: 'Ipsum odit atque doloribus repellendus iure assumenda.'
+                  example: 'Porro voluptas mollitia quae consectetur.'
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be a file. Must not be greater than 2000 kilobytes.'
               required:
                 - restaurant_id
                 - name
@@ -1191,34 +1459,62 @@ paths:
                 type: object
                 example:
                   data:
-                    id: null
-                    uuid: null
-                    name: null
-                    slug: null
+                    id: 63
+                    uuid: d80d7adc-1c6c-4c38-800f-26ed8783d000
+                    name: 'Little Hamburger'
+                    slug: little-hamburger-4
                     price: null
-                    created_at: 'Thu, 1st Jan 1970'
+                    image: null
+                    created_at: 'Sat, 24th Jun 2023'
+                    restaurant:
+                      id: 53
+                      uuid: 2e229963-fa57-4d6d-90d6-4bdf9ae639fa
+                      name: 'Mills, Muller and Turcotte'
+                      location: 'East Micah'
+                      created_at: 'Sat, 24th Jun 2023'
                 properties:
                   data:
                     type: object
                     properties:
                       id:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 63
                       uuid:
                         type: string
-                        example: null
+                        example: d80d7adc-1c6c-4c38-800f-26ed8783d000
                       name:
                         type: string
-                        example: null
+                        example: 'Little Hamburger'
                       slug:
                         type: string
-                        example: null
+                        example: little-hamburger-4
                       price:
+                        type: string
+                        example: null
+                      image:
                         type: string
                         example: null
                       created_at:
                         type: string
-                        example: 'Thu, 1st Jan 1970'
+                        example: 'Sat, 24th Jun 2023'
+                      restaurant:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 53
+                          uuid:
+                            type: string
+                            example: 2e229963-fa57-4d6d-90d6-4bdf9ae639fa
+                          name:
+                            type: string
+                            example: 'Mills, Muller and Turcotte'
+                          location:
+                            type: string
+                            example: 'East Micah'
+                          created_at:
+                            type: string
+                            example: 'Sat, 24th Jun 2023'
       tags:
         - 'Menu Items'
       security: []
@@ -1245,9 +1541,10 @@ paths:
                   data:
                     id: null
                     uuid: null
-                    name: null
+                    name: 'Cheese Dog'
                     slug: null
                     price: null
+                    image: null
                     created_at: 'Thu, 1st Jan 1970'
                 properties:
                   data:
@@ -1261,11 +1558,14 @@ paths:
                         example: null
                       name:
                         type: string
-                        example: null
+                        example: 'Cheese Dog'
                       slug:
                         type: string
                         example: null
                       price:
+                        type: string
+                        example: null
+                      image:
                         type: string
                         example: null
                       created_at:
@@ -1276,22 +1576,26 @@ paths:
       requestBody:
         required: true
         content:
-          application/json:
+          multipart/form-data:
             schema:
               type: object
               properties:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: zohybdz
+                  example: sylaluukfefrsrbdoxwxr
                 price:
                   type: string
                   description: ''
-                  example: aut
+                  example: ex
                 description:
                   type: string
                   description: 'Must not be greater than 299 characters.'
-                  example: 'Asperiores quidem rem quia aut ut eum.'
+                  example: 'Exercitationem labore consequatur accusantium esse dolorem molestiae.'
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be a file. Must not be greater than 2000 kilobytes.'
               required:
                 - name
                 - price
@@ -1316,7 +1620,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the item.'
-        example: 8
+        example: 1
         required: true
         schema:
           type: integer
@@ -1506,9 +1810,9 @@ paths:
                     id: null
                     uuid: null
                     quantity: null
-                    location: null
-                    gps: null
-                    mobile_number: null
+                    location: 'New Shadburgh'
+                    gps: 644841
+                    mobile_number: +1-248-527-6681
                     delivery_status: null
                     payment_status: null
                     payment_channel: null
@@ -1529,13 +1833,13 @@ paths:
                         example: null
                       location:
                         type: string
-                        example: null
+                        example: 'New Shadburgh'
                       gps:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 644841
                       mobile_number:
                         type: string
-                        example: null
+                        example: +1-248-527-6681
                       delivery_status:
                         type: string
                         example: null
@@ -1563,23 +1867,23 @@ paths:
                 menu_item_id:
                   type: integer
                   description: ''
-                  example: 3
+                  example: 6
                 quantity:
                   type: integer
                   description: ''
-                  example: 18
+                  example: 13
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: vbvvfymgsceuzubrc
+                  example: sszerkabqtqknapvnj
                 gps:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: tldijqnnrkjeqzcpyeqr
+                  example: lqjwuk
                 mobile_number:
                   type: string
                   description: 'Must not be greater than 20 characters.'
-                  example: nqsxgm
+                  example: royyssparddpg
                 custom_user_id:
                   type: string
                   description: ''
@@ -1608,9 +1912,9 @@ paths:
                     id: null
                     uuid: null
                     quantity: null
-                    location: null
-                    gps: null
-                    mobile_number: null
+                    location: 'East Mervin'
+                    gps: 835028
+                    mobile_number: 762.945.9303
                     delivery_status: null
                     payment_status: null
                     payment_channel: null
@@ -1631,13 +1935,13 @@ paths:
                         example: null
                       location:
                         type: string
-                        example: null
+                        example: 'East Mervin'
                       gps:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 835028
                       mobile_number:
                         type: string
-                        example: null
+                        example: 762.945.9303
                       delivery_status:
                         type: string
                         example: null
@@ -1680,9 +1984,9 @@ paths:
                     id: null
                     uuid: null
                     quantity: null
-                    location: null
-                    gps: null
-                    mobile_number: null
+                    location: Deannaville
+                    gps: 163227
+                    mobile_number: 1-760-462-9787
                     delivery_status: null
                     payment_status: null
                     payment_channel: null
@@ -1703,13 +2007,13 @@ paths:
                         example: null
                       location:
                         type: string
-                        example: null
+                        example: Deannaville
                       gps:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 163227
                       mobile_number:
                         type: string
-                        example: null
+                        example: 1-760-462-9787
                       delivery_status:
                         type: string
                         example: null
@@ -1741,19 +2045,19 @@ paths:
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: jwxgznripnmxe
+                  example: edqtlwnqustfgg
                 gps:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: mvvkpdjaiklwybsfapzmbwtj
+                  example: f
                 mobile_number:
                   type: string
                   description: 'Must not be greater than 20 characters.'
-                  example: ihbta
+                  example: ielebntspeaw
                 delivery_status:
                   type: string
                   description: 'Must be one of <code>pending</code>, <code>on_way</code>, or <code>delivered</code>.'
-                  example: delivered
+                  example: pending
               required:
                 - quantity
                 - location
@@ -1780,7 +2084,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the order.'
-        example: 6
+        example: 1
         required: true
         schema:
           type: integer
@@ -1800,17 +2104,17 @@ paths:
                 example:
                   data:
                     -
-                      id: null
-                      uuid: null
-                      name: null
-                      location: null
-                      created_at: 'Thu, 1st Jan 1970'
+                      id: 56
+                      uuid: e6dc0923-5c93-45f3-ba44-a1127dd32e35
+                      name: 'Bechtelar Ltd'
+                      location: 'East Pedrostad'
+                      created_at: 'Sat, 24th Jun 2023'
                     -
-                      id: null
-                      uuid: null
-                      name: null
-                      location: null
-                      created_at: 'Thu, 1st Jan 1970'
+                      id: 57
+                      uuid: 80c2bc24-f824-445c-ab43-e124195ef925
+                      name: Mayer-Lynch
+                      location: 'New Courtneytown'
+                      created_at: 'Sat, 24th Jun 2023'
                   links:
                     first: '/?page=1'
                     last: '/?page=1'
@@ -1842,35 +2146,35 @@ paths:
                     type: array
                     example:
                       -
-                        id: null
-                        uuid: null
-                        name: null
-                        location: null
-                        created_at: 'Thu, 1st Jan 1970'
+                        id: 56
+                        uuid: e6dc0923-5c93-45f3-ba44-a1127dd32e35
+                        name: 'Bechtelar Ltd'
+                        location: 'East Pedrostad'
+                        created_at: 'Sat, 24th Jun 2023'
                       -
-                        id: null
-                        uuid: null
-                        name: null
-                        location: null
-                        created_at: 'Thu, 1st Jan 1970'
+                        id: 57
+                        uuid: 80c2bc24-f824-445c-ab43-e124195ef925
+                        name: Mayer-Lynch
+                        location: 'New Courtneytown'
+                        created_at: 'Sat, 24th Jun 2023'
                     items:
                       type: object
                       properties:
                         id:
-                          type: string
-                          example: null
+                          type: integer
+                          example: 56
                         uuid:
                           type: string
-                          example: null
+                          example: e6dc0923-5c93-45f3-ba44-a1127dd32e35
                         name:
                           type: string
-                          example: null
+                          example: 'Bechtelar Ltd'
                         location:
                           type: string
-                          example: null
+                          example: 'East Pedrostad'
                         created_at:
                           type: string
-                          example: 'Thu, 1st Jan 1970'
+                          example: 'Sat, 24th Jun 2023'
                   links:
                     type: object
                     properties:
@@ -1961,30 +2265,30 @@ paths:
                 type: object
                 example:
                   data:
-                    id: null
-                    uuid: null
-                    name: null
-                    location: null
-                    created_at: 'Thu, 1st Jan 1970'
+                    id: 58
+                    uuid: 3a566545-cae5-424f-b0eb-d13f3293dd3e
+                    name: 'Roob Group'
+                    location: Monahanport
+                    created_at: 'Sat, 24th Jun 2023'
                 properties:
                   data:
                     type: object
                     properties:
                       id:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 58
                       uuid:
                         type: string
-                        example: null
+                        example: 3a566545-cae5-424f-b0eb-d13f3293dd3e
                       name:
                         type: string
-                        example: null
+                        example: 'Roob Group'
                       location:
                         type: string
-                        example: null
+                        example: Monahanport
                       created_at:
                         type: string
-                        example: 'Thu, 1st Jan 1970'
+                        example: 'Sat, 24th Jun 2023'
       tags:
         - Restaurants
       requestBody:
@@ -1997,11 +2301,11 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: onlq
+                  example: bqwmqbnnqroszzjjbctevxmra
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: lvumknsttdxsvov
+                  example: i
               required:
                 - name
                 - location
@@ -2020,30 +2324,30 @@ paths:
                 type: object
                 example:
                   data:
-                    id: null
-                    uuid: null
-                    name: null
-                    location: null
-                    created_at: 'Thu, 1st Jan 1970'
+                    id: 59
+                    uuid: 15c0b739-1f33-46be-aea6-f18dd0ce70a6
+                    name: 'Green PLC'
+                    location: 'Lake Emerson'
+                    created_at: 'Sat, 24th Jun 2023'
                 properties:
                   data:
                     type: object
                     properties:
                       id:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 59
                       uuid:
                         type: string
-                        example: null
+                        example: 15c0b739-1f33-46be-aea6-f18dd0ce70a6
                       name:
                         type: string
-                        example: null
+                        example: 'Green PLC'
                       location:
                         type: string
-                        example: null
+                        example: 'Lake Emerson'
                       created_at:
                         type: string
-                        example: 'Thu, 1st Jan 1970'
+                        example: 'Sat, 24th Jun 2023'
       tags:
         - Restaurants
       security: []
@@ -2068,30 +2372,30 @@ paths:
                 type: object
                 example:
                   data:
-                    id: null
-                    uuid: null
-                    name: null
-                    location: null
-                    created_at: 'Thu, 1st Jan 1970'
+                    id: 60
+                    uuid: a247c7d3-8df5-4f83-bf0c-695389263cde
+                    name: 'Bartell, VonRueden and VonRueden'
+                    location: Euniceville
+                    created_at: 'Sat, 24th Jun 2023'
                 properties:
                   data:
                     type: object
                     properties:
                       id:
-                        type: string
-                        example: null
+                        type: integer
+                        example: 60
                       uuid:
                         type: string
-                        example: null
+                        example: a247c7d3-8df5-4f83-bf0c-695389263cde
                       name:
                         type: string
-                        example: null
+                        example: 'Bartell, VonRueden and VonRueden'
                       location:
                         type: string
-                        example: null
+                        example: Euniceville
                       created_at:
                         type: string
-                        example: 'Thu, 1st Jan 1970'
+                        example: 'Sat, 24th Jun 2023'
       tags:
         - Restaurants
       requestBody:
@@ -2104,11 +2408,11 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: rstqyedxshzar
+                  example: xvqgw
                 location:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: egyrinqebzebwewwfpmni
+                  example: v
               required:
                 - name
                 - location
@@ -2132,7 +2436,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the restaurant.'
-        example: 8
+        example: 1
         required: true
         schema:
           type: integer
