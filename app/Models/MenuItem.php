@@ -8,11 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Sluggable\HasSlug;
 
-class MenuItem extends Model
+class MenuItem extends Model implements HasMedia
 {
-    use HasFactory, SoftDeletes, ModelBootingTrait, HasSlug;
+    use HasFactory, SoftDeletes, ModelBootingTrait, HasSlug, InteractsWithMedia;
 
     protected $fillable = [
         'restaurant_id',
@@ -20,6 +22,10 @@ class MenuItem extends Model
         'price',
         'description',
     ];
+
+    public function registerMediaCollections(): void {
+        $this->addMediaCollection('image')->singleFile();
+    }
 
     public function restaurant(): BelongsTo{
         return  $this->belongsTo(Restaurant::class);

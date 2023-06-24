@@ -20,6 +20,7 @@ class MenuItemResource extends JsonResource
             'name' => $this->name,
             'slug' => $this->slug,
             'price' => $this->location,
+            'image' => MediaResource::collection($this->getFirstMedia('image')),
             'created_at' => $this->formattedCreatedAt,
             'restaurant' => RestaurantResource::make($this->whenLoaded('restaurant')),
             'orders' => OrderResource::collection($this->whenLoaded('orders'))

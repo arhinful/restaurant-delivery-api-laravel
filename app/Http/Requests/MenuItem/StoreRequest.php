@@ -27,6 +27,7 @@ class StoreRequest extends FormRequest
             'name' => ['required', 'string', 'max:100'],
             'price' => ['required', 'numeric', 'between:0,9999999999.99'],
             'description' => ['required', 'string', 'max:299'],
+            'image' => ['nullable', 'file', 'max:2000'],
         ];
     }
 }

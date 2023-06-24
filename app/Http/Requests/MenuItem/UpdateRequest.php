@@ -26,6 +26,7 @@ class UpdateRequest extends FormRequest
             'name' => ['required', 'string', 'max:100'],
             'price' => ['required', 'string', new Money()],
             'description' => ['required', 'string', 'max:299'],
+            'image' => ['nullable', 'file', 'max:2000'],
         ];
     }
 }

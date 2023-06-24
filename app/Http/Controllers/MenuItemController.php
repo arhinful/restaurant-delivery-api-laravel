@@ -40,7 +40,7 @@ class MenuItemController extends Controller
      * @apiResourceModel App\Models\MenuItem paginate=15 with=restaurant
      */
     public function index(): JsonResponse{
-        $menu_items = QueryBuilder::for(MenuItem::class)
+        $items = QueryBuilder::for(MenuItem::class)
             ->allowedFilters([
                 'name',
                 'price',
@@ -54,8 +54,8 @@ class MenuItemController extends Controller
             ])
             ->with(['restaurant',])
             ->paginate();
-        $menu_items = MenuItemResource::collection($menu_items)->response()->getData(true);
-        return $this->successReadCollection($menu_items);
+        $items = MenuItemResource::collection($items)->response()->getData(true);
+        return $this->successReadCollection($items);
     }
 
     /**
@@ -69,10 +69,10 @@ class MenuItemController extends Controller
     public function store(StoreRequest $request): JsonResponse{
         DB::beginTransaction();
         try {
-            $menu_item = MenuItemService::store($request->validated());
-            $menu_item = MenuItemResource::make($menu_item);
+            $item = MenuItemService::store($request->validated());
+            $item = MenuItemResource::make($item);
             DB::commit();
-            return $this->successCreated($menu_item);
+            return $this->successCreated($item);
         } catch (\Exception $exception){
             DB::rollBack();
             return $this->errorOccurred($exception->getMessage());
