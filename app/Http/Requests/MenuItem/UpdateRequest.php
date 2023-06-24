@@ -24,7 +24,7 @@ class UpdateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:100'],
-            'price' => ['required', 'string', new Money()],
+            'price' => ['required', 'numeric', 'between:0,9999999999.99'],
             'description' => ['required', 'string', 'max:299'],
             'image' => ['nullable', 'file', 'max:2000'],
         ];
