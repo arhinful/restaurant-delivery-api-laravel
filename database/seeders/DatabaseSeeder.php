@@ -39,7 +39,6 @@ class DatabaseSeeder extends Seeder
             $admin->assignRole($role);
         }catch (\Exception $exception){}
 
-
          // seed restaurant
         $restaurants = Restaurant::factory(50)->create();
 
